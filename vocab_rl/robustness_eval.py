@@ -109,16 +109,36 @@ def main() -> None:
     out_path = args.out if os.path.isabs(args.out) else os.path.join(here, args.out)
 
     env_probe = VocabEnv()
-    trainer = IQLTrainer(state_dim=env_probe.state_dim,
-                         num_actions=NUM_ACTIONS, cfg=IQLConfig())
-    trainer.load(policy_path)
-    print(f"Loaded policy from {policy_path}")
+    # Try CQL first (newer/better), fall back to IQL on TypeError/KeyError
+    # from a state_dict mismatch. Label the policy by the filename stem.
+    policy_label = os.path.basename(policy_path).split(".")[0]
+    if "cql" in policy_label.lower():
+        from cql import CQLConfig, CQLTrainer
+        trainer = CQLTrainer(state_dim=env_probe.state_dim,
+                             num_actions=NUM_ACTIONS, cfg=CQLConfig())
+    elif "ppo" in policy_label.lower():
+        trainer = None  # PPO has different load path
+    else:
+        trainer = IQLTrainer(state_dim=env_probe.state_dim,
+                             num_actions=NUM_ACTIONS, cfg=IQLConfig())
 
-    def iql_fn(state, rng):
-        return trainer.act(state, deterministic=True)
+    if trainer is not None:
+        trainer.load(policy_path)
+        def learned_fn(state, rng):
+            return trainer.act(state, deterministic=True)
+    else:
+        # PPO branch
+        import torch
+        from ppo import load as load_ppo, act_deterministic, PPOConfig  # noqa: F401
+        ppo_model = load_ppo(policy_path)
+        ppo_device = torch.device("cpu")
+        def learned_fn(state, rng):
+            return act_deterministic(ppo_model, state, ppo_device)
+
+    print(f"Loaded policy from {policy_path} (label: {policy_label})")
 
     policies = [
-        ("IQL (ours)", iql_fn),
+        (policy_label, learned_fn),
         ("FSRS+New", FSRSPlusNewAction()),
         ("FSRS", FSRSAction()),
         ("Random", RandomAction()),

@@ -1,0 +1,3182 @@
+[
+  {
+    "surface": "水",
+    "reading": "みず",
+    "gloss": "water",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "火",
+    "reading": "ひ",
+    "gloss": "fire",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "山",
+    "reading": "やま",
+    "gloss": "mountain",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "川",
+    "reading": "かわ",
+    "gloss": "river",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "木",
+    "reading": "き",
+    "gloss": "tree",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "花",
+    "reading": "はな",
+    "gloss": "flower",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "空",
+    "reading": "そら",
+    "gloss": "sky",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "海",
+    "reading": "うみ",
+    "gloss": "sea",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "雨",
+    "reading": "あめ",
+    "gloss": "rain",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "雪",
+    "reading": "ゆき",
+    "gloss": "snow",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "犬",
+    "reading": "いぬ",
+    "gloss": "dog",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "猫",
+    "reading": "ねこ",
+    "gloss": "cat",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "魚",
+    "reading": "さかな",
+    "gloss": "fish",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "鳥",
+    "reading": "とり",
+    "gloss": "bird",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "車",
+    "reading": "くるま",
+    "gloss": "car",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "電車",
+    "reading": "でんしゃ",
+    "gloss": "train",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "バス",
+    "reading": "バス",
+    "gloss": "bus",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "学校",
+    "reading": "がっこう",
+    "gloss": "school",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "先生",
+    "reading": "せんせい",
+    "gloss": "teacher",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "学生",
+    "reading": "がくせい",
+    "gloss": "student",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "本",
+    "reading": "ほん",
+    "gloss": "book",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "新聞",
+    "reading": "しんぶん",
+    "gloss": "newspaper",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "雑誌",
+    "reading": "ざっし",
+    "gloss": "magazine",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "ペン",
+    "reading": "ペン",
+    "gloss": "pen",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "机",
+    "reading": "つくえ",
+    "gloss": "desk",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "椅子",
+    "reading": "いす",
+    "gloss": "chair",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "部屋",
+    "reading": "へや",
+    "gloss": "room",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "家",
+    "reading": "いえ",
+    "gloss": "house",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "門",
+    "reading": "もん",
+    "gloss": "gate",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "窓",
+    "reading": "まど",
+    "gloss": "window",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "時計",
+    "reading": "とけい",
+    "gloss": "clock, watch",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "電話",
+    "reading": "でんわ",
+    "gloss": "telephone",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "テレビ",
+    "reading": "テレビ",
+    "gloss": "television",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "ラジオ",
+    "reading": "ラジオ",
+    "gloss": "radio",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "食べる",
+    "reading": "たべる",
+    "gloss": "to eat",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "飲む",
+    "reading": "のむ",
+    "gloss": "to drink",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "見る",
+    "reading": "みる",
+    "gloss": "to see, watch",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "聞く",
+    "reading": "きく",
+    "gloss": "to listen, hear",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "話す",
+    "reading": "はなす",
+    "gloss": "to speak",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "読む",
+    "reading": "よむ",
+    "gloss": "to read",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "書く",
+    "reading": "かく",
+    "gloss": "to write",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "行く",
+    "reading": "いく",
+    "gloss": "to go",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "来る",
+    "reading": "くる",
+    "gloss": "to come",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "帰る",
+    "reading": "かえる",
+    "gloss": "to return home",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "起きる",
+    "reading": "おきる",
+    "gloss": "to wake up",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "寝る",
+    "reading": "ねる",
+    "gloss": "to sleep",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "買う",
+    "reading": "かう",
+    "gloss": "to buy",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "売る",
+    "reading": "うる",
+    "gloss": "to sell",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "入る",
+    "reading": "はいる",
+    "gloss": "to enter",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "出る",
+    "reading": "でる",
+    "gloss": "to exit, leave",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "大きい",
+    "reading": "おおきい",
+    "gloss": "big, large",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "小さい",
+    "reading": "ちいさい",
+    "gloss": "small, little",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "長い",
+    "reading": "ながい",
+    "gloss": "long",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "短い",
+    "reading": "みじかい",
+    "gloss": "short",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "高い",
+    "reading": "たかい",
+    "gloss": "tall, expensive",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "安い",
+    "reading": "やすい",
+    "gloss": "cheap, inexpensive",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "新しい",
+    "reading": "あたらしい",
+    "gloss": "new",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "古い",
+    "reading": "ふるい",
+    "gloss": "old",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "暑い",
+    "reading": "あつい",
+    "gloss": "hot (weather)",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "寒い",
+    "reading": "さむい",
+    "gloss": "cold (weather)",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "好き",
+    "reading": "すき",
+    "gloss": "liked, favorite",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "嫌い",
+    "reading": "きらい",
+    "gloss": "disliked, hated",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "静か",
+    "reading": "しずか",
+    "gloss": "quiet",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "元気",
+    "reading": "げんき",
+    "gloss": "healthy, energetic",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "父",
+    "reading": "ちち",
+    "gloss": "father",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "母",
+    "reading": "はは",
+    "gloss": "mother",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "兄",
+    "reading": "あに",
+    "gloss": "older brother",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "姉",
+    "reading": "あね",
+    "gloss": "older sister",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "弟",
+    "reading": "おとうと",
+    "gloss": "younger brother",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "妹",
+    "reading": "いもうと",
+    "gloss": "younger sister",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "友達",
+    "reading": "ともだち",
+    "gloss": "friend",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "人",
+    "reading": "ひと",
+    "gloss": "person",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "男",
+    "reading": "おとこ",
+    "gloss": "man, male",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "女",
+    "reading": "おんな",
+    "gloss": "woman, female",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "子供",
+    "reading": "こども",
+    "gloss": "child",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "今日",
+    "reading": "きょう",
+    "gloss": "today",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "明日",
+    "reading": "あした",
+    "gloss": "tomorrow",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "昨日",
+    "reading": "きのう",
+    "gloss": "yesterday",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "今",
+    "reading": "いま",
+    "gloss": "now",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "朝",
+    "reading": "あさ",
+    "gloss": "morning",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "昼",
+    "reading": "ひる",
+    "gloss": "noon, daytime",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "夜",
+    "reading": "よる",
+    "gloss": "night, evening",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "年",
+    "reading": "とし",
+    "gloss": "year, age",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "月",
+    "reading": "つき",
+    "gloss": "moon, month",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "日",
+    "reading": "ひ",
+    "gloss": "day, sun",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "一",
+    "reading": "いち",
+    "gloss": "one",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "二",
+    "reading": "に",
+    "gloss": "two",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "三",
+    "reading": "さん",
+    "gloss": "three",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "百",
+    "reading": "ひゃく",
+    "gloss": "hundred",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "千",
+    "reading": "せん",
+    "gloss": "thousand",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "右",
+    "reading": "みぎ",
+    "gloss": "right (direction)",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "左",
+    "reading": "ひだり",
+    "gloss": "left (direction)",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "上",
+    "reading": "うえ",
+    "gloss": "above, top",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "下",
+    "reading": "した",
+    "gloss": "below, bottom",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "前",
+    "reading": "まえ",
+    "gloss": "front, before",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "後ろ",
+    "reading": "うしろ",
+    "gloss": "back, behind",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "食べ物",
+    "reading": "たべもの",
+    "gloss": "food",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "飲み物",
+    "reading": "のみもの",
+    "gloss": "drink, beverage",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "時間",
+    "reading": "じかん",
+    "gloss": "time",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "何",
+    "reading": "なに",
+    "gloss": "what",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "名前",
+    "reading": "なまえ",
+    "gloss": "name",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "国",
+    "reading": "くに",
+    "gloss": "country",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "外",
+    "reading": "そと",
+    "gloss": "outside",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "中",
+    "reading": "なか",
+    "gloss": "inside",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "東",
+    "reading": "ひがし",
+    "gloss": "east",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "西",
+    "reading": "にし",
+    "gloss": "west",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "南",
+    "reading": "みなみ",
+    "gloss": "south",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "北",
+    "reading": "きた",
+    "gloss": "north",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "駅",
+    "reading": "えき",
+    "gloss": "train station",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "病院",
+    "reading": "びょういん",
+    "gloss": "hospital",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "銀行",
+    "reading": "ぎんこう",
+    "gloss": "bank",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "図書館",
+    "reading": "としょかん",
+    "gloss": "library",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "郵便局",
+    "reading": "ゆうびんきょく",
+    "gloss": "post office",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "店",
+    "reading": "みせ",
+    "gloss": "shop",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "会社",
+    "reading": "かいしゃ",
+    "gloss": "company",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "教室",
+    "reading": "きょうしつ",
+    "gloss": "classroom",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "玄関",
+    "reading": "げんかん",
+    "gloss": "entrance",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "台所",
+    "reading": "だいどころ",
+    "gloss": "kitchen",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "公園",
+    "reading": "こうえん",
+    "gloss": "park",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "町",
+    "reading": "まち",
+    "gloss": "town",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "道",
+    "reading": "みち",
+    "gloss": "road",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "橋",
+    "reading": "はし",
+    "gloss": "bridge",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "映画",
+    "reading": "えいが",
+    "gloss": "movie",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "音楽",
+    "reading": "おんがく",
+    "gloss": "music",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "写真",
+    "reading": "しゃしん",
+    "gloss": "photograph",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "手紙",
+    "reading": "てがみ",
+    "gloss": "letter",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "言葉",
+    "reading": "ことば",
+    "gloss": "word",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "日本語",
+    "reading": "にほんご",
+    "gloss": "japanese language",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "英語",
+    "reading": "えいご",
+    "gloss": "english language",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "授業",
+    "reading": "じゅぎょう",
+    "gloss": "class",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "試験",
+    "reading": "しけん",
+    "gloss": "exam",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "宿題",
+    "reading": "しゅくだい",
+    "gloss": "homework",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "ノート",
+    "reading": "ノート",
+    "gloss": "notebook",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "鉛筆",
+    "reading": "えんぴつ",
+    "gloss": "pencil",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "消しゴム",
+    "reading": "けしゴム",
+    "gloss": "eraser",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "かばん",
+    "reading": "かばん",
+    "gloss": "bag",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "財布",
+    "reading": "さいふ",
+    "gloss": "wallet",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "傘",
+    "reading": "かさ",
+    "gloss": "umbrella",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "靴",
+    "reading": "くつ",
+    "gloss": "shoes",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "服",
+    "reading": "ふく",
+    "gloss": "clothes",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "帽子",
+    "reading": "ぼうし",
+    "gloss": "hat",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "眼鏡",
+    "reading": "めがね",
+    "gloss": "glasses",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "電気",
+    "reading": "でんき",
+    "gloss": "electricity",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "テーブル",
+    "reading": "テーブル",
+    "gloss": "table",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "ベッド",
+    "reading": "ベッド",
+    "gloss": "bed",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "ドア",
+    "reading": "ドア",
+    "gloss": "door",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "トイレ",
+    "reading": "トイレ",
+    "gloss": "toilet",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "ご飯",
+    "reading": "ごはん",
+    "gloss": "cooked rice",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "パン",
+    "reading": "パン",
+    "gloss": "bread",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "肉",
+    "reading": "にく",
+    "gloss": "meat",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "野菜",
+    "reading": "やさい",
+    "gloss": "vegetables",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "果物",
+    "reading": "くだもの",
+    "gloss": "fruit",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "卵",
+    "reading": "たまご",
+    "gloss": "egg",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "牛乳",
+    "reading": "ぎゅうにゅう",
+    "gloss": "milk",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "お茶",
+    "reading": "おちゃ",
+    "gloss": "tea",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "コーヒー",
+    "reading": "コーヒー",
+    "gloss": "coffee",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "お酒",
+    "reading": "おさけ",
+    "gloss": "alcohol",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "家族",
+    "reading": "かぞく",
+    "gloss": "family",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "祖父",
+    "reading": "そふ",
+    "gloss": "grandfather",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "祖母",
+    "reading": "そぼ",
+    "gloss": "grandmother",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "夫",
+    "reading": "おっと",
+    "gloss": "husband",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "妻",
+    "reading": "つま",
+    "gloss": "wife",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "赤ちゃん",
+    "reading": "あかちゃん",
+    "gloss": "baby",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "先輩",
+    "reading": "せんぱい",
+    "gloss": "senior person",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "四",
+    "reading": "し",
+    "gloss": "four",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "五",
+    "reading": "ご",
+    "gloss": "five",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "六",
+    "reading": "ろく",
+    "gloss": "six",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "七",
+    "reading": "しち",
+    "gloss": "seven",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "八",
+    "reading": "はち",
+    "gloss": "eight",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "九",
+    "reading": "く",
+    "gloss": "nine",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "十",
+    "reading": "じゅう",
+    "gloss": "ten",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "万",
+    "reading": "まん",
+    "gloss": "ten thousand",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "何時",
+    "reading": "なんじ",
+    "gloss": "what time",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "今年",
+    "reading": "ことし",
+    "gloss": "this year",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "来年",
+    "reading": "らいねん",
+    "gloss": "next year",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "去年",
+    "reading": "きょねん",
+    "gloss": "last year",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "毎日",
+    "reading": "まいにち",
+    "gloss": "every day",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "毎朝",
+    "reading": "まいあさ",
+    "gloss": "every morning",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "週末",
+    "reading": "しゅうまつ",
+    "gloss": "weekend",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "来週",
+    "reading": "らいしゅう",
+    "gloss": "next week",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "先週",
+    "reading": "せんしゅう",
+    "gloss": "last week",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "今週",
+    "reading": "こんしゅう",
+    "gloss": "this week",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "休む",
+    "reading": "やすむ",
+    "gloss": "to rest",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "働く",
+    "reading": "はたらく",
+    "gloss": "to work",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "教える",
+    "reading": "おしえる",
+    "gloss": "to teach",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "会う",
+    "reading": "あう",
+    "gloss": "to meet",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "待つ",
+    "reading": "まつ",
+    "gloss": "to wait",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "立つ",
+    "reading": "たつ",
+    "gloss": "to stand",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "座る",
+    "reading": "すわる",
+    "gloss": "to sit",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "走る",
+    "reading": "はしる",
+    "gloss": "to run",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "泳ぐ",
+    "reading": "およぐ",
+    "gloss": "to swim",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "使う",
+    "reading": "つかう",
+    "gloss": "to use",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "白い",
+    "reading": "しろい",
+    "gloss": "white",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "黒い",
+    "reading": "くろい",
+    "gloss": "black",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "赤い",
+    "reading": "あかい",
+    "gloss": "red",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "青い",
+    "reading": "あおい",
+    "gloss": "blue",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "広い",
+    "reading": "ひろい",
+    "gloss": "wide",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "狭い",
+    "reading": "せまい",
+    "gloss": "narrow",
+    "jlpt": "N5"
+  },
+  {
+    "surface": "病気",
+    "reading": "びょうき",
+    "gloss": "illness, sickness",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "練習",
+    "reading": "れんしゅう",
+    "gloss": "practice",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "旅行",
+    "reading": "りょこう",
+    "gloss": "travel, trip",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "質問",
+    "reading": "しつもん",
+    "gloss": "question",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "答える",
+    "reading": "こたえる",
+    "gloss": "to answer",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "着る",
+    "reading": "きる",
+    "gloss": "to wear (clothing)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "脱ぐ",
+    "reading": "ぬぐ",
+    "gloss": "to take off (clothes)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "洗う",
+    "reading": "あらう",
+    "gloss": "to wash",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "掃除",
+    "reading": "そうじ",
+    "gloss": "cleaning",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "料理",
+    "reading": "りょうり",
+    "gloss": "cooking, cuisine",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "運動",
+    "reading": "うんどう",
+    "gloss": "exercise, sport",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "建物",
+    "reading": "たてもの",
+    "gloss": "building",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "地図",
+    "reading": "ちず",
+    "gloss": "map",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "階段",
+    "reading": "かいだん",
+    "gloss": "stairs",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "押す",
+    "reading": "おす",
+    "gloss": "to push",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "引く",
+    "reading": "ひく",
+    "gloss": "to pull",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "開ける",
+    "reading": "あける",
+    "gloss": "to open",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "閉める",
+    "reading": "しめる",
+    "gloss": "to close",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "つける",
+    "reading": "つける",
+    "gloss": "to turn on",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "消す",
+    "reading": "けす",
+    "gloss": "to turn off, erase",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "困る",
+    "reading": "こまる",
+    "gloss": "to be troubled",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "忘れる",
+    "reading": "わすれる",
+    "gloss": "to forget",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "覚える",
+    "reading": "おぼえる",
+    "gloss": "to remember, memorize",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "始まる",
+    "reading": "はじまる",
+    "gloss": "to begin",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "終わる",
+    "reading": "おわる",
+    "gloss": "to end, finish",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "決める",
+    "reading": "きめる",
+    "gloss": "to decide",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "集める",
+    "reading": "あつめる",
+    "gloss": "to collect, gather",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "知る",
+    "reading": "しる",
+    "gloss": "to know, learn",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "急ぐ",
+    "reading": "いそぐ",
+    "gloss": "to hurry",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "泣く",
+    "reading": "なく",
+    "gloss": "to cry",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "笑う",
+    "reading": "わらう",
+    "gloss": "to laugh, smile",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "送る",
+    "reading": "おくる",
+    "gloss": "to send",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "貸す",
+    "reading": "かす",
+    "gloss": "to lend",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "借りる",
+    "reading": "かりる",
+    "gloss": "to borrow",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "渡す",
+    "reading": "わたす",
+    "gloss": "to hand over",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "渡る",
+    "reading": "わたる",
+    "gloss": "to cross",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "曲がる",
+    "reading": "まがる",
+    "gloss": "to turn, bend",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "止まる",
+    "reading": "とまる",
+    "gloss": "to stop",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "動く",
+    "reading": "うごく",
+    "gloss": "to move",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "運ぶ",
+    "reading": "はこぶ",
+    "gloss": "to carry, transport",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "作る",
+    "reading": "つくる",
+    "gloss": "to make, create",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "直す",
+    "reading": "なおす",
+    "gloss": "to fix, correct",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "壊れる",
+    "reading": "こわれる",
+    "gloss": "to break, get broken",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "転ぶ",
+    "reading": "ころぶ",
+    "gloss": "to fall down",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "生まれる",
+    "reading": "うまれる",
+    "gloss": "to be born",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "死ぬ",
+    "reading": "しぬ",
+    "gloss": "to die",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "結婚",
+    "reading": "けっこん",
+    "gloss": "marriage",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "卒業",
+    "reading": "そつぎょう",
+    "gloss": "graduation",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "入学",
+    "reading": "にゅうがく",
+    "gloss": "school enrollment",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "留学",
+    "reading": "りゅうがく",
+    "gloss": "studying abroad",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "文化",
+    "reading": "ぶんか",
+    "gloss": "culture",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "社会",
+    "reading": "しゃかい",
+    "gloss": "society",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "経済",
+    "reading": "けいざい",
+    "gloss": "economy",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "政治",
+    "reading": "せいじ",
+    "gloss": "politics",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "歴史",
+    "reading": "れきし",
+    "gloss": "history",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "科学",
+    "reading": "かがく",
+    "gloss": "science",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "医者",
+    "reading": "いしゃ",
+    "gloss": "doctor",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "看護師",
+    "reading": "かんごし",
+    "gloss": "nurse",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "運転手",
+    "reading": "うんてんしゅ",
+    "gloss": "driver",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "料理人",
+    "reading": "りょうりにん",
+    "gloss": "cook, chef",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "空港",
+    "reading": "くうこう",
+    "gloss": "airport",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "港",
+    "reading": "みなと",
+    "gloss": "harbor, port",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "神社",
+    "reading": "じんじゃ",
+    "gloss": "shinto shrine",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "寺",
+    "reading": "てら",
+    "gloss": "temple",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "動物園",
+    "reading": "どうぶつえん",
+    "gloss": "zoo",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "美術館",
+    "reading": "びじゅつかん",
+    "gloss": "art museum",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "博物館",
+    "reading": "はくぶつかん",
+    "gloss": "museum",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "体育館",
+    "reading": "たいいくかん",
+    "gloss": "gymnasium",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "プール",
+    "reading": "プール",
+    "gloss": "swimming pool",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "エレベーター",
+    "reading": "エレベーター",
+    "gloss": "elevator",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "エスカレーター",
+    "reading": "エスカレーター",
+    "gloss": "escalator",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "パスポート",
+    "reading": "パスポート",
+    "gloss": "passport",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "ニュース",
+    "reading": "ニュース",
+    "gloss": "news",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "スポーツ",
+    "reading": "スポーツ",
+    "gloss": "sports",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "ゲーム",
+    "reading": "ゲーム",
+    "gloss": "game",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "パーティー",
+    "reading": "パーティー",
+    "gloss": "party",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "アパート",
+    "reading": "アパート",
+    "gloss": "apartment",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "暖かい",
+    "reading": "あたたかい",
+    "gloss": "warm",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "涼しい",
+    "reading": "すずしい",
+    "gloss": "cool (weather)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "難しい",
+    "reading": "むずかしい",
+    "gloss": "difficult",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "易しい",
+    "reading": "やさしい",
+    "gloss": "easy, gentle",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "正しい",
+    "reading": "ただしい",
+    "gloss": "correct, right",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "危ない",
+    "reading": "あぶない",
+    "gloss": "dangerous",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "痛い",
+    "reading": "いたい",
+    "gloss": "painful, sore",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "重い",
+    "reading": "おもい",
+    "gloss": "heavy",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "軽い",
+    "reading": "かるい",
+    "gloss": "light (weight)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "丸い",
+    "reading": "まるい",
+    "gloss": "round, circular",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "太い",
+    "reading": "ふとい",
+    "gloss": "thick, fat",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "細い",
+    "reading": "ほそい",
+    "gloss": "thin, slender",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "便利",
+    "reading": "べんり",
+    "gloss": "convenient",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "不便",
+    "reading": "ふべん",
+    "gloss": "inconvenient",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "大切",
+    "reading": "たいせつ",
+    "gloss": "important, precious",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "丁寧",
+    "reading": "ていねい",
+    "gloss": "polite, careful",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "親切",
+    "reading": "しんせつ",
+    "gloss": "kind, helpful",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "真面目",
+    "reading": "まじめ",
+    "gloss": "serious, diligent",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "自由",
+    "reading": "じゆう",
+    "gloss": "freedom, free",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "特別",
+    "reading": "とくべつ",
+    "gloss": "special",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "普通",
+    "reading": "ふつう",
+    "gloss": "ordinary, normal",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "降りる",
+    "reading": "おりる",
+    "gloss": "get off",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "乗る",
+    "reading": "のる",
+    "gloss": "ride, board",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "泊まる",
+    "reading": "とまる",
+    "gloss": "stay overnight",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "調べる",
+    "reading": "しらべる",
+    "gloss": "investigate, look up",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "続ける",
+    "reading": "つづける",
+    "gloss": "continue",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "落ちる",
+    "reading": "おちる",
+    "gloss": "fall, drop",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "変わる",
+    "reading": "かわる",
+    "gloss": "change",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "比べる",
+    "reading": "くらべる",
+    "gloss": "compare",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "喜ぶ",
+    "reading": "よろこぶ",
+    "gloss": "be pleased",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "慣れる",
+    "reading": "なれる",
+    "gloss": "get used to",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "触る",
+    "reading": "さわる",
+    "gloss": "touch",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "降る",
+    "reading": "ふる",
+    "gloss": "fall (rain/snow)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "太る",
+    "reading": "ふとる",
+    "gloss": "gain weight",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "痩せる",
+    "reading": "やせる",
+    "gloss": "lose weight",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "集まる",
+    "reading": "あつまる",
+    "gloss": "gather, assemble",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "驚く",
+    "reading": "おどろく",
+    "gloss": "be surprised",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "迎える",
+    "reading": "むかえる",
+    "gloss": "welcome, greet",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "別れる",
+    "reading": "わかれる",
+    "gloss": "part, separate",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "負ける",
+    "reading": "まける",
+    "gloss": "lose, be defeated",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "勝つ",
+    "reading": "かつ",
+    "gloss": "win",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "経つ",
+    "reading": "たつ",
+    "gloss": "pass (time)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "嬉しい",
+    "reading": "うれしい",
+    "gloss": "happy, glad",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "悲しい",
+    "reading": "かなしい",
+    "gloss": "sad",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "怖い",
+    "reading": "こわい",
+    "gloss": "scary, frightening",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "冷たい",
+    "reading": "つめたい",
+    "gloss": "cold (to touch)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "柔らかい",
+    "reading": "やわらかい",
+    "gloss": "soft",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "硬い",
+    "reading": "かたい",
+    "gloss": "hard, firm",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "遅い",
+    "reading": "おそい",
+    "gloss": "slow, late",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "速い",
+    "reading": "はやい",
+    "gloss": "fast",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "眠い",
+    "reading": "ねむい",
+    "gloss": "sleepy",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "大丈夫",
+    "reading": "だいじょうぶ",
+    "gloss": "all right, okay",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "得意",
+    "reading": "とくい",
+    "gloss": "good at, proud",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "苦手",
+    "reading": "にがて",
+    "gloss": "poor at, weak point",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "複雑",
+    "reading": "ふくざつ",
+    "gloss": "complex, complicated",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "安全",
+    "reading": "あんぜん",
+    "gloss": "safe",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "危険",
+    "reading": "きけん",
+    "gloss": "dangerous",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "世界",
+    "reading": "せかい",
+    "gloss": "world",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "技術",
+    "reading": "ぎじゅつ",
+    "gloss": "technology, skill",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "文章",
+    "reading": "ぶんしょう",
+    "gloss": "sentence, text",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "意味",
+    "reading": "いみ",
+    "gloss": "meaning",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "理由",
+    "reading": "りゆう",
+    "gloss": "reason",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "問題",
+    "reading": "もんだい",
+    "gloss": "problem, question",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "答え",
+    "reading": "こたえ",
+    "gloss": "answer",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "説明",
+    "reading": "せつめい",
+    "gloss": "explanation",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "予定",
+    "reading": "よてい",
+    "gloss": "plan, schedule",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "準備",
+    "reading": "じゅんび",
+    "gloss": "preparation",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "発表",
+    "reading": "はっぴょう",
+    "gloss": "announcement, presentation",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "研究",
+    "reading": "けんきゅう",
+    "gloss": "research, study",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "試合",
+    "reading": "しあい",
+    "gloss": "match, game",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "記念",
+    "reading": "きねん",
+    "gloss": "commemoration",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "日記",
+    "reading": "にっき",
+    "gloss": "diary",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "会話",
+    "reading": "かいわ",
+    "gloss": "conversation",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "番組",
+    "reading": "ばんぐみ",
+    "gloss": "program (tv/radio)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "映画館",
+    "reading": "えいがかん",
+    "gloss": "cinema, movie theater",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "工場",
+    "reading": "こうじょう",
+    "gloss": "factory",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "畑",
+    "reading": "はたけ",
+    "gloss": "field, farm",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "海岸",
+    "reading": "かいがん",
+    "gloss": "coast, seashore",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "島",
+    "reading": "しま",
+    "gloss": "island",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "池",
+    "reading": "いけ",
+    "gloss": "pond",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "森",
+    "reading": "もり",
+    "gloss": "forest",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "坂",
+    "reading": "さか",
+    "gloss": "slope, hill",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "角",
+    "reading": "かど",
+    "gloss": "corner",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "押し入れ",
+    "reading": "おしいれ",
+    "gloss": "closet",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "屋根",
+    "reading": "やね",
+    "gloss": "roof",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "壁",
+    "reading": "かべ",
+    "gloss": "wall",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "棚",
+    "reading": "たな",
+    "gloss": "shelf",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "引き出し",
+    "reading": "ひきだし",
+    "gloss": "drawer",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "布団",
+    "reading": "ふとん",
+    "gloss": "futon, bedding",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "鍵",
+    "reading": "かぎ",
+    "gloss": "key, lock",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "皿",
+    "reading": "さら",
+    "gloss": "plate, dish",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "箸",
+    "reading": "はし",
+    "gloss": "chopsticks",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "袋",
+    "reading": "ふくろ",
+    "gloss": "bag, sack",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "紙",
+    "reading": "かみ",
+    "gloss": "paper",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "声",
+    "reading": "こえ",
+    "gloss": "voice",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "顔",
+    "reading": "かお",
+    "gloss": "face",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "首",
+    "reading": "くび",
+    "gloss": "neck",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "背中",
+    "reading": "せなか",
+    "gloss": "back (of body)",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "指",
+    "reading": "ゆび",
+    "gloss": "finger, toe",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "髪",
+    "reading": "かみ",
+    "gloss": "hair",
+    "jlpt": "N4"
+  },
+  {
+    "surface": "景色",
+    "reading": "けしき",
+    "gloss": "scenery, view",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "落とす",
+    "reading": "おとす",
+    "gloss": "to drop",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "夢",
+    "reading": "ゆめ",
+    "gloss": "dream",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "経験",
+    "reading": "けいけん",
+    "gloss": "experience",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "祭り",
+    "reading": "まつり",
+    "gloss": "festival",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "選ぶ",
+    "reading": "えらぶ",
+    "gloss": "to choose, select",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "空気",
+    "reading": "くうき",
+    "gloss": "air, atmosphere",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "急に",
+    "reading": "きゅうに",
+    "gloss": "suddenly",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "負担",
+    "reading": "ふたん",
+    "gloss": "burden, load",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "信じる",
+    "reading": "しんじる",
+    "gloss": "to believe, trust",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "返す",
+    "reading": "かえす",
+    "gloss": "to return something",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "辛い",
+    "reading": "つらい",
+    "gloss": "painful, hard",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "様子",
+    "reading": "ようす",
+    "gloss": "state, appearance",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "湖",
+    "reading": "みずうみ",
+    "gloss": "lake",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "地震",
+    "reading": "じしん",
+    "gloss": "earthquake",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "感じる",
+    "reading": "かんじる",
+    "gloss": "to feel, sense",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "続く",
+    "reading": "つづく",
+    "gloss": "to continue",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "深い",
+    "reading": "ふかい",
+    "gloss": "deep",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "方法",
+    "reading": "ほうほう",
+    "gloss": "method, way",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "広げる",
+    "reading": "ひろげる",
+    "gloss": "to spread, expand",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "都市",
+    "reading": "とし",
+    "gloss": "city, urban area",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "眠る",
+    "reading": "ねむる",
+    "gloss": "to sleep",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "変な",
+    "reading": "へんな",
+    "gloss": "strange, odd",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "受ける",
+    "reading": "うける",
+    "gloss": "to receive, take",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "台風",
+    "reading": "たいふう",
+    "gloss": "typhoon",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "冷える",
+    "reading": "ひえる",
+    "gloss": "to get cold",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "笑顔",
+    "reading": "えがお",
+    "gloss": "smiling face",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "計画",
+    "reading": "けいかく",
+    "gloss": "plan, project",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "拾う",
+    "reading": "ひろう",
+    "gloss": "to pick up",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "役に立つ",
+    "reading": "やくにたつ",
+    "gloss": "to be useful",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "怒る",
+    "reading": "おこる",
+    "gloss": "to get angry",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "以上",
+    "reading": "いじょう",
+    "gloss": "more than, above",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "昼間",
+    "reading": "ひるま",
+    "gloss": "daytime",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "通う",
+    "reading": "かよう",
+    "gloss": "to commute, attend",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "必要",
+    "reading": "ひつよう",
+    "gloss": "necessary, needed",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "植物",
+    "reading": "しょくぶつ",
+    "gloss": "plant, vegetation",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "事故",
+    "reading": "じこ",
+    "gloss": "accident",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "心配",
+    "reading": "しんぱい",
+    "gloss": "worry, concern",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "見つける",
+    "reading": "みつける",
+    "gloss": "to find, discover",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "約束",
+    "reading": "やくそく",
+    "gloss": "promise, appointment",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "残る",
+    "reading": "のこる",
+    "gloss": "to remain, stay",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "商品",
+    "reading": "しょうひん",
+    "gloss": "product, goods",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "戻る",
+    "reading": "もどる",
+    "gloss": "to return, go back",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "眺める",
+    "reading": "ながめる",
+    "gloss": "to gaze at",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "雲",
+    "reading": "くも",
+    "gloss": "cloud",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "生活",
+    "reading": "せいかつ",
+    "gloss": "daily life, living",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "増える",
+    "reading": "ふえる",
+    "gloss": "to increase",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "苦しい",
+    "reading": "くるしい",
+    "gloss": "painful, agonizing",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "部分",
+    "reading": "ぶぶん",
+    "gloss": "part, portion",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "相談",
+    "reading": "そうだん",
+    "gloss": "consultation, advice",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "飛ぶ",
+    "reading": "とぶ",
+    "gloss": "to fly, jump",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "最近",
+    "reading": "さいきん",
+    "gloss": "recently, lately",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "温泉",
+    "reading": "おんせん",
+    "gloss": "hot spring",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "似る",
+    "reading": "にる",
+    "gloss": "to resemble",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "関係",
+    "reading": "かんけい",
+    "gloss": "relationship, connection",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "終わり",
+    "reading": "おわり",
+    "gloss": "end, finish",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "正直",
+    "reading": "しょうじき",
+    "gloss": "honest, frank",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "熱い",
+    "reading": "あつい",
+    "gloss": "hot to the touch",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "手伝う",
+    "reading": "てつだう",
+    "gloss": "to help, assist",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "反対",
+    "reading": "はんたい",
+    "gloss": "opposition, opposite",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "引っ越す",
+    "reading": "ひっこす",
+    "gloss": "to move house",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "特に",
+    "reading": "とくに",
+    "gloss": "especially, particularly",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "割れる",
+    "reading": "われる",
+    "gloss": "to break, crack",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "葉",
+    "reading": "は",
+    "gloss": "leaf",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "若い",
+    "reading": "わかい",
+    "gloss": "young",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "建てる",
+    "reading": "たてる",
+    "gloss": "to build, construct",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "注意",
+    "reading": "ちゅうい",
+    "gloss": "caution, attention",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "踏む",
+    "reading": "ふむ",
+    "gloss": "to step on",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "開く",
+    "reading": "ひらく",
+    "gloss": "to open",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "昔",
+    "reading": "むかし",
+    "gloss": "long ago, old times",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "席",
+    "reading": "せき",
+    "gloss": "seat, place",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "祝う",
+    "reading": "いわう",
+    "gloss": "to celebrate",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "両親",
+    "reading": "りょうしん",
+    "gloss": "parents",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "消える",
+    "reading": "きえる",
+    "gloss": "to disappear, go out",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "仕方",
+    "reading": "しかた",
+    "gloss": "way, method",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "遠い",
+    "reading": "とおい",
+    "gloss": "far, distant",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "楽しむ",
+    "reading": "たのしむ",
+    "gloss": "to enjoy",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "努力",
+    "reading": "どりょく",
+    "gloss": "effort",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "失敗",
+    "reading": "しっぱい",
+    "gloss": "failure",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "成功",
+    "reading": "せいこう",
+    "gloss": "success",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "場所",
+    "reading": "ばしょ",
+    "gloss": "place, location",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "気持ち",
+    "reading": "きもち",
+    "gloss": "feeling",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "意見",
+    "reading": "いけん",
+    "gloss": "opinion",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "環境",
+    "reading": "かんきょう",
+    "gloss": "environment",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "自然",
+    "reading": "しぜん",
+    "gloss": "nature",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "季節",
+    "reading": "きせつ",
+    "gloss": "season",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "目的",
+    "reading": "もくてき",
+    "gloss": "purpose",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "結果",
+    "reading": "けっか",
+    "gloss": "result",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "原因",
+    "reading": "げんいん",
+    "gloss": "cause",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "事件",
+    "reading": "じけん",
+    "gloss": "incident",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "記事",
+    "reading": "きじ",
+    "gloss": "article, news story",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "番号",
+    "reading": "ばんごう",
+    "gloss": "number",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "信号",
+    "reading": "しんごう",
+    "gloss": "traffic light",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "道路",
+    "reading": "どうろ",
+    "gloss": "road",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "地域",
+    "reading": "ちいき",
+    "gloss": "area, region",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "人口",
+    "reading": "じんこう",
+    "gloss": "population",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "会議",
+    "reading": "かいぎ",
+    "gloss": "meeting",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "報告",
+    "reading": "ほうこく",
+    "gloss": "report",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "連絡",
+    "reading": "れんらく",
+    "gloss": "contact, communication",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "確認",
+    "reading": "かくにん",
+    "gloss": "confirmation",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "予約",
+    "reading": "よやく",
+    "gloss": "reservation",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "申し込む",
+    "reading": "もうしこむ",
+    "gloss": "to apply for",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "断る",
+    "reading": "ことわる",
+    "gloss": "to refuse, decline",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "伝える",
+    "reading": "つたえる",
+    "gloss": "to convey, tell",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "決まる",
+    "reading": "きまる",
+    "gloss": "to be decided",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "減る",
+    "reading": "へる",
+    "gloss": "to decrease",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "直る",
+    "reading": "なおる",
+    "gloss": "to be fixed",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "倒れる",
+    "reading": "たおれる",
+    "gloss": "to fall over",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "育てる",
+    "reading": "そだてる",
+    "gloss": "to raise, nurture",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "迷う",
+    "reading": "まよう",
+    "gloss": "to be lost, hesitate",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "疑う",
+    "reading": "うたがう",
+    "gloss": "to doubt, suspect",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "祈る",
+    "reading": "いのる",
+    "gloss": "to pray",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "叫ぶ",
+    "reading": "さけぶ",
+    "gloss": "to shout, scream",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "悩む",
+    "reading": "なやむ",
+    "gloss": "to worry, agonize",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "恥ずかしい",
+    "reading": "はずかしい",
+    "gloss": "embarrassing, shy",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "珍しい",
+    "reading": "めずらしい",
+    "gloss": "rare, unusual",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "詳しい",
+    "reading": "くわしい",
+    "gloss": "detailed, knowledgeable",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "厳しい",
+    "reading": "きびしい",
+    "gloss": "strict, harsh",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "優しい",
+    "reading": "やさしい",
+    "gloss": "kind, gentle",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "賢い",
+    "reading": "かしこい",
+    "gloss": "wise, clever",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "丁寧な",
+    "reading": "ていねいな",
+    "gloss": "polite, careful",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "複雑な",
+    "reading": "ふくざつな",
+    "gloss": "complex, complicated",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "正確な",
+    "reading": "せいかくな",
+    "gloss": "accurate, precise",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "安全な",
+    "reading": "あんぜんな",
+    "gloss": "safe",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "自由な",
+    "reading": "じゆうな",
+    "gloss": "free, unrestricted",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "必要な",
+    "reading": "ひつような",
+    "gloss": "necessary",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "十分な",
+    "reading": "じゅうぶんな",
+    "gloss": "sufficient, enough",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "大切な",
+    "reading": "たいせつな",
+    "gloss": "important, precious",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "様々な",
+    "reading": "さまざまな",
+    "gloss": "various, diverse",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "以外",
+    "reading": "いがい",
+    "gloss": "other than, except",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "以下",
+    "reading": "いか",
+    "gloss": "less than, below",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "将来",
+    "reading": "しょうらい",
+    "gloss": "future",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "現在",
+    "reading": "げんざい",
+    "gloss": "present, now",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "当然",
+    "reading": "とうぜん",
+    "gloss": "naturally, of course",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "きっと",
+    "reading": "きっと",
+    "gloss": "surely, certainly",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "なかなか",
+    "reading": "なかなか",
+    "gloss": "quite, not easily",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "ほとんど",
+    "reading": "ほとんど",
+    "gloss": "mostly, almost",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "ずっと",
+    "reading": "ずっと",
+    "gloss": "all along, much more",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "包む",
+    "reading": "つつむ",
+    "gloss": "to wrap",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "起こす",
+    "reading": "おこす",
+    "gloss": "to wake up, cause",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "輸出",
+    "reading": "ゆしゅつ",
+    "gloss": "export",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "輸入",
+    "reading": "ゆにゅう",
+    "gloss": "import",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "税金",
+    "reading": "ぜいきん",
+    "gloss": "tax",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "収入",
+    "reading": "しゅうにゅう",
+    "gloss": "income",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "費用",
+    "reading": "ひよう",
+    "gloss": "cost, expense",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "温かい",
+    "reading": "あたたかい",
+    "gloss": "warm",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "招待",
+    "reading": "しょうたい",
+    "gloss": "invitation",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "植える",
+    "reading": "うえる",
+    "gloss": "to plant",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "変える",
+    "reading": "かえる",
+    "gloss": "to change",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "感じ",
+    "reading": "かんじ",
+    "gloss": "feeling, sense",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "太陽",
+    "reading": "たいよう",
+    "gloss": "sun",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "表現",
+    "reading": "ひょうげん",
+    "gloss": "expression",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "贈り物",
+    "reading": "おくりもの",
+    "gloss": "gift, present",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "競争",
+    "reading": "きょうそう",
+    "gloss": "competition",
+    "jlpt": "N3"
+  },
+  {
+    "surface": "平和",
+    "reading": "へいわ",
+    "gloss": "peace",
+    "jlpt": "N3"
+  }
+]

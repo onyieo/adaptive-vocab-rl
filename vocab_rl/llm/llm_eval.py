@@ -105,13 +105,19 @@ def run_policy_with_llm(name: str, policy_fn, seed: int = 0) -> list[dict]:
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--iql-policy", default="iql_policy.pt")
+    p.add_argument("--cql-policy", default="cql_policy.pt")
+    p.add_argument("--ppo-policy", default="ppo_policy.pt")
     p.add_argument("--outdir", default="llm_eval_results")
     p.add_argument("--seed", type=int, default=0)
     args = p.parse_args()
 
     here = Path(__file__).resolve().parent.parent  # vocab_rl/
-    iql_path = (args.iql_policy if os.path.isabs(args.iql_policy)
-                else str(here / args.iql_policy))
+
+    def _abs(rel):
+        return rel if os.path.isabs(rel) else str(here / rel)
+    iql_path = _abs(args.iql_policy)
+    cql_path = _abs(args.cql_policy)
+    ppo_path = _abs(args.ppo_policy)
     outdir = args.outdir if os.path.isabs(args.outdir) else str(here / args.outdir)
     os.makedirs(outdir, exist_ok=True)
 
@@ -127,6 +133,29 @@ def main() -> None:
         print(f"loaded IQL policy from {iql_path}")
     else:
         print(f"(skipping IQL — no policy found at {iql_path})")
+
+    # CQL
+    if os.path.exists(cql_path):
+        from cql import CQLConfig, CQLTrainer
+        env_probe = VocabEnv()
+        cql_trainer = CQLTrainer(state_dim=env_probe.state_dim,
+                                 num_actions=NUM_ACTIONS, cfg=CQLConfig())
+        cql_trainer.load(cql_path)
+        print(f"loaded CQL policy from {cql_path}")
+        def cql_fn(state, rng):
+            return cql_trainer.act(state, deterministic=True)
+        policies.append(("CQL", cql_fn))
+
+    # PPO
+    if os.path.exists(ppo_path):
+        import torch
+        from ppo import load as load_ppo, act_deterministic, PPOConfig  # noqa: F401
+        ppo_model = load_ppo(ppo_path)
+        ppo_device = torch.device("cpu")
+        print(f"loaded PPO policy from {ppo_path}")
+        def ppo_fn(state, rng):
+            return act_deterministic(ppo_model, state, ppo_device)
+        policies.append(("PPO", ppo_fn))
 
     means: dict[str, float] = {}
     stds: dict[str, float] = {}

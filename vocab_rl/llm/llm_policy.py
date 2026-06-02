@@ -105,6 +105,10 @@ class LLMPolicy:
             return self._act(env)
         return fn
 
+    # Fallback action used when JSON parsing fails — matches FSRS+New
+    # heuristic so the baseline degrades gracefully rather than crashing.
+    _FALLBACK_ACTION = ACTION_TABLE.index((1, 0, 4))
+
     def _act(self, env) -> int:
         snap = env.sim.snapshot()
         sessions_done = env.turn // self.turns_per_session
@@ -125,7 +129,18 @@ class LLMPolicy:
         )
 
         text = "".join(b.text for b in response.content if b.type == "text")
-        parsed = json.loads(text)
-        return int(parsed["action_index"])
+        try:
+            parsed = json.loads(text)
+            a = int(parsed["action_index"])
+            if 0 <= a < len(ACTION_TABLE):
+                return a
+            print(f"[LLMPolicy] out-of-range action {a}; falling back")
+            return self._FALLBACK_ACTION
+        except (json.JSONDecodeError, KeyError, ValueError) as e:
+            # Structured outputs occasionally returns malformed JSON despite
+            # the schema. Fall back rather than crash the eval.
+            print(f"[LLMPolicy] JSON parse failed ({e}); falling back. "
+                  f"Raw text (first 200 chars): {text[:200]!r}")
+            return self._FALLBACK_ACTION
 
 
