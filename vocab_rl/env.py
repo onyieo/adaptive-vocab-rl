@@ -24,17 +24,46 @@ WORDS_PER_TURN = 5
 # 0 < stability < this are "active" (still being learned).
 ACTIVE_STABILITY_THRESHOLD = 2.0
 
-# Reward = per-step change in total retrievability across the FULL vocabulary
-# (including unseen words, which contribute 0). This rewards both introducing
-# new words and retaining them; it does not reward keeping the seen set small.
+# === Reward design (v3) ===
 #
-# r_t = (sum_R_all_words_after - sum_R_all_words_before) / N_WORDS
+# Three-component reward that better matches the actual goal of vocabulary
+# tutoring than the v1 "coverage growth" reward (which was trivially won by
+# Random because it just rewards exposure breadth).
 #
-# So r_t ∈ roughly [-1, 1] per step, and the un-discounted episode return is
-# (final_total_R - initial_total_R) / N_WORDS ∈ [0, 1] — directly interpretable
-# as "fraction of perfect-recall mass acquired this episode."
-REWARD_NORMALIZER = 1.0  # multiplier on the per-step delta (already normalized
-                         # by N_WORDS; this is just a knob to scale to taste)
+# Components:
+#   (a) COVERAGE  — per-step change in total retrievability across the FULL
+#       vocabulary. Same as v1; the dense within-session learning signal.
+#       coverage_t = (sum_R_after - sum_R_before) / N_WORDS
+#
+#   (b) NATURALNESS PENALTY — per-step penalty proportional to the squared
+#       excess of new words above 1. Encodes the empirical finding from our
+#       LLM-judge eval: turns introducing more than ~1 new word at a time
+#       score lower on conversational naturalness (FSRS+New @ 1 new/turn
+#       scored 3.30 vs Random/IQL with broader directives scoring 2.25-2.65).
+#       naturalness_t = -NATURALNESS_ALPHA * max(0, n_new - 1)^2
+#       This biases the policy toward steady pacing without needing the LLM
+#       in the training loop.
+#
+#   (c) RETENTION BONUS at session boundaries — at each session end, bonus
+#       proportional to the fraction of words STILL above the retention
+#       threshold (R > 0.5) after the inter-session gap. Captures the proposal's
+#       intended "long-term retention" reward: words that survive the gap are
+#       what we actually want. This term explicitly punishes "introduce a
+#       word once and never review" (those words decay below threshold during
+#       the gap and don't earn the bonus).
+#       retention_t = RETENTION_LAMBDA * (# words with R > RETENTION_THRESHOLD) / N_WORDS
+#                     at session boundaries only, 0 otherwise.
+#
+# Set NATURALNESS_ALPHA=0 to ablate (b); RETENTION_LAMBDA=0 to ablate (c).
+# Defaults reproduce the v3 reward; set both to 0 to recover v1.
+
+REWARD_NORMALIZER = 1.0
+# Tuned empirically so that (2,0,3) beats (1,0,4) (2.7 vs 1.9 return) but
+# (3,0,2) and (5,0,0) get pushed below FSRS+New. Lets the policy adapt
+# aggression mildly without devolving to "spray new words everywhere."
+NATURALNESS_ALPHA_DEFAULT = 0.01
+RETENTION_LAMBDA_DEFAULT = 1.0
+RETENTION_THRESHOLD = 0.5
 
 
 def _build_action_table() -> list[tuple[int, int, int]]:
@@ -82,13 +111,17 @@ class VocabEnv:
 
     def __init__(self, seed: int = 0, n_sessions: int = 10,
                  turns_per_session: int = 20, days_between: float = 1.0,
-                 sim_kwargs: dict | None = None) -> None:
+                 sim_kwargs: dict | None = None,
+                 naturalness_alpha: float = NATURALNESS_ALPHA_DEFAULT,
+                 retention_lambda: float = RETENTION_LAMBDA_DEFAULT) -> None:
         self.seed = seed
         self.n_sessions = n_sessions
         self.turns_per_session = turns_per_session
         self.days_between = days_between
-        self.total_turns = n_sessions * turns_per_session
         self.sim_kwargs = sim_kwargs or {}
+        self.naturalness_alpha = naturalness_alpha
+        self.retention_lambda = retention_lambda
+        self.total_turns = n_sessions * turns_per_session
 
         self.sim = StudentSimulator(seed=seed, **self.sim_kwargs)
         self.n_words = self.sim.num_words()
@@ -114,19 +147,35 @@ class VocabEnv:
         self.sim.step(directive)
         self.turn += 1
 
-        # Reward BEFORE the inter-session time gap: that way we credit the
-        # current action with the recall mass it produced, not penalize it for
-        # the forgetting that the next session opens with.
+        # --- (a) COVERAGE: per-step delta total retrievability ------------
         new_total_R = self._total_retrievability()
-        reward = REWARD_NORMALIZER * (new_total_R - self._prev_total_R) / self.n_words
+        coverage = REWARD_NORMALIZER * (new_total_R - self._prev_total_R) / self.n_words
         self._prev_total_R = new_total_R
 
+        # --- (b) NATURALNESS PENALTY: squared excess of new words above 1 -
+        naturalness = -self.naturalness_alpha * max(0, n_new - 1) ** 2
+
+        # --- (c) RETENTION BONUS at session boundaries --------------------
         done = self.turn >= self.total_turns
-        if (self.turn % self.turns_per_session == 0) and not done:
-            self.sim.advance_time(self.days_between)
-            # Re-baseline so the inter-session decay doesn't show up as a
-            # negative reward attributed to the next turn's action.
-            self._prev_total_R = self._total_retrievability()
+        is_session_end = (self.turn % self.turns_per_session == 0)
+        retention_bonus = 0.0
+        if is_session_end:
+            if not done:
+                # Mid-session boundary: advance time, then measure post-gap
+                # retention. Re-baseline _prev_total_R so the next turn isn't
+                # charged for the inter-session decay.
+                self.sim.advance_time(self.days_between)
+                post_R = [w.retrievability(self.sim.now) for w in self.sim.words]
+                self._prev_total_R = sum(post_R)
+            else:
+                # Final step: measure right-now retention (no time advance —
+                # the post-rollout eval handles the 7-day-after measurement).
+                post_R = [w.retrievability(self.sim.now) for w in self.sim.words]
+            retention_bonus = (self.retention_lambda
+                               * sum(1 for r in post_R if r > RETENTION_THRESHOLD)
+                               / self.n_words)
+
+        reward = coverage + naturalness + retention_bonus
 
         m = self.sim.metrics()
         return self._obs(), reward, done, StepInfo(
