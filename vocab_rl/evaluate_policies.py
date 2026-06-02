@@ -241,6 +241,19 @@ def main() -> None:
 
         behaviors.append(("CQL (ours)", cql_fn))
 
+    ppo_path = os.path.join(here, "ppo_policy.pt")
+    if os.path.exists(ppo_path):
+        import torch
+        from ppo import load as load_ppo, act_deterministic, PPOConfig  # noqa: F401
+        ppo_model = load_ppo(ppo_path)
+        ppo_device = torch.device("cpu")
+        print(f"Loaded PPO policy from {ppo_path}")
+
+        def ppo_fn(state, rng):
+            return act_deterministic(ppo_model, state, ppo_device)
+
+        behaviors.append(("PPO (online)", ppo_fn))
+
     if args.with_llm_policy:
         from llm.llm_policy import LLMPolicy
         behaviors.append(("LLMPrompted", LLMPolicy(turns_per_session=env_probe.turns_per_session)))

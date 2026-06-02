@@ -247,16 +247,20 @@ def act_deterministic(model: ActorCritic, state: np.ndarray,
 
 def save(model: ActorCritic, path: str, cfg: PPOConfig,
          state_dim: int, num_actions: int) -> None:
-    torch.save({"model": model.state_dict(), "cfg": cfg,
-                "state_dim": state_dim, "num_actions": num_actions}, path)
+    # Save cfg as a plain dict so reloading doesn't depend on the PPOConfig
+    # class being available in the loading module's __main__ namespace.
+    torch.save({"model": model.state_dict(),
+                "hidden": list(cfg.hidden),
+                "state_dim": state_dim,
+                "num_actions": num_actions}, path)
 
 
 def load(path: str, device: torch.device | None = None) -> ActorCritic:
     dev = device or torch.device("cpu")
     ckpt = torch.load(path, map_location=dev, weights_only=False)
-    cfg: PPOConfig = ckpt["cfg"]
+    hidden = tuple(ckpt.get("hidden", (256, 256)))
     model = ActorCritic(ckpt["state_dim"], ckpt["num_actions"],
-                        hidden=cfg.hidden).to(dev)
+                        hidden=hidden).to(dev)
     model.load_state_dict(ckpt["model"])
     return model
 
