@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Training artifacts (regenerable, large)
+dataset.npz
+smoke.npz
+*.pt
+iql_policy.pt
+cql_policy.pt
+smoke_policy.pt
+
+# Generated plots
+*.png
+
+# LLM eval outputs (contain conversations + may include API responses)
+llm_eval_results/
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.bbl
+report/*.blg
+report/*.fdb_latexmk
+report/*.fls
+report/*.synctex.gz
+report/*.toc
+report/_minted-*/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+*.swp

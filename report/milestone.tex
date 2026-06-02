@@ -1,0 +1,72 @@
+% CS224R Milestone Report — Onyinyechi Okoye
+\documentclass{article}
+
+\usepackage[preprint]{cs224r_2026}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{CS224R Milestone Report}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\renewcommand{\maketitle}{
+  \begin{center}
+    {\bf \large Offline RL for Adaptive Vocabulary Selection in Conversational Language Tutoring}\\
+    \vspace{0.1cm}
+    {\bf Team Members:} Onyinyechi Okoye\\
+    \vspace{0.1cm}
+    {\bf Emails:} onyie@stanford.edu\\
+    \vspace{0.2cm}
+  \end{center}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Experiments}
+\textbf{Setup.} We completed Phase~1: a knowledge-tracing student simulator, four baseline policies, and a multi-seed evaluation harness. The simulator models 51 Japanese vocabulary words across JLPT levels~N5--N3. Each word has stability $S$, difficulty $d\!\in\![0,10]$, and an FSRS-style retrievability $R(t)\!=\!(1+t/(9S))^{-1}$ with $t$ in days since last exposure~\cite{fsrs}. On a successful Bernoulli recall, stability grows by a difficulty-modulated factor; on failure it resets; first exposures seed $S_0\!=\!0.5$. Time advances $\sim$2 min per turn and 1 day between sessions. Baselines: \textbf{Random} (5 random words/turn), \textbf{FSRS} (5 most-due seen words; only introduces if $<\!5$ are due), \textbf{FSRS+New} (1 new + 4 most-due), and a \textbf{RuleBased} 95\%/5\% review/introduce heuristic. Each ran for 10 sessions $\times$ 20 turns over 5 seeds.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.92\linewidth]{../vocab_rl/per_word_retention.png}
+  \vspace{-1.0em}
+  \caption{Per-word retrievability over 200 turns under each baseline (mean across 5 seeds). Rows are words sorted by JLPT level (N5 at bottom, N3 at top); columns are turns; bright cells indicate high recall probability. FSRS and RuleBased fail to ever reach N4/N3 words; FSRS+New saturates by turn $\sim$50; Random covers everything but with large session-boundary drops.}
+  \label{fig:results}
+\end{figure}
+
+\textbf{Initial Results.} Final-turn acquired words ($R\!>\!0.9$, mean over seeds): FSRS+New $51.0$, Random $50.2$, RuleBased $15.8$, FSRS $5.0$. Acquisition curves show clear sawtooth dips at session boundaries, confirming the forgetting curve is active. \textbf{Results matched expectations}: the ordering FSRS+New\,$\ge$\,Random\,$>$\,RuleBased\,$\gg$\,FSRS is exactly what FSRS theory predicts---pure FSRS plateaus because once five items are seen it never re-enters the new-word branch; RuleBased introduces too slowly to cover the inventory. Figure~\ref{fig:results} makes the qualitative gap visible: no fixed heuristic both \emph{introduces broadly} and \emph{adapts pacing to difficulty}, directly motivating the learned policy proposed for Phase~2.
+
+\section{Changes to Research Hypothesis or Objective}
+\textbf{No change to the core hypothesis} that a learned offline RL policy will outperform fixed spaced-repetition heuristics by discovering adaptive, learner-state-aware pacing. The baseline sweep strengthens its motivation: the observed failure modes of fixed heuristics are precisely what we anticipated, and the heatmap reveals a clear gap a learned policy can plausibly close. Two minor scoping refinements: (i)~vocabulary swapped from Spanish to Japanese for convenience; (ii)~final evaluation will additionally report retention measured \emph{after} a multi-day gap, since the $R\!>\!0.9$ threshold is generous for freshly-exposed words.
+
+\section{Next Steps}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{MDP wrapper \& offline dataset (5/26):} Gym-style interface, fixed-dim state featurization, structured directive action space (counts of new/active/review + emphasized word), and $\sim$1k baseline trajectories per policy.
+    \item \textbf{Policy training (6/1):} feature-based MLP trained with IQL~\cite{iql} on the offline buffer; CQL~\cite{cql} as a secondary comparison.
+    \item \textbf{Evaluation (6/1):} acquisition and post-gap retention curves; ablation on held-out simulator parameterizations (varied forgetting rates and difficulty) for robustness.
+\end{enumerate}
+
+\textbf{Potential Challenges.} The chief risk is simulator overfitting; we mitigate by training on one parameterization and evaluating on held-out ones with stochastic noise in learner recall.
+
+\section{Team Contributions}
+Solo project. Onyinyechi Okoye is responsible for all work to date and all planned remaining work; no changes from the proposal.
+
+\textbf{AI Tools Disclosure.} Claude (Anthropic) was used to scaffold the simulator, baselines, and plotting code, and to draft report boilerplate; all algorithmic and modeling choices were specified and reviewed by the author. IQL/CQL training code in Phase~2 will be written independently per course policy.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{reference}
+
+\end{document}
