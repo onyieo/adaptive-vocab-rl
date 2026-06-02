@@ -33,11 +33,13 @@ from iql import IQLConfig, IQLTrainer
 N_SEEDS = 5
 
 VARIANTS: list[tuple[str, dict]] = [
-    ("default",        {}),
-    ("fast_forget",    {"forgetting_constant": 5.0}),
-    ("slow_forget",    {"forgetting_constant": 15.0}),
-    ("harder_words",   {"difficulty_scale": 1.3}),
-    ("easier_words",   {"difficulty_scale": 0.7}),
+    ("default",        {}),                                          # in-distribution baseline
+    ("fast_forget",    {"forgetting_constant": 5.0}),                # extrapolates below train range (7-12)
+    ("slow_forget",    {"forgetting_constant": 15.0}),               # extrapolates above train range
+    ("harder_words",   {"difficulty_scale": 1.3}),                   # extrapolates above (train: 0.85-1.15)
+    ("easier_words",   {"difficulty_scale": 0.7}),                   # extrapolates below
+    ("combo_ood",      {"forgetting_constant": 5.0,
+                        "difficulty_scale": 1.3}),                   # joint OOD — worst case
 ]
 
 

@@ -23,8 +23,18 @@ WORDS_PER_TURN = 5
 # words with stability >= this are considered "review" (well-learned);
 # 0 < stability < this are "active" (still being learned).
 ACTIVE_STABILITY_THRESHOLD = 2.0
-SHAPING_COEF = 0.01      # weight on per-step delta-acquired
-TERMINAL_COEF = 1.0      # weight on terminal mean retrievability
+
+# Reward = per-step change in total retrievability across the FULL vocabulary
+# (including unseen words, which contribute 0). This rewards both introducing
+# new words and retaining them; it does not reward keeping the seen set small.
+#
+# r_t = (sum_R_all_words_after - sum_R_all_words_before) / N_WORDS
+#
+# So r_t ∈ roughly [-1, 1] per step, and the un-discounted episode return is
+# (final_total_R - initial_total_R) / N_WORDS ∈ [0, 1] — directly interpretable
+# as "fraction of perfect-recall mass acquired this episode."
+REWARD_NORMALIZER = 1.0  # multiplier on the per-step delta (already normalized
+                         # by N_WORDS; this is just a knob to scale to taste)
 
 
 def _build_action_table() -> list[tuple[int, int, int]]:
@@ -86,7 +96,7 @@ class VocabEnv:
         self.action_dim = NUM_ACTIONS
 
         self.turn = 0
-        self._prev_acquired = 0
+        self._prev_total_R = 0.0
 
     # ---- core API ---------------------------------------------------------
 
@@ -95,7 +105,7 @@ class VocabEnv:
             self.seed = seed
         self.sim = StudentSimulator(seed=self.seed, **self.sim_kwargs)
         self.turn = 0
-        self._prev_acquired = 0
+        self._prev_total_R = self._total_retrievability()
         return self._obs()
 
     def step(self, action: int) -> tuple[np.ndarray, float, bool, StepInfo]:
@@ -104,24 +114,27 @@ class VocabEnv:
         self.sim.step(directive)
         self.turn += 1
 
-        m = self.sim.metrics()
-        delta = m["acquired"] - self._prev_acquired
-        self._prev_acquired = m["acquired"]
+        # Reward BEFORE the inter-session time gap: that way we credit the
+        # current action with the recall mass it produced, not penalize it for
+        # the forgetting that the next session opens with.
+        new_total_R = self._total_retrievability()
+        reward = REWARD_NORMALIZER * (new_total_R - self._prev_total_R) / self.n_words
+        self._prev_total_R = new_total_R
 
         done = self.turn >= self.total_turns
-
-        # advance time across session boundary (after the last turn of a session,
-        # before the first turn of the next).
         if (self.turn % self.turns_per_session == 0) and not done:
             self.sim.advance_time(self.days_between)
+            # Re-baseline so the inter-session decay doesn't show up as a
+            # negative reward attributed to the next turn's action.
+            self._prev_total_R = self._total_retrievability()
 
-        reward = SHAPING_COEF * float(delta)
-        if done:
-            reward += TERMINAL_COEF * float(m["avg_retrievability"])
-
+        m = self.sim.metrics()
         return self._obs(), reward, done, StepInfo(
             acquired=m["acquired"], avg_retrievability=m["avg_retrievability"]
         )
+
+    def _total_retrievability(self) -> float:
+        return sum(w.retrievability(self.sim.now) for w in self.sim.words)
 
     # ---- helpers ----------------------------------------------------------
 

@@ -7,15 +7,38 @@ where t is elapsed time (in days) since last exposure and S is stability.
 
 from __future__ import annotations
 
+import json
+import os
 from dataclasses import dataclass, field
 from typing import Sequence
 
 import numpy as np
 
 
-# A small fixed vocabulary of ~50 Japanese words across JLPT N5/N4/N3.
-# (word, reading, gloss, jlpt_level)
-VOCAB: list[tuple[str, str, str, str]] = [
+def _load_vocab_from_json() -> list[tuple[str, str, str, str]] | None:
+    """Load the generated vocab.json if present. Returns None if missing
+    or malformed (in which case we fall back to the embedded 51-word default)."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(here, "vocab.json")
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            entries = json.load(f)
+        out = []
+        for e in entries:
+            out.append((e["surface"], e["reading"], e["gloss"], e["jlpt"]))
+        return out
+    except Exception as exc:
+        print(f"[simulator] vocab.json present but unreadable ({exc}); "
+              f"falling back to embedded default")
+        return None
+
+
+# Embedded fallback (51 words) — used when vocab.json is absent.
+# Run generate_vocab.py to produce the larger ~500-word list described in
+# the proposal.
+_EMBEDDED_VOCAB: list[tuple[str, str, str, str]] = [
     # N5 (easiest)
     ("水", "みず", "water", "N5"),
     ("火", "ひ", "fire", "N5"),
@@ -71,6 +94,10 @@ VOCAB: list[tuple[str, str, str, str]] = [
     ("懸念", "けねん", "concern", "N3"),
     ("緻密", "ちみつ", "elaborate", "N3"),
 ]
+
+
+# Public symbol used elsewhere. Prefer the JSON file when available.
+VOCAB: list[tuple[str, str, str, str]] = _load_vocab_from_json() or _EMBEDDED_VOCAB
 
 
 LEVEL_DIFFICULTY = {"N5": 2.5, "N4": 5.0, "N3": 7.5}

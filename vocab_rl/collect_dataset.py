@@ -23,7 +23,22 @@ from baseline_actions import ALL_BEHAVIOR_POLICIES
 from env import VocabEnv
 
 
-def collect(n_traj_per_policy: int, out_path: str, seed_start: int = 0) -> None:
+# Training-time simulator parameterizations. The default is included so the
+# mixed buffer always contains some "canonical" trajectories; the rest are
+# perturbations of forgetting rate and difficulty distribution. We deliberately
+# hold a "harder_words" + "fast_forget" combination OUT of training so the
+# robustness eval has a true out-of-distribution test.
+TRAINING_SIM_VARIANTS: list[dict] = [
+    {},  # default: forgetting=9.0, difficulty_scale=1.0
+    {"forgetting_constant": 7.0},
+    {"forgetting_constant": 12.0},
+    {"difficulty_scale": 0.85},
+    {"difficulty_scale": 1.15},
+]
+
+
+def collect(n_traj_per_policy: int, out_path: str, seed_start: int = 0,
+            multi_sim: bool = False) -> None:
     policies = [cls() for cls in ALL_BEHAVIOR_POLICIES]
     n_policies = len(policies)
 
@@ -38,12 +53,21 @@ def collect(n_traj_per_policy: int, out_path: str, seed_start: int = 0) -> None:
     next_states = np.zeros((total, state_dim), dtype=np.float32)
     dones = np.zeros(total, dtype=bool)
     policy_id = np.zeros(total, dtype=np.int8)
+    sim_variant = np.zeros(total, dtype=np.int8)
+
+    variants = TRAINING_SIM_VARIANTS if multi_sim else [{}]
+    if multi_sim:
+        print(f"Multi-sim training: cycling through {len(variants)} variants "
+              f"(default, fast/slow forgetting, harder/easier words). "
+              f"Held-out test variants in robustness_eval.")
 
     idx = 0
     seed = seed_start
     for pid, policy in enumerate(policies):
         for k in range(n_traj_per_policy):
-            env = VocabEnv(seed=seed)
+            variant_idx = k % len(variants) if multi_sim else 0
+            kwargs = variants[variant_idx]
+            env = VocabEnv(seed=seed, sim_kwargs=kwargs)
             rng = np.random.default_rng(seed + 1_000_000)
             s = env.reset()
             for _ in range(steps_per_traj):
@@ -55,6 +79,7 @@ def collect(n_traj_per_policy: int, out_path: str, seed_start: int = 0) -> None:
                 next_states[idx] = s2
                 dones[idx] = done
                 policy_id[idx] = pid
+                sim_variant[idx] = variant_idx
                 idx += 1
                 s = s2
                 if done:
@@ -70,7 +95,9 @@ def collect(n_traj_per_policy: int, out_path: str, seed_start: int = 0) -> None:
         out_path,
         states=states, actions=actions, rewards=rewards,
         next_states=next_states, dones=dones, policy_id=policy_id,
+        sim_variant=sim_variant,
         policy_names=np.array([p.name for p in policies]),
+        variants=np.array([str(v) for v in variants]),
     )
     print(f"\nsaved {total} transitions to {out_path} "
           f"({os.path.getsize(out_path) / 1e6:.1f} MB)")
@@ -84,13 +111,16 @@ def main() -> None:
                         help="trajectories per behavior policy")
     parser.add_argument("--out", default="dataset.npz")
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--multi-sim", action="store_true",
+                        help="Cycle through multiple simulator parameterizations "
+                             "during training-data collection (Phase A robustness goal).")
     args = parser.parse_args()
 
     here = os.path.dirname(os.path.abspath(__file__))
     out = args.out if os.path.isabs(args.out) else os.path.join(here, args.out)
     print(f"Collecting {args.n} trajectories x {len(ALL_BEHAVIOR_POLICIES)} "
-          f"policies (seed_start={args.seed})")
-    collect(args.n, out, seed_start=args.seed)
+          f"policies (seed_start={args.seed}, multi_sim={args.multi_sim})")
+    collect(args.n, out, seed_start=args.seed, multi_sim=args.multi_sim)
 
 
 if __name__ == "__main__":
