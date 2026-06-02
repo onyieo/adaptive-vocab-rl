@@ -2,3 +2,4 @@ numpy
 matplotlib
 torch
 anthropic
+python-dotenv

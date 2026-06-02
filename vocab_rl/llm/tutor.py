@@ -16,7 +16,8 @@ import anthropic
 # Allow importing simulator.VOCAB when run from anywhere.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from simulator import VOCAB  # noqa: E402
+from simulator import VOCAB                # noqa: E402
+from llm._env import require_api_key       # noqa: E402
 
 
 TUTOR_MODEL = "claude-sonnet-4-6"
@@ -52,6 +53,7 @@ class Tutor:
     LLM can build coherent dialogue across turns."""
 
     def __init__(self, model: str = TUTOR_MODEL) -> None:
+        require_api_key()
         self.client = anthropic.Anthropic()
         self.model = model
         self.history: list[dict] = []

@@ -7,8 +7,13 @@ and cached. Output is constrained to a small JSON schema so parsing is reliable.
 from __future__ import annotations
 
 import json
+import sys
+from pathlib import Path
 
 import anthropic
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from llm._env import require_api_key  # noqa: E402
 
 
 JUDGE_MODEL = "claude-haiku-4-5"
@@ -41,6 +46,7 @@ SCHEMA = {
 
 class Judge:
     def __init__(self, model: str = JUDGE_MODEL) -> None:
+        require_api_key()
         self.client = anthropic.Anthropic()
         self.model = model
 

@@ -24,6 +24,8 @@ from collections import Counter
 
 import anthropic
 
+from llm._env import require_api_key
+
 
 MODEL = "claude-sonnet-4-6"
 BATCH_SIZE = 100  # words per API call
@@ -129,6 +131,7 @@ def main() -> None:
                for lvl, frac in LEVEL_SPLIT.items()}
     print(f"target: {targets}")
 
+    require_api_key()
     client = anthropic.Anthropic()
     all_entries: list[dict] = []
     avoid: set[str] = set()

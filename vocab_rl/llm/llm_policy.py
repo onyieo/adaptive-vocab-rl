@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from env import ACTION_TABLE, WORDS_PER_TURN  # noqa: E402
 from simulator import VOCAB                   # noqa: E402
+from llm._env import require_api_key          # noqa: E402
 
 
 LLM_POLICY_MODEL = "claude-haiku-4-5"
@@ -92,6 +93,7 @@ class LLMPolicy:
 
     def __init__(self, model: str = LLM_POLICY_MODEL,
                  turns_per_session: int = 20) -> None:
+        require_api_key()
         self.client = anthropic.Anthropic()
         self.model = model
         self.turns_per_session = turns_per_session

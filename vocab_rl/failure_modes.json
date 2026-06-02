@@ -1,0 +1,331 @@
+{
+  "n_steps": 1000,
+  "rollouts": 5,
+  "mean_confidence": 0.004672508969902992,
+  "fraction_agrees_FSRS_plus_New": 0.104,
+  "action_distribution": {
+    "(0, 0, 5)": 142,
+    "(0, 1, 4)": 0,
+    "(0, 2, 3)": 4,
+    "(0, 3, 2)": 5,
+    "(0, 4, 1)": 8,
+    "(0, 5, 0)": 146,
+    "(1, 0, 4)": 104,
+    "(1, 1, 3)": 22,
+    "(1, 2, 2)": 208,
+    "(1, 3, 1)": 0,
+    "(1, 4, 0)": 270,
+    "(2, 0, 3)": 0,
+    "(2, 1, 2)": 0,
+    "(2, 2, 1)": 0,
+    "(2, 3, 0)": 18,
+    "(3, 0, 2)": 0,
+    "(3, 1, 1)": 0,
+    "(3, 2, 0)": 0,
+    "(4, 0, 1)": 1,
+    "(4, 1, 0)": 1,
+    "(5, 0, 0)": 71
+  },
+  "least_decisive_topk": [
+    {
+      "seed": 4,
+      "step": 33,
+      "turn_in_session": 13,
+      "session": 1,
+      "action": 14,
+      "action_tuple": [
+        2,
+        3,
+        0
+      ],
+      "q_chosen": 0.5692999362945557,
+      "q_best": 0.5692999362945557,
+      "q_min": 0.560748815536499,
+      "q_argmin": 18,
+      "confidence": 5.960464477539062e-07,
+      "regret_from_second": 5.960464477539062e-07,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 33,
+        "turn_in_session": 13,
+        "session": 1,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9979949516586518,
+        "mean_stability_seen": 1.5394209168185589,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 1,
+      "step": 128,
+      "turn_in_session": 8,
+      "session": 6,
+      "action": 10,
+      "action_tuple": [
+        1,
+        4,
+        0
+      ],
+      "q_chosen": 0.3801273703575134,
+      "q_best": 0.3801273703575134,
+      "q_min": 0.3671625256538391,
+      "q_argmin": 19,
+      "confidence": 1.2516975402832031e-06,
+      "regret_from_second": 1.2516975402832031e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 128,
+        "turn_in_session": 8,
+        "session": 6,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9787811850110941,
+        "mean_stability_seen": 114842609899.98859,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 2,
+      "step": 115,
+      "turn_in_session": 15,
+      "session": 5,
+      "action": 8,
+      "action_tuple": [
+        1,
+        2,
+        2
+      ],
+      "q_chosen": 0.3367932140827179,
+      "q_best": 0.3367932140827179,
+      "q_min": 0.32496142387390137,
+      "q_argmin": 0,
+      "confidence": 1.8775463104248047e-06,
+      "regret_from_second": 1.8775463104248047e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 115,
+        "turn_in_session": 15,
+        "session": 5,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9994526363314569,
+        "mean_stability_seen": 106029474.23115437,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 0,
+      "step": 176,
+      "turn_in_session": 16,
+      "session": 8,
+      "action": 7,
+      "action_tuple": [
+        1,
+        1,
+        3
+      ],
+      "q_chosen": 0.11848726123571396,
+      "q_best": 0.11848726123571396,
+      "q_min": 0.0636441558599472,
+      "q_argmin": 2,
+      "confidence": 2.0489096641540527e-06,
+      "regret_from_second": 2.0489096641540527e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 176,
+        "turn_in_session": 16,
+        "session": 8,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9998363353605211,
+        "mean_stability_seen": 1008.3456159380888,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 4,
+      "step": 37,
+      "turn_in_session": 17,
+      "session": 1,
+      "action": 8,
+      "action_tuple": [
+        1,
+        2,
+        2
+      ],
+      "q_chosen": 0.5709813237190247,
+      "q_best": 0.5709813237190247,
+      "q_min": 0.5596877932548523,
+      "q_argmin": 6,
+      "confidence": 3.159046173095703e-06,
+      "regret_from_second": 3.159046173095703e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 37,
+        "turn_in_session": 17,
+        "session": 1,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9981471521133211,
+        "mean_stability_seen": 2.5254965212870415,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 2,
+      "step": 114,
+      "turn_in_session": 14,
+      "session": 5,
+      "action": 10,
+      "action_tuple": [
+        1,
+        4,
+        0
+      ],
+      "q_chosen": 0.339834600687027,
+      "q_best": 0.339834600687027,
+      "q_min": 0.327506959438324,
+      "q_argmin": 0,
+      "confidence": 3.7848949432373047e-06,
+      "regret_from_second": 3.7848949432373047e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 114,
+        "turn_in_session": 14,
+        "session": 5,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9994523774268548,
+        "mean_stability_seen": 106029474.19788463,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 4,
+      "step": 129,
+      "turn_in_session": 9,
+      "session": 6,
+      "action": 10,
+      "action_tuple": [
+        1,
+        4,
+        0
+      ],
+      "q_chosen": 0.25734883546829224,
+      "q_best": 0.25734883546829224,
+      "q_min": 0.24232009053230286,
+      "q_argmin": 15,
+      "confidence": 5.930662155151367e-06,
+      "regret_from_second": 5.930662155151367e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 129,
+        "turn_in_session": 9,
+        "session": 6,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9920261066742389,
+        "mean_stability_seen": 6812483.12929221,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 0,
+      "step": 105,
+      "turn_in_session": 5,
+      "session": 5,
+      "action": 0,
+      "action_tuple": [
+        0,
+        0,
+        5
+      ],
+      "q_chosen": 0.30252426862716675,
+      "q_best": 0.30252426862716675,
+      "q_min": 0.28761667013168335,
+      "q_argmin": 1,
+      "confidence": 6.616115570068359e-06,
+      "regret_from_second": 6.616115570068359e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 105,
+        "turn_in_session": 5,
+        "session": 5,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.969831401967762,
+        "mean_stability_seen": 243.7415983381516,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 2,
+      "step": 29,
+      "turn_in_session": 9,
+      "session": 1,
+      "action": 0,
+      "action_tuple": [
+        0,
+        0,
+        5
+      ],
+      "q_chosen": 0.6121605038642883,
+      "q_best": 0.6121605038642883,
+      "q_min": 0.5905973315238953,
+      "q_argmin": 1,
+      "confidence": 6.854534149169922e-06,
+      "regret_from_second": 6.854534149169922e-06,
+      "agrees_fsrs_plus_new": false,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 29,
+        "turn_in_session": 9,
+        "session": 1,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.8783646215428812,
+        "mean_stability_seen": 120.38782788066868,
+        "n_due_under_0.5": 0
+      }
+    },
+    {
+      "seed": 4,
+      "step": 54,
+      "turn_in_session": 14,
+      "session": 2,
+      "action": 6,
+      "action_tuple": [
+        1,
+        0,
+        4
+      ],
+      "q_chosen": 0.547788679599762,
+      "q_best": 0.547788679599762,
+      "q_min": 0.5359458923339844,
+      "q_argmin": 12,
+      "confidence": 1.2755393981933594e-05,
+      "regret_from_second": 1.2755393981933594e-05,
+      "agrees_fsrs_plus_new": true,
+      "fsrs_plus_new_action": 6,
+      "state_summary": {
+        "turn": 54,
+        "turn_in_session": 14,
+        "session": 2,
+        "n_seen": 51,
+        "n_unseen": 0,
+        "mean_R_seen": 0.9551900647405835,
+        "mean_stability_seen": 453.31590605373106,
+        "n_due_under_0.5": 0
+      }
+    }
+  ]
+}

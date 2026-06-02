@@ -35,6 +35,11 @@ report/*.synctex.gz
 report/*.toc
 report/_minted-*/
 
+# Secrets — never commit
+.env
+.env.local
+*.env
+
 # OS / editor
 .DS_Store
 .vscode/
