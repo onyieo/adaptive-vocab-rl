@@ -16,8 +16,9 @@ iql_policy.pt
 cql_policy.pt
 smoke_policy.pt
 
-# Generated plots
+# Generated plots (regenerable; PNGs we want for the writeup live in vocab_rl/results/)
 *.png
+!vocab_rl/results/*.png
 
 # LLM eval outputs (contain conversations + may include API responses)
 llm_eval_results/
