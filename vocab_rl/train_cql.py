@@ -21,14 +21,16 @@ def main() -> None:
     p.add_argument("--beta", type=float, default=3.0)
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--device", default=None)
+    p.add_argument("--reward-scale", type=float, default=1.0,
+                   help="Multiplier on rewards (try 100 at 500 words).")
     args = p.parse_args()
 
     here = os.path.dirname(os.path.abspath(__file__))
     data_path = args.data if os.path.isabs(args.data) else os.path.join(here, args.data)
     out_path  = args.out  if os.path.isabs(args.out)  else os.path.join(here, args.out)
 
-    print(f"Loading dataset from {data_path}")
-    buf = OfflineBuffer.from_npz(data_path)
+    print(f"Loading dataset from {data_path} (reward_scale={args.reward_scale})")
+    buf = OfflineBuffer.from_npz(data_path, reward_scale=args.reward_scale)
     state_dim = buf.states.shape[1]
     env = VocabEnv()
     assert env.state_dim == state_dim

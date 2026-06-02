@@ -23,14 +23,17 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--device", default=None,
                         help="cpu / cuda / mps (default: auto)")
+    parser.add_argument("--reward-scale", type=float, default=1.0,
+                        help="Multiplier applied to all rewards on load. "
+                             "Use ~100 at 500 words to escape AWR collapse.")
     args = parser.parse_args()
 
     here = os.path.dirname(os.path.abspath(__file__))
     data_path = args.data if os.path.isabs(args.data) else os.path.join(here, args.data)
     out_path = args.out if os.path.isabs(args.out) else os.path.join(here, args.out)
 
-    print(f"Loading dataset from {data_path}")
-    buf = OfflineBuffer.from_npz(data_path)
+    print(f"Loading dataset from {data_path} (reward_scale={args.reward_scale})")
+    buf = OfflineBuffer.from_npz(data_path, reward_scale=args.reward_scale)
     state_dim = buf.states.shape[1]
     print(f"  {len(buf)} transitions, state_dim={state_dim}, "
           f"num_actions={NUM_ACTIONS}")

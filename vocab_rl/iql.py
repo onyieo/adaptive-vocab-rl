@@ -111,12 +111,22 @@ class OfflineBuffer:
     dones: np.ndarray
 
     @classmethod
-    def from_npz(cls, path: str) -> "OfflineBuffer":
+    def from_npz(cls, path: str, reward_scale: float = 1.0) -> "OfflineBuffer":
+        """Load offline buffer. `reward_scale` multiplies all rewards on load
+        — useful when raw per-step rewards are tiny (e.g. ~0.005 with 500-word
+        vocab), which collapses IQL's AWR weights toward uniform. Scaling by
+        100 with beta=10 gives a much healthier advantage distribution.
+
+        IMPORTANT: scaling rewards also scales the Q-function. For CQL, the
+        conservative penalty's magnitude vs. Bellman loss changes with reward
+        scale, so retune alpha_cql when scaling (alpha ~ reward_scale^0 / Q^1
+        means alpha can stay roughly the same in relative terms, but try
+        smaller alpha if conservative penalty starts dominating)."""
         d = np.load(path, allow_pickle=True)
         return cls(
             states=d["states"].astype(np.float32),
             actions=d["actions"].astype(np.int64),
-            rewards=d["rewards"].astype(np.float32),
+            rewards=d["rewards"].astype(np.float32) * float(reward_scale),
             next_states=d["next_states"].astype(np.float32),
             dones=d["dones"].astype(bool),
         )

@@ -19,7 +19,8 @@ import os
 
 import numpy as np
 
-from baseline_actions import ALL_BEHAVIOR_POLICIES
+from baseline_actions import (ALL_BEHAVIOR_POLICIES,
+                              REBALANCED_BEHAVIOR_POLICIES)
 from env import VocabEnv
 
 
@@ -38,9 +39,13 @@ TRAINING_SIM_VARIANTS: list[dict] = [
 
 
 def collect(n_traj_per_policy: int, out_path: str, seed_start: int = 0,
-            multi_sim: bool = False) -> None:
-    policies = [cls() for cls in ALL_BEHAVIOR_POLICIES]
+            multi_sim: bool = False, rebalanced: bool = False) -> None:
+    pool = REBALANCED_BEHAVIOR_POLICIES if rebalanced else ALL_BEHAVIOR_POLICIES
+    policies = [cls() for cls in pool]
     n_policies = len(policies)
+    if rebalanced:
+        print("Using REBALANCED behavior mix (drops FSRS, RuleBased; "
+              "adds AggressiveIntro 2x).")
 
     env = VocabEnv()
     state_dim = env.state_dim
@@ -114,13 +119,22 @@ def main() -> None:
     parser.add_argument("--multi-sim", action="store_true",
                         help="Cycle through multiple simulator parameterizations "
                              "during training-data collection (Phase A robustness goal).")
+    parser.add_argument("--rebalanced", action="store_true",
+                        help="Use the REBALANCED behavior mix (drops FSRS/RuleBased; "
+                             "adds AggressiveIntro 2x). Yields a buffer biased toward "
+                             "high-quality scheduling — meant for the offline-vs-online "
+                             "push.")
     args = parser.parse_args()
 
     here = os.path.dirname(os.path.abspath(__file__))
     out = args.out if os.path.isabs(args.out) else os.path.join(here, args.out)
-    print(f"Collecting {args.n} trajectories x {len(ALL_BEHAVIOR_POLICIES)} "
-          f"policies (seed_start={args.seed}, multi_sim={args.multi_sim})")
-    collect(args.n, out, seed_start=args.seed, multi_sim=args.multi_sim)
+    n_pol = (len(REBALANCED_BEHAVIOR_POLICIES) if args.rebalanced
+             else len(ALL_BEHAVIOR_POLICIES))
+    print(f"Collecting {args.n} trajectories x {n_pol} policies "
+          f"(seed_start={args.seed}, multi_sim={args.multi_sim}, "
+          f"rebalanced={args.rebalanced})")
+    collect(args.n, out, seed_start=args.seed, multi_sim=args.multi_sim,
+            rebalanced=args.rebalanced)
 
 
 if __name__ == "__main__":

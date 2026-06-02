@@ -71,7 +71,30 @@ class MixedExploreAction:
         return int(rng.choice(self._indices))
 
 
+class AggressiveIntroAction:
+    """Heavy on new-word introductions. Samples uniformly from directives
+    that have n_new >= 2. Designed to compensate for the existing baselines
+    being review-heavy (FSRS, RuleBased, FSRS+New have n_new <= 1)."""
+    name = "AggressiveIntro"
+
+    def __init__(self) -> None:
+        self._indices = [_action_index(a, b, WORDS_PER_TURN - a - b)
+                         for a in range(2, WORDS_PER_TURN + 1)
+                         for b in range(0, WORDS_PER_TURN - a + 1)]
+
+    def __call__(self, state, rng: np.random.Generator) -> int:
+        return int(rng.choice(self._indices))
+
+
 ALL_BEHAVIOR_POLICIES = [
     RandomAction, FSRSAction, FSRSPlusNewAction, RuleBasedAction,
     MixedExploreAction,
+]
+
+# "Rebalanced" mix — drops FSRS (always 0,0,5 — clearly suboptimal at scale),
+# replaces RuleBased (95% review-only) with MixedExplore + AggressiveIntro
+# for more breadth. Yields a buffer biased toward higher-quality scheduling.
+REBALANCED_BEHAVIOR_POLICIES = [
+    RandomAction, FSRSPlusNewAction, MixedExploreAction,
+    AggressiveIntroAction, AggressiveIntroAction,  # double weight on aggressive intro
 ]
