@@ -1,0 +1,17 @@
+{
+  "IQL v1": {
+    "ret_mean": 13.1,
+    "ret_ci_lo": 9.098749999999999,
+    "ret_ci_hi": 17.35
+  },
+  "CQL v1": {
+    "ret_mean": 13.2,
+    "ret_ci_lo": 7.44875,
+    "ret_ci_hi": 22.25
+  },
+  "PPO v1": {
+    "ret_mean": 22.95,
+    "ret_ci_lo": 18.89875,
+    "ret_ci_hi": 26.9
+  }
+}

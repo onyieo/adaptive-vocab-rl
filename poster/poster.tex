@@ -183,6 +183,11 @@
     $$r_t = \underbrace{\Delta R_{\text{total}}/N}_{\text{coverage}}
             \;-\; \underbrace{\alpha \cdot \max(0, n_{\text{new}} - 1)^2}_{\text{naturalness penalty}}
             \;+\; \underbrace{\lambda \cdot \tfrac{\#\{R{>}0.5\}}{N}}_{\text{session-end retention bonus}}$$
+    \vspace{0.3cm}
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.85\colwidth]{../vocab_rl/results/reward_design_impact.png}
+    \end{figure}
   \end{alertblock}
 
   \begin{block}{Final Results (500 words, 20 eval seeds, 95\% CI)}

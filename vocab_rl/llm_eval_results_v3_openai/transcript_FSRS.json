@@ -1,0 +1,1166 @@
+{
+  "policy": "FSRS",
+  "seed": 0,
+  "turns": [
+    {
+      "turn": 0,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        159,
+        138,
+        12,
+        108,
+        69
+      ],
+      "words": [
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 159,
+      "text": "うちの祖母 (そぼ) [grandmother] はね、毎日駅 (えき) [train station] の近くの市場で新鮮な魚 (さかな) [fish] を買うんですよ — もう何十年も続けてる習慣なんです。妹 (いもうと) [younger sister] と一緒に行くと、帰りに靴 (くつ) [shoes] が泥だらけになっちゃうくらい歩くんですよね。あなたのおばあさんはどんな人ですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The target vocabulary is integrated seamlessly into a natural conversation about family and habits.",
+      "tutor_usage": {
+        "input_tokens": 132,
+        "output_tokens": 162,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    {
+      "turn": 1,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        12,
+        69,
+        108,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "へえ、素敵なおばあさんですね！そういえば、市場で魚を見て回るとき、私はいつも靴 (くつ) [shoes] 選びに気をつけるんです — 濡れた床で滑りやすいから、丈夫な靴が一番大事なんですよ。妹も祖母と駅で待ち合わせるとき、いつもそう言ってます。あなたはどんな靴をよく履きますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response includes the target vocabulary naturally, but the phrase about choosing shoes feels slightly forced within the context.",
+      "tutor_usage": {
+        "input_tokens": 132,
+        "output_tokens": 145,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 291
+      }
+    },
+    {
+      "turn": 2,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "スニーカーが好きなんですね！実は妹も同じで、駅まで歩くとき絶対スニーカーを履くって言ってます。祖母は「靴は足の健康に一番大切だ」ってよく言うんですよ — 魚を買いに行くときも、いい靴を履いていくんです。あなたの靴、何足くらい持ってますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation naturally flows, incorporating the target vocabulary in a coherent and relatable way.",
+      "tutor_usage": {
+        "input_tokens": 406,
+        "output_tokens": 124,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 291
+      }
+    },
+    {
+      "turn": 3,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "十足以上！すごいコレクションですね！妹は駅の近くに靴の店があって、そこでよく新しい靴を見てるんですよ。祖母は「靴はいくつあっても困らない」って笑いながら言うんですけど、魚を買いに行くときはいつも同じ古い靴を履いていくんです。お気に入りの一足はどんな靴ですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The response flows naturally, integrating vocabulary seamlessly while maintaining a conversational tone.",
+      "tutor_usage": {
+        "input_tokens": 385,
+        "output_tokens": 131,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 436
+      }
+    },
+    {
+      "turn": 4,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        159,
+        138
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "黒いシンプルな靴、使いやすそうですね！うちの妹はね、本当におしゃれにうるさくて、駅で祖母と待ち合わせるときでも必ずかわいい靴を履いてくるんですよ。魚を買いに市場に行くときでさえそうなんです — もう笑えますよね。あなたの妹さんや姉さんはいますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally and incorporates the target vocabulary seamlessly.",
+      "tutor_usage": {
+        "input_tokens": 392,
+        "output_tokens": 131,
+        "cache_read_input_tokens": 13638,
+        "cache_creation_input_tokens": 398
+      }
+    },
+    {
+      "turn": 5,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        159,
+        138
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "あ、一人っ子なんですね！実はうちの妹は三人姉妹の末っ子で、祖母にとても可愛がられてるんですよ。駅で一緒に降りて魚を買いに行くのも、いつも妹だけなんです — 靴が汚れても全然気にしないから、祖母のお気に入りなのかも。一人っ子って、やっぱり自由な感じがしますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The response flows naturally and connects smoothly with the previous turn, incorporating the target vocabulary in a conversational manner.",
+      "tutor_usage": {
+        "input_tokens": 392,
+        "output_tokens": 139,
+        "cache_read_input_tokens": 13912,
+        "cache_creation_input_tokens": 384
+      }
+    },
+    {
+      "turn": 6,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        159,
+        138
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "そうですよね、自由な反面ちょっと寂しいこともありますよね。うちの妹はよく祖母と駅で待ち合わせて、二人で魚屋さんをぶらぶらするんですよ — 靴をぺたぺた鳴らしながら歩く妹の様子が目に浮かびます。もし妹がいたら、一緒にどんなことをしてみたいですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The response feels natural and flows well, incorporating the target vocabulary seamlessly into the conversation.",
+      "tutor_usage": {
+        "input_tokens": 400,
+        "output_tokens": 135,
+        "cache_read_input_tokens": 14165,
+        "cache_creation_input_tokens": 391
+      }
+    },
+    {
+      "turn": 7,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "ショッピングいいですね！妹と一緒に靴を選ぶのって、すごく楽しそう！うちの妹も駅の近くのショッピングモールで靴を見るのが大好きで、祖母に魚を買ってもらいながらついでに靴屋さんに寄るんですよ。どんなブランドの靴に興味がありますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The turn flows naturally, integrating the vocabulary seamlessly into the conversation.",
+      "tutor_usage": {
+        "input_tokens": 396,
+        "output_tokens": 120,
+        "cache_read_input_tokens": 14425,
+        "cache_creation_input_tokens": 399
+      }
+    },
+    {
+      "turn": 8,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "ナイキ、いい選択ですね！妹も駅前のナイキの店でよく靴を見てますよ。祖母は「若い人の靴はどうしてそんなに高いの」って驚くんですけど、魚より靴のほうが大事な時期ってありますよね。靴を買うとき、デザインと履き心地、どちらを優先しますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The turn flows naturally, incorporates the target vocabulary seamlessly, and maintains an engaging conversation.",
+      "tutor_usage": {
+        "input_tokens": 381,
+        "output_tokens": 122,
+        "cache_read_input_tokens": 14685,
+        "cache_creation_input_tokens": 403
+      }
+    },
+    {
+      "turn": 9,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "両方大事にするなんて、さすがですね！妹は完全にデザイン派で、駅までの道で足が痛くなっても全然後悔しないんですよ。祖母は逆に履き心地一番派で、魚を買いに長時間歩いても疲れない靴しか買わないんです。靴を実際に買う前に、お店で試し履きしますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally, incorporating target vocabulary seamlessly and maintaining a casual tone.",
+      "tutor_usage": {
+        "input_tokens": 383,
+        "output_tokens": 124,
+        "cache_read_input_tokens": 14953,
+        "cache_creation_input_tokens": 384
+      }
+    },
+    {
+      "turn": 10,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "オンラインで買うのは便利だけど、靴はサイズが難しいですよね！妹はいつもオンラインで買って、サイズが合わなくて困ってます。祖母は「靴は必ず駅の近くのお店で試してから買いなさい」って言うんですよ — 魚と同じで、実際に見て選ぶのが一番だって。返品したことはありますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The turn flows naturally and effectively weaves in the target vocabulary while maintaining a conversational tone.",
+      "tutor_usage": {
+        "input_tokens": 385,
+        "output_tokens": 130,
+        "cache_read_input_tokens": 15217,
+        "cache_creation_input_tokens": 371
+      }
+    },
+    {
+      "turn": 11,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "返品したことないんですね、すごい！妹も「靴は縁だから、気に入ったら即買い！」ってよく言ってます。祖母は駅の近くに昔から通ってるお気に入りの靴屋さんがあって、そこで買えばサイズが絶対合うって信頼してるんですよ — 魚屋さんと同じ感覚ですね。あなたにも、ずっと通ってるお気に入りのお店がありますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally, with target vocabulary integrated seamlessly and contextual references enhancing the dialogue.",
+      "tutor_usage": {
+        "input_tokens": 391,
+        "output_tokens": 153,
+        "cache_read_input_tokens": 15466,
+        "cache_creation_input_tokens": 375
+      }
+    },
+    {
+      "turn": 12,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "カフェがお気に入りの場所なんですね、素敵！妹は駅の近くのカフェで靴の写真をよくインスタに載せてるんですよ — おしゃれですよね。祖母は「カフェより魚屋さんのほうが落ち着く」って言うんですけど、世代によって全然違いますね。そのカフェではいつも何を注文しますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response is mostly natural with a smooth flow, but the mention of shoes feels slightly forced into the café context.",
+      "tutor_usage": {
+        "input_tokens": 414,
+        "output_tokens": 128,
+        "cache_read_input_tokens": 15717,
+        "cache_creation_input_tokens": 383
+      }
+    },
+    {
+      "turn": 13,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "ラテいいですね、私も好きです！妹は駅前のカフェでラテを飲みながら、靴のネットショッピングをするのが週末の楽しみらしいんですよ。祖母には内緒で魚の代わりに靴を買っちゃったこともあるって言ってました — 笑えますよね。週末はどんなふうに過ごすことが多いですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The vocabulary flows naturally within the conversation, maintaining an engaging tone with organic use of the target words.",
+      "tutor_usage": {
+        "input_tokens": 389,
+        "output_tokens": 127,
+        "cache_read_input_tokens": 15970,
+        "cache_creation_input_tokens": 412
+      }
+    },
+    {
+      "turn": 14,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "週末はのんびり派なんですね、いいなあ！妹は逆に駅から駅へ歩き回って、靴が擦り切れるくらい活動的なんですよ。祖母と一緒に魚を食べながらゆっくり過ごす週末も、たまにはいいかもって妹も最近言ってます。のんびりするとき、一番好きな食べ物は何ですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The turn flows naturally and seamlessly incorporates the vocabulary while maintaining an engaging conversational tone.",
+      "tutor_usage": {
+        "input_tokens": 388,
+        "output_tokens": 133,
+        "cache_read_input_tokens": 16229,
+        "cache_creation_input_tokens": 410
+      }
+    },
+    {
+      "turn": 15,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "ピザいいですね！祖母は「やっぱり魚が一番」って言いそうですけど。妹は駅の近くにできた新しいピザ屋さんに行くとき、必ずおしゃれな靴を履いていくんですよ — 食べに行くだけなのに、気合い入れすぎですよね。ピザはどんなトッピングが好きですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The turn flows naturally while incorporating the target vocabulary seamlessly into the conversation.",
+      "tutor_usage": {
+        "input_tokens": 394,
+        "output_tokens": 125,
+        "cache_read_input_tokens": 16511,
+        "cache_creation_input_tokens": 384
+      }
+    },
+    {
+      "turn": 16,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "シーフードピザ、おいしそう！祖母も魚が好きだから、きっと喜びそうですね。妹は駅の近くのイタリアンレストランでシーフードピザを食べるとき、新しい靴をおろす口実にするんですよ — 「特別な日だから！」って言って。あなたは新しい靴をおろすとき、何か特別なタイミングを選びますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The turn flows naturally, with references to previous parts of the conversation and the target vocabulary integrated seamlessly.",
+      "tutor_usage": {
+        "input_tokens": 386,
+        "output_tokens": 134,
+        "cache_read_input_tokens": 16768,
+        "cache_creation_input_tokens": 389
+      }
+    },
+    {
+      "turn": 17,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "すぐ履くタイプなんですね、わかります！新しい靴はやっぱり早く履きたいですよね。妹は買った靴をそのまま駅のトイレで履き替えて、古い靴を袋に入れて帰るんですよ — 祖母に見せたくて、魚を買って帰る途中で寄ったりして。あなたは靴を買ったら、誰かに見せたくなりますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The conversation flows well, but the inclusion of vocabulary feels slightly forced in places.",
+      "tutor_usage": {
+        "input_tokens": 395,
+        "output_tokens": 140,
+        "cache_read_input_tokens": 17024,
+        "cache_creation_input_tokens": 387
+      }
+    },
+    {
+      "turn": 18,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "友達に見せるんですね、わかる！妹も新しい靴を買ったら、まず友達に写真を送るんですよ。でも祖母だけは実際に会って見せないと納得しないらしくて、わざわざ駅まで歩いて見せに行くんです — 魚のついでに靴自慢もしちゃうんですよね。あなたはSNSに靴の写真を載せたりしますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation feels natural and the target vocabulary is integrated seamlessly, maintaining a fluid dialogue.",
+      "tutor_usage": {
+        "input_tokens": 401,
+        "output_tokens": 139,
+        "cache_read_input_tokens": 17286,
+        "cache_creation_input_tokens": 388
+      }
+    },
+    {
+      "turn": 19,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        138,
+        69,
+        108,
+        12,
+        159
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "SNSはあまり使わない派なんですね！妹は逆に靴の写真ばかり投稿してて、祖母が「魚の写真も撮ってよ」って拗ねてるんですよ。駅のホームで撮った靴の写真がいちばんいいねが多かったって自慢してました。あなたはSNSより直接会って話すほうが好きですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally, incorporating target vocabulary seamlessly with relatable content.",
+      "tutor_usage": {
+        "input_tokens": 400,
+        "output_tokens": 124,
+        "cache_read_input_tokens": 17540,
+        "cache_creation_input_tokens": 403
+      }
+    }
+  ]
+}

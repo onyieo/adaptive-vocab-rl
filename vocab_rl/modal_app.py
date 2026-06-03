@@ -43,12 +43,16 @@ image = (
 app = modal.App("adaptive-vocab-rl", image=image)
 
 
+_models_volume = modal.Volume.from_name("vocab-rl-models")
+
+
 @app.function(
     timeout=60 * 60,
     cpu=4,
     memory=8192,
     secrets=[modal.Secret.from_name("wandb"),
              modal.Secret.from_name("llm-keys")],
+    volumes={"/models": _models_volume},
 )
 def train_and_eval_one(config: dict) -> dict:
     """Train ONE config and return eval metrics.
@@ -71,6 +75,7 @@ def train_and_eval_one(config: dict) -> dict:
       run_name        str
     """
     sys.path.insert(0, "/vocab_rl")
+    import os
     import time
     import numpy as np
     import torch
@@ -103,9 +108,29 @@ def train_and_eval_one(config: dict) -> dict:
     wandb.log({"setup/collect_secs": time.monotonic() - t0})
 
     # ---- 2. (optional) distill from a pre-trained PPO ----------------
-    # Skipped on Modal — PPO checkpoint isn't available remotely. The
-    # rebalanced+multi-sim buffer alone should be enough; if distillation
-    # turns out to matter we can add a volume-based PPO upload later.
+    if config.get("distill_ppo") and os.path.exists("/models/ppo_v3.pt"):
+        from distill_ppo import collect_ppo_trajectories
+        n_distill = config.get("distill_n", 100)
+        print(f"Distilling {n_distill} PPO trajectories from /models/ppo_v3.pt")
+        new = collect_ppo_trajectories("/models/ppo_v3.pt", n_distill,
+                                       seed_start=9000 + config["seed"] * 1000,
+                                       multi_sim=True)
+        existing = dict(np.load(data_path, allow_pickle=True))
+        merged = {}
+        for k in ("states", "actions", "rewards", "next_states", "dones"):
+            merged[k] = np.concatenate([existing[k], new[k]], axis=0)
+        if "policy_id" in existing:
+            new_pid = np.full(len(new["actions"]), 99, dtype=np.int8)
+            merged["policy_id"] = np.concatenate(
+                [existing["policy_id"], new_pid], axis=0)
+        if "policy_names" in existing:
+            names = list(existing["policy_names"])
+            if "PPODistilled" not in names:
+                names.append("PPODistilled")
+            merged["policy_names"] = np.array(names)
+        np.savez_compressed(data_path, **merged)
+        wandb.log({"setup/distilled_n": n_distill,
+                   "setup/distilled_transitions": len(new["actions"])})
 
     # ---- 3. train -----------------------------------------------------
     t0 = time.monotonic()
@@ -260,6 +285,46 @@ def _build_sweep_configs() -> list[dict]:
         ))
 
     return configs
+
+
+@app.local_entrypoint()
+def multi_seed():
+    """Train multiple seeds of the best v3 configs with PPO distillation +
+    full buffer + 100k steps. Tightens CIs on the headline numbers.
+
+    15 runs: 5 seeds x (CQL default, IQL beta=3, IQL beta=10).
+    Each ~15-25 min, parallel = ~25 min wall-clock.
+    """
+    seeds = list(range(5))
+    configs = []
+    for seed in seeds:
+        configs.append(_make_cfg(
+            algo="cql", seed=seed,
+            n_steps=100_000, n_traj=200,
+            distill_ppo=True, distill_n=100,
+            run_name=f"FINAL_cql_alpha1_seed{seed}",
+        ))
+        configs.append(_make_cfg(
+            algo="iql", seed=seed, beta=3.0,
+            n_steps=100_000, n_traj=200,
+            distill_ppo=True, distill_n=100,
+            run_name=f"FINAL_iql_beta3_seed{seed}",
+        ))
+        configs.append(_make_cfg(
+            algo="iql", seed=seed, beta=10.0,
+            n_steps=100_000, n_traj=200,
+            distill_ppo=True, distill_n=100,
+            run_name=f"FINAL_iql_beta10_seed{seed}",
+        ))
+
+    print(f"Dispatching {len(configs)} multi-seed FINAL configs (full v3 settings)...")
+    results = list(train_and_eval_one.map(configs))
+    print(f"\n{len(results)} configs done.")
+    import json
+    out_path = HERE / "final_multiseed_results.json"
+    with open(out_path, "w") as f:
+        json.dump(results, f, indent=2)
+    print(f"Saved -> {out_path}")
 
 
 @app.local_entrypoint()
