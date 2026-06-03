@@ -56,6 +56,10 @@
   CS224R Final Project \hfill
   \href{mailto:onyie@stanford.edu}{onyie@stanford.edu}}
 
+% Suppress default logo placeholders (gemini reserves space if unset)
+\logoright{}
+\logoleft{}
+
 \begin{document}
 
 % Stanford logo top-right
@@ -111,20 +115,20 @@
   \begin{block}{Approach}
     \begin{center}
       \begin{tikzpicture}[
-          node distance=0.5cm and 0.6cm,
+          node distance=1.0cm and 1.1cm,
           box/.style={rectangle, draw=stanfordred, very thick, rounded corners,
-                     minimum height=1.2cm, minimum width=2.8cm, align=center,
-                     text width=2.6cm, font=\scriptsize},
-          smallbox/.style={rectangle, draw=black!50, thick, rounded corners,
-                     minimum height=1.0cm, minimum width=2.2cm, align=center,
-                     text width=2.0cm, font=\tiny},
-          arrow/.style={->, thick, stanfordred, >=latex}]
+                     minimum height=1.8cm, minimum width=4.0cm, align=center,
+                     text width=3.6cm, font=\small},
+          smallbox/.style={rectangle, draw=black!60, thick, rounded corners,
+                     minimum height=1.5cm, minimum width=3.4cm, align=center,
+                     text width=3.2cm, font=\footnotesize},
+          arrow/.style={->, very thick, stanfordred, >=latex}]
         \node[box] (policy) {RL Policy $\pi(a|s)$ \\ (IQL / CQL)};
         \node[smallbox, right=of policy] (action) {Directive\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
         \node[smallbox, right=of action] (llm) {Frozen LLM\\(Sonnet)};
         \node[smallbox, below=of llm] (utter) {Japanese\\dialogue turn};
-        \node[smallbox, below=of action] (sim) {Student sim\\(FSRS)};
-        \node[smallbox, below=of policy] (state) {State $s$\\(per-word)};
+        \node[smallbox, below=of action] (sim) {Student\\simulator (FSRS)};
+        \node[smallbox, below=of policy] (state) {State $s$\\(per-word stats)};
         \draw[arrow] (policy) -- (action);
         \draw[arrow] (action) -- (llm);
         \draw[arrow] (llm) -- (utter);
@@ -209,28 +213,19 @@
   \end{block}
 
   \begin{block}{Discussion}
-    \heading{Takeaways}
-    \begin{itemize}
-      \item Reward design \emph{dominates} algorithm choice for this domain
-      \item Coverage metrics mislead: Random scored 81 acquired, only 18 retained
-      \item Hierarchical RL/LLM control is viable: structured directives
-            are tractable as RL actions, LLM handles naturalness
-    \end{itemize}
-    \heading{Limitations}
-    \begin{itemize}
-      \item Simulator dynamics hand-tuned; no human pilot
-      \item Coarse action space (21 directives)
-      \item Wide offline-RL CIs indicate seed sensitivity
-    \end{itemize}
+    \textbf{Takeaways}: reward design \emph{dominates} algorithm choice
+    here; coverage metrics mislead (Random scored 81 acquired but only 18
+    retained); hierarchical RL/LLM control is viable.
+
+    \textbf{Limitations}: simulator dynamics are hand-tuned (no human
+    pilot); action space is coarse (21 directives); wide offline-RL CIs
+    indicate seed sensitivity.
   \end{block}
 
   \begin{block}{Future Work (before final report)}
-    \begin{itemize}
-      \item Multi-seed training to tighten offline RL CIs (Modal sweep running)
-      \item Behavior-cloning-of-PPO ablation
-      \item Top-$k$ per-word action space
-      \item Extended OOD robustness across simulator parameterizations
-    \end{itemize}
+    Multi-seed training to tighten offline-RL CIs (Modal sweep running);
+    BC-of-PPO ablation; top-$k$ per-word action space; extended OOD
+    robustness sweep.
   \end{block}
 
   \begin{block}{References}
