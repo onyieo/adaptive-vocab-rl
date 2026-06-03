@@ -1,0 +1,1166 @@
+{
+  "policy": "IQL",
+  "seed": 0,
+  "turns": [
+    {
+      "turn": 0,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        159,
+        138,
+        12,
+        108,
+        69
+      ],
+      "words": [
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 159,
+      "text": "私の祖母 (そぼ) [grandmother] はね、毎日 駅 (えき) [train station] まで歩いて、市場で新鮮な魚 (さかな) [fish] を買うんです — もう80歳なのに、すごく元気でしょう！妹 (いもうと) [younger sister] と私はいつも祖母の靴 (くつ) [shoes] が古くなっていないか心配するんですが、あなたのおばあさんはどんな人ですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally with the target vocabulary integrated seamlessly, making it sound like a genuine exchange.",
+      "tutor_usage": {
+        "input_tokens": 3,
+        "output_tokens": 155,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    {
+      "turn": 1,
+      "action_index": 8,
+      "directive_counts": {
+        "new": 1,
+        "active": 2,
+        "review": 2
+      },
+      "word_ids": [
+        138,
+        12,
+        190,
+        69,
+        108
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 190,
+      "text": "へえ、そうなんですね！実は妹も魚が大好きで、泳ぐ (およぐ) [to swim] のもすごく得意なんですよ — 魚みたいに！駅の近くにプールがあって、よく一緒に行くんです。あなたは泳ぐのは好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The inclusion of '泳ぐ' feels somewhat forced, but the overall conversation flows naturally.",
+      "tutor_usage": {
+        "input_tokens": 135,
+        "output_tokens": 103,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 284
+      }
+    },
+    {
+      "turn": 2,
+      "action_index": 8,
+      "directive_counts": {
+        "new": 1,
+        "active": 2,
+        "review": 2
+      },
+      "word_ids": [
+        138,
+        159,
+        178,
+        190,
+        69
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 178,
+      "text": "いいですね！妹と泳ぐなら、週末 (しゅうまつ) [weekend] が一番ゆっくりできていいですよね。祖母も週末に合わせて遊びに来ることが多くて、家族みんなで出かけるんです。あなたの週末はいつもどんな感じですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally, incorporating the target vocabulary seamlessly.",
+      "tutor_usage": {
+        "input_tokens": 376,
+        "output_tokens": 104,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 284
+      }
+    },
+    {
+      "turn": 3,
+      "action_index": 2,
+      "directive_counts": {
+        "new": 0,
+        "active": 2,
+        "review": 3
+      },
+      "word_ids": [
+        138,
+        108,
+        12,
+        178,
+        190
+      ],
+      "words": [
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 138,
+      "text": "週末に出かけるとき、靴 (くつ) [shoes] って大事ですよね — 泳ぎに行くときと駅まで歩くときとで、履く靴が全然違う！私は魚市場に行くときも歩きやすい靴を選ぶようにしています。あなたはどんな靴が好きですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally, incorporating the target vocabulary seamlessly while maintaining an engaging discussion.",
+      "tutor_usage": {
+        "input_tokens": 379,
+        "output_tokens": 109,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 390
+      }
+    },
+    {
+      "turn": 4,
+      "action_index": 11,
+      "directive_counts": {
+        "new": 2,
+        "active": 0,
+        "review": 3
+      },
+      "word_ids": [
+        146,
+        167,
+        159,
+        138,
+        69
+      ],
+      "words": [
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 146,
+      "text": "そういえば、祖母の家はとても古くて、トイレ (トイレ) [toilet] が七 (しち) [seven] つもある大きな家なんですよ！妹と靴を脱いで上がるとき、いつもどこに置いたか忘れちゃって笑。あなたの家は大きいですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The conversation is mostly natural, but the inclusion of 'トイレ' feels a bit forced in the context.",
+      "tutor_usage": {
+        "input_tokens": 374,
+        "output_tokens": 104,
+        "cache_read_input_tokens": 13634,
+        "cache_creation_input_tokens": 345
+      }
+    },
+    {
+      "turn": 5,
+      "action_index": 2,
+      "directive_counts": {
+        "new": 0,
+        "active": 2,
+        "review": 3
+      },
+      "word_ids": [
+        69,
+        146,
+        167,
+        178,
+        190
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "あ、実は私の妹はとても面白い子で、週末になると必ずトイレで七回も歌を歌うんです — 泳ぐ練習のために息継ぎを鍛えてるって言って！あなたには妹や弟はいますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response is mostly natural but the repetition of 'トイレ' feels a bit forced.",
+      "tutor_usage": {
+        "input_tokens": 370,
+        "output_tokens": 85,
+        "cache_read_input_tokens": 13875,
+        "cache_creation_input_tokens": 347
+      }
+    },
+    {
+      "turn": 6,
+      "action_index": 11,
+      "directive_counts": {
+        "new": 2,
+        "active": 0,
+        "review": 3
+      },
+      "word_ids": [
+        190,
+        69,
+        155,
+        176,
+        167
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "コーヒー",
+          "reading": "コーヒー",
+          "gloss": "coffee",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "毎日",
+          "reading": "まいにち",
+          "gloss": "every day",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 155,
+      "text": "そうなんですね！妹と泳いだ後は、毎日 (まいにち) [every day] コーヒー (コーヒー) [coffee] を一杯飲むのが私の楽しみなんですけど、特にコーヒーが一番おいしく感じるのは運動の後ですね。あなたはコーヒーは好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows well but feels slightly forced in the inclusion of target vocabulary.",
+      "tutor_usage": {
+        "input_tokens": 359,
+        "output_tokens": 113,
+        "cache_read_input_tokens": 14113,
+        "cache_creation_input_tokens": 341
+      }
+    },
+    {
+      "turn": 7,
+      "action_index": 7,
+      "directive_counts": {
+        "new": 1,
+        "active": 1,
+        "review": 3
+      },
+      "word_ids": [
+        190,
+        69,
+        146,
+        123,
+        167
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 123,
+      "text": "泳ぐときって、頭の中で音楽 (おんがく) [music] が流れませんか？妹は七曲くらいお気に入りの曲があって、トイレでもプールでもずっと鼻歌を歌ってるんです。あなたはどんな音楽が好きですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The vocabulary is integrated naturally into the conversation, maintaining a smooth flow.",
+      "tutor_usage": {
+        "input_tokens": 385,
+        "output_tokens": 99,
+        "cache_read_input_tokens": 14350,
+        "cache_creation_input_tokens": 324
+      }
+    },
+    {
+      "turn": 8,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        126,
+        123,
+        155
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "言葉",
+          "reading": "ことば",
+          "gloss": "word",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "コーヒー",
+          "reading": "コーヒー",
+          "gloss": "coffee",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 126,
+      "text": "いいですね！音楽の言葉 (ことば) [word] って、日本語で覚えると面白いですよ — 例えば「泳ぐように」とか歌詞によく出てきますよね。妹もコーヒーを飲みながらよく日本語の歌の言葉を調べているんです。好きな曲の歌詞を日本語で読んでみたことはありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The conversation flows well, but the insertion of '言葉' feels slightly forced.",
+      "tutor_usage": {
+        "input_tokens": 373,
+        "output_tokens": 127,
+        "cache_read_input_tokens": 14589,
+        "cache_creation_input_tokens": 334
+      }
+    },
+    {
+      "turn": 9,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        99,
+        176,
+        146
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "何",
+          "reading": "なに",
+          "gloss": "what",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "毎日",
+          "reading": "まいにち",
+          "gloss": "every day",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 99,
+      "text": "そういえば、毎日の練習で一番大切なのは何 (なに) [what] だと思いますか？妹が泳ぐのが上手くなったのも、毎日少しずつ続けたからだと思うんですよね。日本語の勉強で、何が一番楽しいですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The turn flows naturally, but the inclusion of '何' feels slightly forced.",
+      "tutor_usage": {
+        "input_tokens": 402,
+        "output_tokens": 97,
+        "cache_read_input_tokens": 14810,
+        "cache_creation_input_tokens": 345
+      }
+    },
+    {
+      "turn": 10,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        98,
+        123,
+        138
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "時間",
+          "reading": "じかん",
+          "gloss": "time",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 98,
+      "text": "確かに、時間 (じかん) [time] をうまく使うのって大事ですよね — 妹は泳ぐ時間と音楽を聴く時間をきちんと分けているみたいです。靴を履いてプールに向かうとき、イヤホンで音楽を聴きながら歩くのが好きみたいで！あなたは一日の時間をどう使っていますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The vocabulary is integrated smoothly into the conversation and flows naturally.",
+      "tutor_usage": {
+        "input_tokens": 368,
+        "output_tokens": 129,
+        "cache_read_input_tokens": 15056,
+        "cache_creation_input_tokens": 364
+      }
+    },
+    {
+      "turn": 11,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        75,
+        167,
+        126
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "今日",
+          "reading": "きょう",
+          "gloss": "today",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "言葉",
+          "reading": "ことば",
+          "gloss": "word",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 75,
+      "text": "今日 (きょう) [today] は妹と一緒に泳ぎに行く予定なんですよ！七時に待ち合わせて、行き帰りに日本語の言葉をクイズし合うんです。あなたは今日どんな一日でしたか？",
+      "naturalness": 5,
+      "naturalness_reason": "The vocabulary is seamlessly integrated into a natural-sounding conversation.",
+      "tutor_usage": {
+        "input_tokens": 397,
+        "output_tokens": 89,
+        "cache_read_input_tokens": 15293,
+        "cache_creation_input_tokens": 358
+      }
+    },
+    {
+      "turn": 12,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        191,
+        108,
+        12
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "使う",
+          "reading": "つかう",
+          "gloss": "to use",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 191,
+      "text": "泳ぐときって、体全体を使う (つかう) [to use] から、本当にいい運動ですよね！妹と駅で待ち合わせてプールに行った帰りに、魚料理のお店に寄ることが多いんです。あなたは体を動かすとき、どんな運動をよく使いますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally with the vocabulary integrated seamlessly, making it sound like a real dialogue.",
+      "tutor_usage": {
+        "input_tokens": 355,
+        "output_tokens": 107,
+        "cache_read_input_tokens": 15554,
+        "cache_creation_input_tokens": 360
+      }
+    },
+    {
+      "turn": 13,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        108,
+        12,
+        190,
+        69,
+        54
+      ],
+      "words": [
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "高い",
+          "reading": "たかい",
+          "gloss": "tall, expensive",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 54,
+      "text": "駅の近くにある魚料理のお店、すごく高い (たかい) [expensive] んですけど、本当においしくて！妹と泳いだ後にたまに行くんですが、特別な日のご褒美にしています。あなたは高いレストランに行くことはありますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The use of vocabulary feels organic and the conversation flows naturally.",
+      "tutor_usage": {
+        "input_tokens": 375,
+        "output_tokens": 94,
+        "cache_read_input_tokens": 15785,
+        "cache_creation_input_tokens": 349
+      }
+    },
+    {
+      "turn": 14,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        108,
+        12,
+        190,
+        69,
+        196
+      ],
+      "words": [
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "広い",
+          "reading": "ひろい",
+          "gloss": "wide",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 196,
+      "text": "そうそう、駅の近くに広い (ひろい) [wide] プールが新しくできたんですよ — 妹がとても喜んで、もっと遠くまで泳げるって張り切っています！帰りに魚を買って帰ることも多いんです。あなたの近所には広い公園やプールはありますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The vocabulary is smoothly integrated into the conversation, making it sound natural and cohesive.",
+      "tutor_usage": {
+        "input_tokens": 362,
+        "output_tokens": 106,
+        "cache_read_input_tokens": 16045,
+        "cache_creation_input_tokens": 328
+      }
+    },
+    {
+      "turn": 15,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        108,
+        12,
+        190,
+        69,
+        105
+      ],
+      "words": [
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "西",
+          "reading": "にし",
+          "gloss": "west",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 105,
+      "text": "そのプールは駅の西 (にし) [west] 側にあって、とても行きやすいんですよ！妹と泳いだ後、西口の魚屋さんでよく買い物するんです。あなたの家は駅のどのあたりにありますか？",
+      "naturalness": 5,
+      "naturalness_reason": "The conversation flows naturally with appropriate vocabulary integration and context.",
+      "tutor_usage": {
+        "input_tokens": 371,
+        "output_tokens": 86,
+        "cache_read_input_tokens": 16266,
+        "cache_creation_input_tokens": 334
+      }
+    },
+    {
+      "turn": 16,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        108,
+        12,
+        190,
+        69,
+        84
+      ],
+      "words": [
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "日",
+          "reading": "ひ",
+          "gloss": "day, sun",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 84,
+      "text": "泳ぐのにぴったりな日 (ひ) [day] って、晴れていて気持ちいい日ですよね！妹と駅で待ち合わせて、そういう日は魚を見ながら川沿いを散歩することもあるんです。あなたはどんな日が一番好きですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The vocabulary is naturally integrated into the conversation, creating a smooth flow.",
+      "tutor_usage": {
+        "input_tokens": 352,
+        "output_tokens": 102,
+        "cache_read_input_tokens": 16506,
+        "cache_creation_input_tokens": 332
+      }
+    },
+    {
+      "turn": 17,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        108,
+        12,
+        190,
+        69,
+        9
+      ],
+      "words": [
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "雪",
+          "reading": "ゆき",
+          "gloss": "snow",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 9,
+      "text": "雪 (ゆき) [snow] の日は駅まで歩くのが大変だから、妹と泳ぎに行く気がなかなか起きないんですよね！でも雪の中を魚屋さんまで歩くのは、なんか冒険みたいで好きです。あなたは雪が好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The transition to discussing snow feels mostly natural, but the inclusion of vocabulary could be smoother.",
+      "tutor_usage": {
+        "input_tokens": 371,
+        "output_tokens": 105,
+        "cache_read_input_tokens": 16732,
+        "cache_creation_input_tokens": 322
+      }
+    },
+    {
+      "turn": 18,
+      "action_index": 14,
+      "directive_counts": {
+        "new": 2,
+        "active": 3,
+        "review": 0
+      },
+      "word_ids": [
+        191,
+        196,
+        123,
+        40,
+        14
+      ],
+      "words": [
+        {
+          "surface": "使う",
+          "reading": "つかう",
+          "gloss": "to use",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "広い",
+          "reading": "ひろい",
+          "gloss": "wide",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "書く",
+          "reading": "かく",
+          "gloss": "to write",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "車",
+          "reading": "くるま",
+          "gloss": "car",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 40,
+      "text": "私は音楽を聴きながら書く (かく) [to write] のが大好きで、広いテーブルにノートを広げてよく日記を書くんです！車の中でも信号待ちのときにメモを使うことがあるんですが、あなたは何かを書くとき、どんな場所が好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The turn is mostly natural but the transition to asking about writing locations feels slightly forced.",
+      "tutor_usage": {
+        "input_tokens": 366,
+        "output_tokens": 104,
+        "cache_read_input_tokens": 16968,
+        "cache_creation_input_tokens": 321
+      }
+    },
+    {
+      "turn": 19,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        108,
+        12,
+        190,
+        69,
+        51
+      ],
+      "words": [
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "小さい",
+          "reading": "ちいさい",
+          "gloss": "small, little",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 51,
+      "text": "妹はまだ小さい (ちいさい) [small] 頃から泳ぐのが得意で、駅の近くのプールでずっと練習してきたんですよ！小さい魚みたいにスイスイ泳ぐんです。あなたは小さい頃、何かスポーツをやっていましたか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response is mostly natural but the repetition of '小さい' feels slightly forced.",
+      "tutor_usage": {
+        "input_tokens": 368,
+        "output_tokens": 106,
+        "cache_read_input_tokens": 17187,
+        "cache_creation_input_tokens": 340
+      }
+    }
+  ]
+}

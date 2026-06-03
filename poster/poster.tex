@@ -272,12 +272,12 @@
   \begin{block}{Retention vs Naturalness Pareto}
     \begin{figure}
       \centering
-      % Placeholder — will be replaced by the cross-judge Pareto plot
-      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/llm_naturalness_v2.png}
-      \caption{LLM-judge naturalness scores (1--5). FSRS+New scores highest
-      on naturalness (3.00) but lowest on retention (4 words). RL methods
-      sit at a different Pareto point: \emph{much} higher retention, modest
-      naturalness cost.}
+      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/pareto_retention_naturalness.png}
+      \caption{Naturalness judged by \emph{cross-family} OpenAI gpt-4o-mini
+      (Claude Sonnet is the tutor; OpenAI rules out self-preference bias).
+      Frontier: PPO $\to$ IQL $\to$ RuleBased.
+      \textbf{PPO has equal naturalness to Random but 8$\times$ the retention};
+      offline IQL has \emph{higher} naturalness than PPO at 56\% of the retention.}
     \end{figure}
   \end{block}
 
