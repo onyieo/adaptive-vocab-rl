@@ -1,5 +1,6 @@
+% CS224R Final Project Poster
+% Stanford Gemini theme, 36"x24" landscape (recommended dimensions)
 % Compile with XeLaTeX
-% Stanford Gemini theme (3 columns, landscape 120cm x 72cm)
 
 \documentclass[final]{beamer}
 
@@ -9,7 +10,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
+% 36" x 24" = 91.44 cm x 60.96 cm (rounded to 91 x 61 cm)
+\usepackage[size=custom,width=91,height=61,scale=1.0]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{stanford}
 \usepackage{graphicx}
@@ -17,6 +19,8 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
+
+\graphicspath{{plots/}}
 
 % ====================
 % Lengths — 3 columns
@@ -45,69 +49,77 @@
   CS224R Final Project \hfill
   \href{mailto:onyie@stanford.edu}{onyie@stanford.edu}}
 
-% Stanford logo top-right
 \begin{document}
-\addtobeamertemplate{headline}{}{
-    \begin{tikzpicture}[remember picture,overlay]
-      \node [anchor=north east, inner sep=3cm]
-            at ([xshift=0.0cm,yshift=2.5cm]current page.north east)
-      {\includegraphics[height=7.0cm]{stanford_logos/Block_S_2_color.png}};
-    \end{tikzpicture}
-}
+
+% Optional: Stanford logo top-right. Uncomment after adding stanford_logos/ to project.
+% \addtobeamertemplate{headline}{}{
+%     \begin{tikzpicture}[remember picture,overlay]
+%       \node [anchor=north east, inner sep=2cm]
+%             at ([xshift=0.0cm,yshift=1.5cm]current page.north east)
+%       {\includegraphics[height=5.0cm]{stanford_logos/Block_S_2_color.png}};
+%     \end{tikzpicture}
+% }
 
 \begin{frame}[t]
 \begin{columns}[t]
 \separatorcolumn
 
 % =====================================================================
-% COLUMN 1 — Problem, framing, MDP
+% COLUMN 1 — Q1 Problem, Q2 Why It Matters, Q3 Prior Work
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{block}{The Problem}
+  \begin{block}{1. What is the problem?}
     A conversational language tutor must decide at every turn:
     \emph{which vocabulary should the tutor's response target?} Each turn
-    presents words the learner has never seen, words being acquired, and
-    words due for review. The choice trades off:
-    \begin{itemize}
-      \item \textbf{Long-term retention} — words must come back before they decay
-      \item \textbf{Curriculum pacing} — too many new words at once overwhelms
-      \item \textbf{Conversational naturalness} — the tutor's turn must still
-            sound like dialogue, not a flashcard drill
-    \end{itemize}
-    This is a sequential decision problem with delayed, multi-objective
-    rewards: the effect of introducing a word now on long-term retention
-    isn't observed until future sessions.
+    presents a mix of words the learner has never seen, words being
+    acquired, and words due for review. This is a sequential decision
+    problem with delayed, multi-objective rewards: the effect of
+    introducing a word now on long-term retention is not observed until
+    future sessions.
   \end{block}
 
-  \begin{block}{Why prior work falls short}
-    \textbf{Spaced repetition (FSRS, SM-2)} \cite{fsrs} schedules flashcards
-    in isolation — no mechanism for embedding review in natural conversation
-    and no joint reasoning about introducing new vocabulary.
+  \begin{block}{2. Why is it interesting and important?}
+    The choice involves a genuine multi-way trade-off:
+    \begin{itemize}
+      \item \textbf{Long-term retention} — words must come back before they decay
+      \item \textbf{Curriculum pacing} — too many new words at once overwhelms the learner
+      \item \textbf{Conversational naturalness} — the tutor's response must still
+            sound like dialogue, not a flashcard drill
+    \end{itemize}
+    A real product (Duolingo, Anki, LingoChamp, etc.) ships some hand-coded
+    spaced-repetition rule. A principled RL approach has the potential to
+    discover scheduling strategies no fixed heuristic can match.
+  \end{block}
 
-    \textbf{RLHF-style methods} \cite{rlhf} train the LLM directly but can't
-    reason about long-horizon retention; the LLM is the policy, not a
-    scheduler.
+  \begin{block}{3. Why hasn't it been solved before?}
+    \textbf{Spaced repetition (FSRS, SM-2)} \cite{fsrs} schedules
+    flashcards in isolation — no mechanism for embedding review in
+    natural conversation, no joint reasoning about introducing new vocabulary.
+
+    \textbf{RLHF-style methods} \cite{rlhf} treat the LLM as the policy and
+    can't reason about long-horizon retention; the LLM optimizes a
+    naturalness reward turn-by-turn.
 
     \textbf{Educational RL} \cite{rafferty} works on isolated problems
     (which exercise to assign), never on item selection mediated through a
     generative LLM producing free-form dialogue.
 
-    \textbf{Our contribution}: a hierarchical control framing where RL
-    operates over latent linguistic constraints and a frozen LLM executes
-    them as natural conversation.
+    \textbf{Our contribution}: a \emph{hierarchical control} framing where
+    RL operates over latent linguistic constraints and a frozen LLM
+    realizes them as natural conversation.
   \end{block}
 
-  \begin{block}{Approach: Hierarchical Control}
+  \begin{block}{4. Key components of our approach}
     \begin{center}
       \begin{tikzpicture}[
-          node distance=1.0cm and 1.3cm,
+          node distance=0.6cm and 0.7cm,
           box/.style={rectangle, draw=stanfordred, very thick, rounded corners,
-                     minimum height=1.7cm, minimum width=3.8cm, align=center,
-                     text width=3.6cm, font=\small},
+                     minimum height=1.4cm, minimum width=3.2cm, align=center,
+                     text width=3.0cm, font=\footnotesize},
           smallbox/.style={rectangle, draw=black!50, thick, rounded corners,
-                     minimum height=1.2cm, minimum width=2.8cm, align=center,
-                     text width=2.6cm, font=\footnotesize},
+                     minimum height=1.1cm, minimum width=2.4cm, align=center,
+                     text width=2.2cm, font=\scriptsize},
           arrow/.style={->, very thick, stanfordred, >=latex}]
         \node[box] (policy) {Offline RL Policy $\pi(a|s)$ \\ (IQL / CQL)};
         \node[smallbox, right=of policy] (action) {Action: directive\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
@@ -124,17 +136,15 @@
       \end{tikzpicture}
     \end{center}
     \begin{itemize}
-      \item \textbf{State} $s_t$: per-word stability, retrievability,
-            difficulty, usage counts; session position
+      \item \textbf{State} $s_t$: per-word stability, retrievability, difficulty,
+            usage counts; session position. 500 JLPT N5/N4/N3 words.
       \item \textbf{Action} $a_t$: structured directive
             $(n_{\text{new}}, n_{\text{active}}, n_{\text{review}})$
-            summing to 5 words per turn (21 discrete actions)
-      \item \textbf{Reward} $r_t$ (v3): combines coverage growth,
-            naturalness penalty for overloading new vocabulary, and
-            session-end retention bonus
-      \item \textbf{Env}: knowledge-tracing student simulator with FSRS-style
-            forgetting; LLM tutor (Claude Sonnet) realizes directives as
-            Japanese conversational turns
+            summing to 5 words (21 discrete actions).
+      \item \textbf{Reward} $r_t$: see Findings (the headline result).
+      \item \textbf{Methods}: IQL \cite{iql}, CQL \cite{cql} (offline);
+            PPO \cite{ppo} (online upper bound); Random, FSRS, FSRS+New,
+            RuleBased, SmartFSRS (heuristics).
     \end{itemize}
   \end{block}
 
@@ -143,159 +153,96 @@
 \separatorcolumn
 
 % =====================================================================
-% COLUMN 2 — Methods, reward redesign, headline results
+% COLUMN 2 — Q5 Findings (reward design + headline)
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{block}{Methods Compared}
-    All policies output a 21-action structured directive each turn.
-    \begin{itemize}
-      \item \textbf{Heuristics}: Random; FSRS \cite{fsrs}, FSRS+New
-            (proposal baselines); RuleBased (95\%/5\% review/intro);
-            SmartFSRS (load-aware FSRS+New)
-      \item \textbf{Offline RL}: IQL \cite{iql}, CQL \cite{cql} — trained on
-            mixed-quality trajectories with 100$\times$ reward scaling,
-            buffer curation (drop FSRS/RuleBased, add aggressive-intro
-            policy), and 100 distilled PPO trajectories
-      \item \textbf{Online RL}: PPO \cite{ppo} — trained from scratch
-            against the simulator (deployment-impractical upper bound)
-    \end{itemize}
-  \end{block}
-
-  \begin{alertblock}{Key Finding: Reward Design $\gg$ Algorithm Choice}
-    Same algorithms, two rewards, 6$\times$ improvement.
-    \begin{itemize}
-      \item \textbf{v1 reward (coverage only)}: $r = \Delta R_{\text{total}}/N$ —
-            optimizes for exposing many words, ignores stickiness
-      \item \textbf{v3 reward}: $-$\,naturalness penalty for cramming multiple
-            new words per turn (encodes the empirical LLM-judge finding);
-            $+$\,session-end bonus for words above retention threshold
-    \end{itemize}
-    The naturalness penalty stops policies from sprawling, the retention
-    bonus directly rewards what the proposal calls the actual goal. Every
-    RL method improves $\sim$6$\times$ from this swap alone.
+  \begin{alertblock}{5. Key findings — Reward design $\gg$ algorithm choice}
+    Same algorithms, two rewards, \textbf{6$\times$ retention improvement}
+    across every RL method from the reward redesign alone.
 
     \heading{v3 reward}
     $$r_t = \underbrace{\Delta R_{\text{total}}/N}_{\text{coverage}}
             \;-\; \underbrace{\alpha \cdot \max(0, n_{\text{new}} - 1)^2}_{\text{naturalness penalty}}
             \;+\; \underbrace{\lambda \cdot \tfrac{\#\{R{>}0.5\}}{N}}_{\text{session-end retention bonus}}$$
+
+    The naturalness penalty stops policies from cramming many new words
+    into one turn; the session-end bonus directly rewards what the
+    proposal calls the actual goal.
     \vspace{0.3cm}
     \begin{figure}
       \centering
-      \includegraphics[width=0.85\colwidth]{../vocab_rl/results/reward_design_impact.png}
+      \includegraphics[width=0.95\colwidth]{reward_design_impact.png}
     \end{figure}
   \end{alertblock}
 
-  \begin{block}{Final Results (500 words, 20 eval seeds, 95\% CI)}
+  \begin{block}{Final retention numbers}
     \begin{figure}
       \centering
-      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/headline_retention_20seeds.png}
+      \includegraphics[width=0.98\colwidth]{headline_retention_20seeds.png}
     \end{figure}
-    \textbf{Every RL method beats every heuristic by 5--30$\times$ on retention.}
-    Online RL (PPO) exceeds offline RL by $\sim$1.8$\times$ — the cost of
-    the deployment-realistic offline constraint.
+    500 words, 20 eval seeds, 95\% bootstrap CIs. \textbf{Every RL method
+    beats every heuristic by 5--30$\times$.} Online RL (PPO) exceeds
+    offline RL by $\sim$1.8$\times$ — the cost of the deployment-realistic
+    offline constraint (in production you cannot expose real students to a
+    learning policy).
   \end{block}
-
 
 \end{column}
 
 \separatorcolumn
 
 % =====================================================================
-% COLUMN 3 — Sweep, Pareto, qualitative, takeaways
+% COLUMN 3 — Q5 (more findings) + Q6 + Q7
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{block}{Adaptive Pacing Emerges}
+  \begin{block}{Adaptive pacing emerges from training}
     \begin{figure}
       \centering
-      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/action_distribution_v3.png}
-      \caption{Action mix by turn-in-session. RL methods (right two panels)
-      learn intra-session pacing: heavy on new-word actions early, shift
-      review-heavy late. No hand-coded baseline shows this structure.}
+      \includegraphics[width=0.98\colwidth]{action_distribution_v3.png}
     \end{figure}
+    Action mix by turn-in-session. RL methods (right panels) learn
+    intra-session pacing: heavy on new-word actions early, shift to review
+    late. \emph{No hand-coded baseline shows this structure.}
   \end{block}
 
-  \begin{block}{Sensitivity Sweep (Modal: 69 runs, 5 seeds/config)}
-    Smaller buffer (no PPO distillation) for compute budget. Absolute numbers
-    are lower than the headline but the \emph{relative ordering} is robust.
-
-    \begin{table}
-      \centering
-      \small
-      \begin{tabular}{lcc}
-        \toprule
-        \textbf{Sweep dimension (CQL)} & \textbf{Acquired} & \textbf{Retained} \\
-        \midrule
-        \multicolumn{3}{l}{\textit{A. Reward $\alpha_{nat} \times \lambda_{ret}$:}} \\
-        $\alpha_{nat}{=}0.005,\lambda{=}0.5$ & 54.5 & 16.6 \\
-        $\alpha_{nat}{=}0.01,\ \lambda{=}1.0$ (default) & 46.6 & 14.8 \\
-        $\alpha_{nat}{=}0.05,\lambda{=}0.5$ & 62.2 & \textbf{23.9} \\
-        \multicolumn{3}{l}{\textit{B. CQL conservatism $\alpha_{cql}$:}} \\
-        $\alpha_{cql}{=}0.1$  & 56.3 & \textbf{20.3} \\
-        $\alpha_{cql}{=}5.0$  & 51.8 & 15.3 \\
-        $\alpha_{cql}{=}10.0$ & 50.5 & 10.0 \\
-        \multicolumn{3}{l}{\textit{C. IQL AWR temperature $\beta$:}} \\
-        $\beta{=}3$   & 57.6 & \textbf{25.0} \\
-        $\beta{=}10$  & 59.0 & 21.9 \\
-        $\beta{=}30$  & 49.0 & 15.4 \\
-        \bottomrule
-      \end{tabular}
-    \end{table}
-
-    \emph{Even without PPO distillation, every RL configuration retains
-    $\geq 10$ words after a 7-day gap, vs $4$ for FSRS+New.}
-  \end{block}
-
-  \begin{block}{Retention vs Naturalness Pareto}
+  \begin{block}{Retention vs naturalness Pareto frontier}
     \begin{figure}
       \centering
-      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/pareto_retention_naturalness.png}
-      \caption{Naturalness judged by \emph{cross-family} OpenAI gpt-4o-mini
-      (Claude Sonnet is the tutor; OpenAI rules out self-preference bias).
-      Frontier: PPO $\to$ IQL $\to$ RuleBased.
-      \textbf{PPO has equal naturalness to Random but 8$\times$ the retention};
-      offline IQL has \emph{higher} naturalness than PPO at 56\% of the retention.}
+      \includegraphics[width=0.98\colwidth]{pareto_retention_naturalness.png}
     \end{figure}
+    Naturalness judged by \emph{cross-family} OpenAI gpt-4o-mini (the tutor
+    is Claude Sonnet — eliminates self-preference bias). PPO matches Random
+    on naturalness but at \emph{8$\times$ the retention}; offline IQL has
+    higher naturalness than PPO at 56\% of retention.
   \end{block}
 
-  \begin{block}{Takeaways and Limitations}
-    \heading{What we learned}
+  \begin{block}{6. Takeaways and limitations}
+    \heading{What audiences can learn}
     \begin{itemize}
-      \item \textbf{Reward design dominates algorithm choice} — v1 vs v3
-            reward changed PPO retention from 63 to 151 (2.4$\times$) with
-            no algorithm changes
-      \item \textbf{Every RL method beats every heuristic by 5--30$\times$}
-            on post-gap retention; coverage-style metrics (Random scoring 81
-            acquired) are misleading without measuring stickiness
-      \item \textbf{Online RL has the highest ceiling}; offline RL achieves
-            $\sim$55\% of online retention, quantifying the cost of the
-            deployment-realistic constraint
-      \item \textbf{Hierarchical RL/LLM control} is a viable framing:
-            structured directives are tractable as RL actions; the LLM
-            handles naturalness through prompted generation
+      \item \textbf{Reward design dominates algorithm choice} for this domain
+      \item \textbf{Coverage metrics mislead}: Random scored 81 acquired but
+            only 18 retained after 7 days. Stickiness matters.
+      \item \textbf{Hierarchical RL/LLM control} works: structured directives
+            are tractable as RL actions; the LLM handles naturalness via prompting
     \end{itemize}
     \heading{Honest limitations}
     \begin{itemize}
       \item Simulator dynamics are hand-tuned; no human pilot yet
-      \item Cross-judge bias check (OpenAI judge) addresses but doesn't
-            eliminate LLM-as-judge concerns
-      \item Action space is coarse (21 directives) — finer-grained
-            word selection is future work
+      \item Action space is coarse (21 directives); finer-grained word
+            selection is future work
+      \item Wide CIs on offline RL (e.g.\ IQL: [52.6, 119.0])
+            indicate seed sensitivity
     \end{itemize}
   \end{block}
 
-  \begin{block}{Planned Before Final Report}
+  \begin{block}{7. Planned before final report}
     \begin{itemize}
-      \item \textbf{Tighten offline RL CIs}: 5 training seeds $\times$ 3 algos
-            with full v3 settings (Modal sweep currently running)
-      \item \textbf{Behavior cloning of PPO}: ablation to test whether
-            offline RL is doing more than supervised imitation
-      \item \textbf{Top-$k$ action space}: extend beyond 21 directives to
-            per-word selection, addressing the coarseness limitation
-      \item \textbf{Robustness analysis}: extended OOD evaluation on
-            held-out simulator parameterizations (forgetting rate, difficulty
-            distribution, combined OOD)
+      \item \textbf{Tighter CIs}: multi-seed training of IQL/CQL on Modal
+      \item \textbf{BC-of-PPO ablation}: does offline RL exceed simple imitation?
+      \item \textbf{Top-$k$ action space}: per-word selection beyond the 21-action directive
+      \item \textbf{Extended OOD robustness}: forgetting rate, difficulty distribution, combined OOD held-out sims
     \end{itemize}
   \end{block}
 
