@@ -173,19 +173,13 @@
   \end{block}
 
   \begin{block}{Sample Tutor Turn (IQL policy)}
-    Directive: $(2, 0, 3)$ targeting
-    \texttt{祖母, 靴, 魚, 駅, 妹}; cross-judge naturalness score 5/5.
-    \begin{quote}
-    \small
-    \textit{私の祖母\,(そぼ) [grandmother] は料理がとても上手で、
-    特に魚\,(さかな) [fish] の料理が最高なんです！
-    先日、妹\,(いもうと) [younger sister] と一緒に
-    駅\,(えき) [train station] の近くの店で
-    祖母へのプレゼントに靴\,(くつ) [shoes] を買いました。
-    あなたのおばあさんとはよく会いますか？}
-    \end{quote}
-    The policy weaves five target words into a single coherent
-    conversational turn; the LLM handles glosses and pedagogical scaffolding.
+    \begin{figure}
+      \centering
+      \includegraphics[width=\colwidth]{sample_turn.png}
+    \end{figure}
+    The trained IQL policy weaves five target Japanese vocabulary words
+    into one coherent conversational turn; the LLM handles inline glosses
+    and pedagogical scaffolding. Cross-judge naturalness: 5/5.
   \end{block}
 
 \end{column}
