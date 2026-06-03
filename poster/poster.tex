@@ -11,16 +11,20 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 % 36" x 24" = 91.44 cm x 60.96 cm (rounded to 91 x 61 cm)
-\usepackage[size=custom,width=91,height=61,scale=0.9]{beamerposter}
+\usepackage[size=custom,width=91,height=61,scale=0.8]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{stanford}
 
-% Smaller title and section fonts (gemini defaults are too large at 36"x24")
-\setbeamerfont{headline title}{family=\rmfamily, size=\LARGE, series=\bfseries}
-\setbeamerfont{headline author}{family=\rmfamily, size=\large}
-\setbeamerfont{headline institute}{family=\rmfamily, size=\normalsize}
-\setbeamerfont{block title}{family=\rmfamily, size=\large, series=\bfseries}
-\setbeamerfont{block alerted title}{family=\rmfamily, size=\large, series=\bfseries}
+% Smaller fonts + tighter line spacing for the 36"x24" canvas
+\setbeamerfont{headline title}{family=\rmfamily, size=\Large, series=\bfseries}
+\setbeamerfont{headline author}{family=\rmfamily, size=\normalsize}
+\setbeamerfont{headline institute}{family=\rmfamily, size=\small}
+\setbeamerfont{block title}{family=\rmfamily, size=\normalsize, series=\bfseries}
+\setbeamerfont{block alerted title}{family=\rmfamily, size=\normalsize, series=\bfseries}
+\setbeamerfont{block body}{size=\small}
+\setbeamerfont{block alerted body}{size=\small}
+\setbeamerfont{caption}{size=\footnotesize}
+\linespread{0.95}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -158,32 +162,30 @@
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{alertblock}{Key Finding: Reward Design Dominates Algorithm Choice}
-    Identical algorithms, two reward formulations, a 6$\times$ improvement
-    in post-gap retention across every RL method.
-
-    \heading{v3 reward}
-    \vspace{-0.3cm}
-    $$r_t = \underbrace{\Delta R_{\text{total}}/N}_{\text{coverage}}
+  \begin{alertblock}{Reward Design}
+    The reward combines three terms that jointly target retention and
+    naturalness without requiring an LLM in the training loop:
+    \vspace{-0.2cm}
+    $$r_t = \underbrace{\Delta R_{\text{total}}/N}_{\text{coverage growth}}
             - \underbrace{\alpha \cdot \max(0, n_{\text{new}} {-} 1)^2}_{\text{naturalness penalty}}
             + \underbrace{\lambda \cdot \tfrac{\#\{R{>}0.5\}}{N}}_{\text{retention bonus}}$$
     \vspace{-0.2cm}
-    \begin{figure}
-      \centering
-      \includegraphics[width=0.95\colwidth]{reward_design_impact.png}
-    \end{figure}
+    The naturalness penalty discourages introducing several new words at
+    once (calibrated from LLM-judge ratings). The retention bonus at each
+    session boundary rewards words above a recall threshold, providing the
+    long-horizon signal that coverage alone misses.
   \end{alertblock}
 
   \begin{block}{Final Retention (500 words, 95\% CI)}
     \begin{figure}
       \centering
-      \includegraphics[width=0.98\colwidth]{headline_retention_20seeds.png}
+      \includegraphics[width=\colwidth]{headline_retention_20seeds.png}
     \end{figure}
-    \textbf{Offline RL (the deployable case) outperforms every fixed
-    heuristic by 4--17$\times$} on post-gap retention. PPO is included as a
-    \emph{non-deployable reference} (online RL requires student-in-the-loop
-    training, which is impractical in production); it indicates an
-    additional 2$\times$ headroom under unrestricted simulator access.
+    \textbf{Offline RL outperforms every deployable baseline by
+    4--17$\times$.} PPO is shown for reference: online RL is not
+    deployable in production (student-in-the-loop training is impractical),
+    but indicates an additional $\sim$2$\times$ headroom under unrestricted
+    simulator access.
   \end{block}
 
 \end{column}
