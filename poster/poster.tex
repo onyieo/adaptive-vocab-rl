@@ -117,39 +117,23 @@
   \end{block}
 
   \begin{block}{Approach}
-    \begin{center}
-      \begin{tikzpicture}[
-          node distance=1.0cm and 0.7cm,
-          box/.style={rectangle, draw=stanfordred, very thick, rounded corners,
-                     minimum height=1.8cm, minimum width=7.0cm, align=center,
-                     text width=6.4cm, font=\small},
-          smallbox/.style={rectangle, draw=black!60, thick, rounded corners,
-                     minimum height=1.8cm, minimum width=7.0cm, align=center,
-                     text width=6.4cm, font=\small},
-          arrow/.style={->, very thick, stanfordred, >=latex}]
-        % Top row: policy -> action -> llm
-        \node[box] (policy) {\textbf{RL Policy} $\pi(a|s)$\\(IQL / CQL)};
-        \node[smallbox, right=of policy] (action) {\textbf{Directive}\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
-        \node[smallbox, right=of action] (llm) {\textbf{Frozen LLM}\\(Claude Sonnet)};
-        % Bottom row: state <- sim <- utterance
-        \node[smallbox, below=of llm] (utter) {\textbf{Japanese}\\dialogue turn};
-        \node[smallbox, below=of action] (sim) {\textbf{Student simulator}\\(FSRS dynamics)};
-        \node[smallbox, below=of policy] (state) {\textbf{State $s$}\\(per-word stats)};
-        \draw[arrow] (policy) -- (action);
-        \draw[arrow] (action) -- (llm);
-        \draw[arrow] (llm) -- (utter);
-        \draw[arrow] (utter) -- (sim);
-        \draw[arrow] (sim) -- (state);
-        \draw[arrow] (state) -- (policy);
-      \end{tikzpicture}
-    \end{center}
-    \vspace{0.2cm}
+    \begin{figure}
+      \centering
+      \includegraphics[width=\colwidth]{architecture.png}
+    \end{figure}
+    \vspace{-0.2cm}
     \begin{itemize}
-      \item \textbf{State}: per-word stability, $R$, difficulty, usage; session position. 500 JLPT N5--N3 words.
-      \item \textbf{Action}: $(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$ summing to 5 (21 discrete actions).
-      \item \textbf{Methods}: IQL \cite{iql}, CQL \cite{cql} (offline, \emph{deployable});
-            PPO \cite{ppo} (online, reference upper bound);
-            heuristics: Random, FSRS, FSRS+New, RuleBased, SmartFSRS.
+      \item \textbf{State} $s$: per-word stability, retrievability,
+            difficulty, usage; session position. 500 JLPT N5--N3 words.
+      \item \textbf{Action} $a$: $(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$
+            summing to 5 words per turn (21 discrete directives).
+      \item \textbf{Reward}: combines coverage growth, a naturalness
+            penalty on multi-new-word turns, and a session-end retention
+            bonus (formula in Column 2).
+      \item \textbf{Methods compared}: IQL \cite{iql}, CQL \cite{cql}
+            (offline, \emph{deployable}); PPO \cite{ppo} (online, reference
+            upper bound); heuristic baselines: Random, FSRS, FSRS+New,
+            RuleBased, SmartFSRS.
     \end{itemize}
   \end{block}
 
@@ -186,6 +170,22 @@
     deployable in production (student-in-the-loop training is impractical),
     but indicates an additional $\sim$2$\times$ headroom under unrestricted
     simulator access.
+  \end{block}
+
+  \begin{block}{Sample Tutor Turn (IQL policy)}
+    Directive: $(2, 0, 3)$ targeting
+    \texttt{祖母, 靴, 魚, 駅, 妹}; cross-judge naturalness score 5/5.
+    \begin{quote}
+    \small
+    \textit{私の祖母\,(そぼ) [grandmother] は料理がとても上手で、
+    特に魚\,(さかな) [fish] の料理が最高なんです！
+    先日、妹\,(いもうと) [younger sister] と一緒に
+    駅\,(えき) [train station] の近くの店で
+    祖母へのプレゼントに靴\,(くつ) [shoes] を買いました。
+    あなたのおばあさんとはよく会いますか？}
+    \end{quote}
+    The policy weaves five target words into a single coherent
+    conversational turn; the LLM handles glosses and pedagogical scaffolding.
   \end{block}
 
 \end{column}
