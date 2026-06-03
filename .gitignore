@@ -17,6 +17,7 @@ venv/
 # Generated plots (regenerable; PNGs we want for the writeup live in vocab_rl/results/)
 *.png
 !vocab_rl/results/*.png
+!poster/plots/*.png
 
 # LLM eval outputs (contain conversations + may include API responses)
 llm_eval_results/
