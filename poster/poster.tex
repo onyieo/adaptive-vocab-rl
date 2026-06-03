@@ -11,9 +11,16 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 % 36" x 24" = 91.44 cm x 60.96 cm (rounded to 91 x 61 cm)
-\usepackage[size=custom,width=91,height=61,scale=1.0]{beamerposter}
+\usepackage[size=custom,width=91,height=61,scale=0.9]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{stanford}
+
+% Smaller title and section fonts (gemini defaults are too large at 36"x24")
+\setbeamerfont{headline title}{family=\rmfamily, size=\LARGE, series=\bfseries}
+\setbeamerfont{headline author}{family=\rmfamily, size=\large}
+\setbeamerfont{headline institute}{family=\rmfamily, size=\normalsize}
+\setbeamerfont{block title}{family=\rmfamily, size=\large, series=\bfseries}
+\setbeamerfont{block alerted title}{family=\rmfamily, size=\large, series=\bfseries}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
