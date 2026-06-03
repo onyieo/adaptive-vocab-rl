@@ -137,6 +137,25 @@
     \end{itemize}
   \end{block}
 
+  \begin{block}{Experimental Setup}
+    \textbf{Simulator}: knowledge-tracing student with FSRS forgetting
+    dynamics over 500 JLPT N5/N4/N3 Japanese words; per-word stability
+    grows on successful recall, decays exponentially between exposures.
+
+    \textbf{Episodes}: 10 sessions $\times$ 20 turns $\times$ 5 words/turn,
+    with a one-day gap between sessions. Per-turn naturalness scored by
+    a frozen LLM judge (OpenAI gpt-4o-mini) on generated dialogue.
+
+    \textbf{Offline RL data}: rebalanced buffer mixing four behavior
+    policies plus 100 PPO-distilled trajectories. Reward signal scaled by
+    $100\times$ to escape AWR weight collapse at large state dimension.
+
+    \textbf{Evaluation}: post-gap retention ($R{>}0.5$ after a 7-day gap
+    following the final session) measured across 20 eval seeds for
+    heuristics + PPO; 5 training seeds for offline RL. All comparisons
+    use the same env, same reward, same eval protocol.
+  \end{block}
+
 \end{column}
 
 \separatorcolumn
