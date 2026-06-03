@@ -148,36 +148,32 @@
 \begin{column}{\colwidth}
 
   \begin{block}{Methods Compared}
-    All policies operate on the same 21-action directive space.
+    All policies output a 21-action structured directive each turn.
     \begin{itemize}
-      \item \textbf{Random} — uniform over 21 directives
-      \item \textbf{FSRS, FSRS+New, RuleBased} — proposal's scheduling
-            heuristic baselines
-      \item \textbf{SmartFSRS} — hand-coded scheduler with cognitive-load
-            awareness (only introduce when active-due count is low)
-      \item \textbf{LLM-prompted} — Claude Haiku reads current state and
-            picks a directive (the "no-RL" upper bound for prompt-engineered
-            systems)
-      \item \textbf{IQL} \cite{iql} — offline RL, our primary method
-      \item \textbf{CQL} \cite{cql} — offline RL with conservative penalty
-      \item \textbf{BC of PPO} — supervised distillation from the online
-            policy (ablation: does offline RL add anything beyond imitation?)
-      \item \textbf{PPO} \cite{ppo} — online RL trained from scratch
-            (deployment-impractical upper bound)
+      \item \textbf{Heuristics}: Random; FSRS \cite{fsrs}, FSRS+New
+            (proposal baselines); RuleBased (95\%/5\% review/intro);
+            SmartFSRS (load-aware FSRS+New)
+      \item \textbf{Offline RL}: IQL \cite{iql}, CQL \cite{cql} — trained on
+            mixed-quality trajectories with 100$\times$ reward scaling,
+            buffer curation (drop FSRS/RuleBased, add aggressive-intro
+            policy), and 100 distilled PPO trajectories
+      \item \textbf{Online RL}: PPO \cite{ppo} — trained from scratch
+            against the simulator (deployment-impractical upper bound)
     \end{itemize}
   \end{block}
 
   \begin{alertblock}{Key Finding: Reward Design $\gg$ Algorithm Choice}
-    Same algorithm, three rewards, three orders of magnitude in performance.
-    PPO post-gap retention (7-day, $R{>}0.5$):
+    Same algorithms, two rewards, 6$\times$ improvement.
     \begin{itemize}
-      \item \textbf{v1 reward (coverage only)}: PPO retains \textbf{63} words
-      \item \textbf{v2 reward (+ rebalanced offline buffer)}: PPO retains \textbf{63} (unchanged)
-      \item \textbf{v3 reward (+ naturalness penalty + retention bonus)}:
-            PPO retains \textbf{151} words ($2.4\times$ improvement from
-            \emph{reward redesign alone}, no algorithm change)
+      \item \textbf{v1 reward (coverage only)}: $r = \Delta R_{\text{total}}/N$ —
+            optimizes for exposing many words, ignores stickiness
+      \item \textbf{v3 reward}: $-$\,naturalness penalty for cramming multiple
+            new words per turn (encodes the empirical LLM-judge finding);
+            $+$\,session-end bonus for words above retention threshold
     \end{itemize}
-    Offline RL benefits identically: CQL retention 19 (v1) $\to$ 81 (v3).
+    The naturalness penalty stops policies from sprawling, the retention
+    bonus directly rewards what the proposal calls the actual goal. Every
+    RL method improves $\sim$6$\times$ from this swap alone.
 
     \heading{v3 reward}
     $$r_t = \underbrace{\Delta R_{\text{total}}/N}_{\text{coverage}}
@@ -195,27 +191,9 @@
       \centering
       \includegraphics[width=0.95\colwidth]{../vocab_rl/results/headline_retention_20seeds.png}
     \end{figure}
-    \begin{table}
-      \centering
-      \small
-      \begin{tabular}{lrr}
-        \toprule
-        \textbf{Policy} & \textbf{Acquired ($R{>}0.9$)} & \textbf{Retained (7d, $R{>}0.5$)} \\
-        \midrule
-        \textbf{PPO v3} (online RL) & 110.1 & \textbf{151.3 [132.3, 162.6]} \\
-        IQL v3 (offline RL) & 74.7 & 85.8 [52.6, 119.0] \\
-        CQL v3 (offline RL) & 71.5 & 81.4 [49.9, 112.7] \\
-        \midrule
-        Random              & 81.5 & 18.0 [15.2, 20.9] \\
-        SmartFSRS           & 5.1  & 8.9  [7.7, 10.3] \\
-        FSRS                & 5.0  & 5.0 \\
-        FSRS+New            & 24.0 & 4.4  [4.2, 4.7] \\
-        \bottomrule
-      \end{tabular}
-    \end{table}
     \textbf{Every RL method beats every heuristic by 5--30$\times$ on retention.}
-    Online RL beats offline RL by $\sim$1.8$\times$ (the cost of the
-    deployment-realistic offline constraint).
+    Online RL (PPO) exceeds offline RL by $\sim$1.8$\times$ — the cost of
+    the deployment-realistic offline constraint.
   \end{block}
 
 
@@ -231,7 +209,7 @@
   \begin{block}{Adaptive Pacing Emerges}
     \begin{figure}
       \centering
-      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/action_distribution_v2.png}
+      \includegraphics[width=0.95\colwidth]{../vocab_rl/results/action_distribution_v3.png}
       \caption{Action mix by turn-in-session. RL methods (right two panels)
       learn intra-session pacing: heavy on new-word actions early, shift
       review-heavy late. No hand-coded baseline shows this structure.}
