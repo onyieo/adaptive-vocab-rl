@@ -113,31 +113,33 @@
   \end{block}
 
   \begin{block}{Approach}
-    \resizebox{\linewidth}{!}{%
+    \begin{center}
       \begin{tikzpicture}[
-          node distance=1.4cm and 1.6cm,
+          node distance=1.0cm and 0.7cm,
           box/.style={rectangle, draw=stanfordred, very thick, rounded corners,
-                     minimum height=2.4cm, minimum width=5.5cm, align=center,
-                     text width=5.0cm, font=\large},
+                     minimum height=1.8cm, minimum width=7.0cm, align=center,
+                     text width=6.4cm, font=\small},
           smallbox/.style={rectangle, draw=black!60, thick, rounded corners,
-                     minimum height=2.0cm, minimum width=4.6cm, align=center,
-                     text width=4.2cm, font=\normalsize},
+                     minimum height=1.8cm, minimum width=7.0cm, align=center,
+                     text width=6.4cm, font=\small},
           arrow/.style={->, very thick, stanfordred, >=latex}]
-        \node[box] (policy) {RL Policy $\pi(a|s)$ \\ (IQL / CQL)};
-        \node[smallbox, right=of policy] (action) {Directive\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
-        \node[smallbox, right=of action] (llm) {Frozen LLM\\(Sonnet)};
-        \node[smallbox, below=of llm] (utter) {Japanese\\dialogue turn};
-        \node[smallbox, below=of action] (sim) {Student\\simulator (FSRS)};
-        \node[smallbox, below=of policy] (state) {State $s$\\(per-word stats)};
+        % Top row: policy -> action -> llm
+        \node[box] (policy) {\textbf{RL Policy} $\pi(a|s)$\\(IQL / CQL)};
+        \node[smallbox, right=of policy] (action) {\textbf{Directive}\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
+        \node[smallbox, right=of action] (llm) {\textbf{Frozen LLM}\\(Claude Sonnet)};
+        % Bottom row: state <- sim <- utterance
+        \node[smallbox, below=of llm] (utter) {\textbf{Japanese}\\dialogue turn};
+        \node[smallbox, below=of action] (sim) {\textbf{Student simulator}\\(FSRS dynamics)};
+        \node[smallbox, below=of policy] (state) {\textbf{State $s$}\\(per-word stats)};
         \draw[arrow] (policy) -- (action);
         \draw[arrow] (action) -- (llm);
         \draw[arrow] (llm) -- (utter);
         \draw[arrow] (utter) -- (sim);
         \draw[arrow] (sim) -- (state);
         \draw[arrow] (state) -- (policy);
-      \end{tikzpicture}%
-    }
-    \vspace{0.3cm}
+      \end{tikzpicture}
+    \end{center}
+    \vspace{0.2cm}
     \begin{itemize}
       \item \textbf{State}: per-word stability, $R$, difficulty, usage; session position. 500 JLPT N5--N3 words.
       \item \textbf{Action}: $(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$ summing to 5 (21 discrete actions).
