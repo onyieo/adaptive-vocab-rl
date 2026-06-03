@@ -1,0 +1,15 @@
+name,algo,beta,seed,acq,ret
+FINAL_cql_alpha1_seed1,cql,3,1,71.0,56.9
+FINAL_iql_beta3_seed1,iql,3,1,45.7,54.0
+FINAL_cql_alpha1_seed0,cql,3,0,51.9,48.8
+FINAL_iql_beta3_seed2,iql,3,2,52.1,48.8
+FINAL_iql_beta3_seed0,iql,3,0,65.7,101.3
+FINAL_iql_beta10_seed2,iql,10,2,50.3,30.0
+FINAL_iql_beta10_seed0,iql,10,0,63.6,75.0
+FINAL_cql_alpha1_seed4,cql,3,4,43.7,35.9
+FINAL_iql_beta10_seed3,iql,10,3,50.7,74.5
+FINAL_cql_alpha1_seed2,cql,3,2,52.1,70.6
+FINAL_iql_beta3_seed3,iql,3,3,65.5,63.6
+FINAL_iql_beta3_seed4,iql,3,4,75.5,106.7
+FINAL_cql_alpha1_seed3,cql,3,3,66.3,60.2
+FINAL_iql_beta10_seed4,iql,10,4,63.3,70.0
