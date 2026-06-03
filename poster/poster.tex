@@ -91,9 +91,9 @@
       \item \textbf{Conversational naturalness} — turns must sound like
             dialogue, not a flashcard drill
     \end{itemize}
-    Real products ship hand-coded spaced-repetition rules. A principled
-    RL approach can discover scheduling strategies no fixed heuristic
-    matches.
+    Existing products rely on hand-coded spaced-repetition rules. A
+    principled reinforcement-learning approach has the potential to
+    discover scheduling strategies that fixed heuristics cannot express.
   \end{block}
 
   \begin{block}{Related Work}
@@ -113,15 +113,15 @@
   \end{block}
 
   \begin{block}{Approach}
-    \begin{center}
+    \resizebox{\linewidth}{!}{%
       \begin{tikzpicture}[
-          node distance=1.0cm and 1.1cm,
+          node distance=1.4cm and 1.6cm,
           box/.style={rectangle, draw=stanfordred, very thick, rounded corners,
-                     minimum height=1.8cm, minimum width=4.0cm, align=center,
-                     text width=3.6cm, font=\small},
+                     minimum height=2.4cm, minimum width=5.5cm, align=center,
+                     text width=5.0cm, font=\large},
           smallbox/.style={rectangle, draw=black!60, thick, rounded corners,
-                     minimum height=1.5cm, minimum width=3.4cm, align=center,
-                     text width=3.2cm, font=\footnotesize},
+                     minimum height=2.0cm, minimum width=4.6cm, align=center,
+                     text width=4.2cm, font=\normalsize},
           arrow/.style={->, very thick, stanfordred, >=latex}]
         \node[box] (policy) {RL Policy $\pi(a|s)$ \\ (IQL / CQL)};
         \node[smallbox, right=of policy] (action) {Directive\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
@@ -135,14 +135,15 @@
         \draw[arrow] (utter) -- (sim);
         \draw[arrow] (sim) -- (state);
         \draw[arrow] (state) -- (policy);
-      \end{tikzpicture}
-    \end{center}
+      \end{tikzpicture}%
+    }
+    \vspace{0.3cm}
     \begin{itemize}
       \item \textbf{State}: per-word stability, $R$, difficulty, usage; session position. 500 JLPT N5--N3 words.
       \item \textbf{Action}: $(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$ summing to 5 (21 discrete actions).
-      \item \textbf{Methods}: IQL \cite{iql}, CQL \cite{cql} (offline);
-            PPO \cite{ppo} (online upper bound); Random, FSRS, FSRS+New,
-            RuleBased, SmartFSRS.
+      \item \textbf{Methods}: IQL \cite{iql}, CQL \cite{cql} (offline, \emph{deployable});
+            PPO \cite{ppo} (online, reference upper bound);
+            heuristics: Random, FSRS, FSRS+New, RuleBased, SmartFSRS.
     \end{itemize}
   \end{block}
 
@@ -155,9 +156,9 @@
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{alertblock}{Key Finding: Reward Design $\gg$ Algorithm Choice}
-    Same algorithms, two rewards, \textbf{6$\times$ retention gain} across
-    every RL method.
+  \begin{alertblock}{Key Finding: Reward Design Dominates Algorithm Choice}
+    Identical algorithms, two reward formulations, a 6$\times$ improvement
+    in post-gap retention across every RL method.
 
     \heading{v3 reward}
     \vspace{-0.3cm}
@@ -171,15 +172,16 @@
     \end{figure}
   \end{alertblock}
 
-  \begin{block}{Final Retention (500 words, 20 seeds, 95\% CI)}
+  \begin{block}{Final Retention (500 words, 95\% CI)}
     \begin{figure}
       \centering
       \includegraphics[width=0.98\colwidth]{headline_retention_20seeds.png}
     \end{figure}
-    Every RL method beats every heuristic by \textbf{4--34$\times$} on
-    post-gap retention. Online RL (PPO) exceeds offline RL by
-    $\sim$2$\times$ — the cost of the deployment-realistic offline
-    constraint.
+    \textbf{Offline RL (the deployable case) outperforms every fixed
+    heuristic by 4--17$\times$} on post-gap retention. PPO is included as a
+    \emph{non-deployable reference} (online RL requires student-in-the-loop
+    training, which is impractical in production); it indicates an
+    additional 2$\times$ headroom under unrestricted simulator access.
   \end{block}
 
 \end{column}
@@ -196,9 +198,9 @@
       \centering
       \includegraphics[width=0.98\colwidth]{action_distribution_v3.png}
     \end{figure}
-    Action mix by turn-in-session. RL methods (right panels) learn
-    \emph{intra-session pacing}: new words early, review late. No
-    hand-coded baseline shows this.
+    Action mix by turn-in-session. The learned policies (right panels)
+    develop intra-session pacing: new words introduced early, review
+    weighted later. No hand-coded baseline exhibits this structure.
   \end{block}
 
   \begin{block}{Retention vs Naturalness Pareto}
@@ -206,26 +208,28 @@
       \centering
       \includegraphics[width=0.98\colwidth]{pareto_retention_naturalness.png}
     \end{figure}
-    Naturalness from \emph{cross-family} judge (OpenAI gpt-4o-mini vs
-    Claude Sonnet tutor — no self-preference). PPO matches Random
-    naturalness with 8$\times$ retention; offline IQL has higher
-    naturalness than PPO at 50\% of retention.
+    Naturalness scored by a cross-family LLM judge (OpenAI gpt-4o-mini
+    evaluating a Claude Sonnet tutor) to mitigate same-family
+    self-preference. Offline IQL achieves higher naturalness than PPO
+    while maintaining $\sim$50\% of its retention.
   \end{block}
 
   \begin{block}{Discussion}
-    \textbf{Takeaways}: reward design \emph{dominates} algorithm choice
-    here; coverage metrics mislead (Random scored 81 acquired but only 18
-    retained); hierarchical RL/LLM control is viable.
+    \textbf{Takeaways:} reward design dominates algorithm choice for this
+    domain; coverage metrics are misleading (Random scored 81 acquired but
+    only 18 retained after 7 days); hierarchical RL+LLM control is a
+    viable architecture for tutor-style applications.
 
-    \textbf{Limitations}: simulator dynamics are hand-tuned (no human
-    pilot); action space is coarse (21 directives); wide offline-RL CIs
-    indicate seed sensitivity.
+    \textbf{Limitations:} simulator dynamics are hand-tuned without a
+    human pilot; the action space is coarse (21 directives); offline RL
+    confidence intervals remain wide enough to motivate further multi-seed
+    work.
   \end{block}
 
-  \begin{block}{Future Work (before final report)}
-    Multi-seed training to tighten offline-RL CIs (Modal sweep running);
-    BC-of-PPO ablation; top-$k$ per-word action space; extended OOD
-    robustness sweep.
+  \begin{block}{Future Work}
+    Top-$k$ per-word action space, behavior-cloning-of-PPO ablation, and
+    extended out-of-distribution robustness across simulator
+    parameterizations.
   \end{block}
 
   \begin{block}{References}
