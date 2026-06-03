@@ -1,0 +1,1166 @@
+{
+  "policy": "FSRS",
+  "seed": 0,
+  "turns": [
+    {
+      "turn": 0,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        159,
+        138,
+        12,
+        108,
+        69
+      ],
+      "words": [
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 159,
+      "text": "うちの祖母 (そぼ) [grandmother] はね、毎日 駅 (えき) [train station] の近くの市場まで歩いて、新鮮な魚 (さかな) [fish] を買いに行くんですよ。妹 (いもうと) [younger sister] もよくついて行くんだけど、いつも靴 (くつ) [shoes] が泥だらけになって帰ってくるって（笑）。あなたのおばあさんはどんな人ですか？",
+      "naturalness": 4,
+      "naturalness_reason": "Naturally conversational narrative about the speaker's grandmother with organically woven vocabulary; pedagogical glosses are unobtrusive and the closing question invites genuine dialogue exchange, though the density of glosses is slightly more noticeable than ideal native speech.",
+      "tutor_usage": {
+        "input_tokens": 132,
+        "output_tokens": 154,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    {
+      "turn": 1,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        12,
+        69,
+        108,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 12,
+      "text": "へえ、そうなんですね！うちの祖母が市場で買う魚、本当においしいんですよ——特にお刺身にすると最高で。妹は靴を汚してでも祖母についていきたいみたいで、駅の近くまで二人でよく歩いてますよ。あなたは魚料理、好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response largely echoes the prior turn's vocabulary and structure rather than organically extending the conversation; it feels like the tutor is repeating back target words (魚, 祖母, 妹, 靴, 駅) in a list-like manner instead of building naturally on the conversational thread.",
+      "tutor_usage": {
+        "input_tokens": 132,
+        "output_tokens": 110,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 283
+      }
+    },
+    {
+      "turn": 2,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "あ、魚が好きなんですね！実はうちの妹が一番の魚好きで、祖母に魚の選び方をずっと教わってるんですよ。この前も駅の近くの市場で靴を濡らしながら夢中で選んでたみたい（笑）。あなたには妹さんや弟さんいますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The tutor's response heavily recycles content from the prior turn (妹, 魚, 祖母, 駅の近く, 靴, 市場) rather than advancing the conversation naturally, creating a stilted echo effect that feels more like vocabulary repetition than genuine dialogue flow.",
+      "tutor_usage": {
+        "input_tokens": 371,
+        "output_tokens": 110,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 283
+      }
+    },
+    {
+      "turn": 3,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "そうなんですか！うちの妹はほんとうに元気な子で、祖母と一緒に駅まで走って行って、魚を買った帰りに靴をびしょびしょにしてくるんですよね。あなたの妹さんはどんな子ですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response repeats much of the tutor's prior story about the younger sister, shoes, and the station/market in nearly identical phrasing, making it feel like a stilted echo rather than a natural conversation continuation; the question asked ('あなたには妹さんや弟さんいますか?') is not answered, and the turn reads more like rearranged drill material than genuine dialogue flow.",
+      "tutor_usage": {
+        "input_tokens": 371,
+        "output_tokens": 89,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 393
+      }
+    },
+    {
+      "turn": 4,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "かわいい妹さんですね！うちの妹は祖母にそっくりで、魚を見る目がすごく鋭いんですよ。この前、駅前の市場で新しい靴を履いて行ったのに、帰ってきたらもうぐちゃぐちゃになってて（笑）。妹さんと一緒によく出かけますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally and incorporates the contextual vocabulary (妹, 祖母, 駅, 魚, 靴) organically into a genuine-sounding anecdote, with only minor awkwardness in the phrasing \"魚を見る目がすごく鋭い\" which feels slightly constructed but still acceptable for conversational speech.",
+      "tutor_usage": {
+        "input_tokens": 350,
+        "output_tokens": 117,
+        "cache_read_input_tokens": 13630,
+        "cache_creation_input_tokens": 349
+      }
+    },
+    {
+      "turn": 5,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "そうですか！うちも妹とよく出かけるんですけど、先週は祖母も一緒に駅の向こうの魚屋さんまで行ったんですよ。妹ったら新しい靴で来たのに、帰り道でぜんぶ汚しちゃって、祖母に笑われてました（笑）。妹さんとはどんなところに行くことが多いですか？",
+      "naturalness": 5,
+      "naturalness_reason": "The response flows naturally as authentic conversation, seamlessly echoing and building on the previous turn's anecdote about the sister ruining shoes, while maintaining casual tone markers (妹ったら, ぜんぶ, 笑われてました) and returning the question organically without any forced vocabulary insertion or artificial glossing.",
+      "tutor_usage": {
+        "input_tokens": 378,
+        "output_tokens": 128,
+        "cache_read_input_tokens": 13869,
+        "cache_creation_input_tokens": 328
+      }
+    },
+    {
+      "turn": 6,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "いいですね！そういえば、うちの妹は駅の近くのお店で靴を選ぶのがすごく好きで、祖母をよく付き合わせてるんですよ。魚屋さんの前を通るたびに祖母が「これがおいしい」って教えてあげてる様子がほほえましくて。妹さんはどんなものを買うのが好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels overly constructed and shifts awkwardly between topics (shoe shopping, fish vendor lessons, what the sister buys), with the vocabulary ('ほほえましい' and the detailed observations about the grandmother) feeling inserted to display knowledge rather than flowing naturally from genuine conversational interest.",
+      "tutor_usage": {
+        "input_tokens": 389,
+        "output_tokens": 125,
+        "cache_read_input_tokens": 14108,
+        "cache_creation_input_tokens": 335
+      }
+    },
+    {
+      "turn": 7,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "そうなんですね！うちの妹はとにかく賑やかで、祖母と駅まで歩くときもずっとしゃべりっぱなしなんですよ。魚屋さんの前でも靴を脱いで川に入ろうとして、祖母にしかられたこともあるって（笑）。妹さんって、にぎやかなタイプですか？",
+      "naturalness": 1,
+      "naturalness_reason": "The response contains nonsensical and contradictory elements (removing shoes to enter a river at a fish market) that break coherence, and the grammar/content feel disconnected from the conversational flow despite using grammatically correct Japanese.",
+      "tutor_usage": {
+        "input_tokens": 386,
+        "output_tokens": 120,
+        "cache_read_input_tokens": 14326,
+        "cache_creation_input_tokens": 374
+      }
+    },
+    {
+      "turn": 8,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "あはは、おとなしい妹さんもかわいいですね！うちの妹は駅で祖母を待つ間も、魚の絵を靴に描いたりして一人で遊んでるような子なんですよ。妹さんは今、学校は楽しんでいますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response acknowledges the previous turn but then abruptly shifts to describing the tutor's own sister and asking an unrelated question about school, breaking conversational flow and feeling more like a scripted interview turn than a natural dialogue exchange.",
+      "tutor_usage": {
+        "input_tokens": 381,
+        "output_tokens": 92,
+        "cache_read_input_tokens": 14572,
+        "cache_creation_input_tokens": 382
+      }
+    },
+    {
+      "turn": 9,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "そうですか、よかった！ところで、うちの妹が昨日おもしろいことを言っててね、将来は駅の近くで魚料理のお店を開きたいって。祖母に料理を習いながら、靴もおしゃれなものを履いて働くんだって（笑）。あなたの妹さんは将来の夢とかありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally and continues the conversation smoothly with a personal anecdote about the sister's dream, creating a genuine dialogue exchange, though the transition from the sister's shoe-drawing behavior to opening a fish restaurant feels slightly forced thematically.",
+      "tutor_usage": {
+        "input_tokens": 353,
+        "output_tokens": 116,
+        "cache_read_input_tokens": 14829,
+        "cache_creation_input_tokens": 374
+      }
+    },
+    {
+      "turn": 10,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "すてきな夢ですね！うちの妹も負けてなくて、祖母から魚の料理を全部覚えたら、駅の近くにお店を出して、お店のユニフォームには特別な靴を履くって決めてるみたいですよ。妹さんの夢、応援してあげていますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response mirrors the prior turn's content almost verbatim (fish cooking, grandmother, near station, special shoes), creating an artificial echo rather than a natural conversational reply; the mirroring reads as formulaic rather than genuine exchange.",
+      "tutor_usage": {
+        "input_tokens": 377,
+        "output_tokens": 102,
+        "cache_read_input_tokens": 15083,
+        "cache_creation_input_tokens": 341
+      }
+    },
+    {
+      "turn": 11,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "それはいいお兄さん（お姉さん）ですね！うちの妹も、祖母と駅前の魚屋さんに通ううちに料理がどんどん上手になってきて、家族みんな応援してますよ。この前は新しい靴を買ってもらって、すごく嬉しそうでした。あなたは妹さんにプレゼントをあげたことありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "Natural and engaging response that flows conversationally, though the transition to asking about gifts feels slightly formulaic and could have emerged more organically from the prior exchange about the sister's dreams.",
+      "tutor_usage": {
+        "input_tokens": 363,
+        "output_tokens": 127,
+        "cache_read_input_tokens": 15332,
+        "cache_creation_input_tokens": 337
+      }
+    },
+    {
+      "turn": 12,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "わあ、優しいですね！うちの妹へのプレゼントはいつも祖母が選ぶんですけど、この前は駅の近くのお店で可愛い靴を買ってあげたら、そのまま魚屋さんまで走って行って汚してきたんですよ（笑）。妹さんへのプレゼント、何を選びましたか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response is grammatically correct but reads as a somewhat forced reversal of the previous speaker's story rather than a natural conversational flow; the learner appears to be recycling details (grandmother choosing gifts, shoes, fish shop) from the prior turn in an artificial way, creating a stilted echo effect rather than engaging organically with the question asked.",
+      "tutor_usage": {
+        "input_tokens": 388,
+        "output_tokens": 119,
+        "cache_read_input_tokens": 15553,
+        "cache_creation_input_tokens": 347
+      }
+    },
+    {
+      "turn": 13,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "それは妹さん、きっと喜んだでしょうね！うちの妹はね、祖母から「靴は大切にしなさい」っていつも言われてるのに、駅から魚市場まで走るから、すぐダメにしちゃうんですよ。妹さんはもらったプレゼント、大切に使ってくれましたか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response acknowledges the prior turn but shifts awkwardly into discussing the tutor's own sister rather than continuing the natural back-and-forth about the user's gift-giving experience; the dialogue feels like the tutor is deflecting rather than engaging conversationally, making it stilted and self-focused rather than maintaining rapport.",
+      "tutor_usage": {
+        "input_tokens": 380,
+        "output_tokens": 113,
+        "cache_read_input_tokens": 15798,
+        "cache_creation_input_tokens": 358
+      }
+    },
+    {
+      "turn": 14,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "それはよかった！うちの妹ったら、祖母に靴を大切にしなさいって何度言われても、駅から魚屋さんまでの道でいつも汚しちゃうんですよね。あなたの妹さんは物を大切にするタイプですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The tutor largely repeats the learner's content rather than advancing the conversation naturally; the turn feels like a self-focused detour (dwelling on their own sister's shoe-ruining habits) before awkwardly pivoting back to ask the original question again, making it sound stilted and pedagogically forced rather than a flowing chat.",
+      "tutor_usage": {
+        "input_tokens": 374,
+        "output_tokens": 89,
+        "cache_read_input_tokens": 16029,
+        "cache_creation_input_tokens": 375
+      }
+    },
+    {
+      "turn": 15,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "うらやましいな～！うちの妹は祖母似で元気いっぱいなんですけど、物持ちだけはあまりよくなくて（笑）。先日も駅で靴の紐がほどけたまま魚屋さんまで走っていって、祖母にため息をつかれてましたよ。妹さんと祖母さんは仲がいいですか？",
+      "naturalness": 4,
+      "naturalness_reason": "Natural conversational flow with relatable anecdotes woven in smoothly; the target words (物持ち, ため息) integrate organically into the exchange, though the response slightly mirrors the prior turn's structure, creating minor redundancy rather than truly advancing the dialogue naturally.",
+      "tutor_usage": {
+        "input_tokens": 350,
+        "output_tokens": 121,
+        "cache_read_input_tokens": 16285,
+        "cache_creation_input_tokens": 361
+      }
+    },
+    {
+      "turn": 16,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "それは素敵ですね！やっぱり妹と祖母って仲良くなりやすいのかな。うちも妹が祖母と一緒に駅前の魚屋さんで靴を泥だらけにしながら買い物するのが、二人だけの楽しみになってるみたいですよ。妹さんとおばあさんはよく会いますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response echoes the prior turn's details too directly (妹, 祖母, 駅, 魚屋さん, 靴) without organic integration, making it feel like a rephrased drill rather than natural conversation flow; the repetition comes across as stilted rather than engaging.",
+      "tutor_usage": {
+        "input_tokens": 382,
+        "output_tokens": 118,
+        "cache_read_input_tokens": 16533,
+        "cache_creation_input_tokens": 331
+      }
+    },
+    {
+      "turn": 17,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "そうなんですね、少し寂しいですね。うちの妹は祖母が駅の近くに住んでいるから、靴を履き替える暇もなく毎週会いに行って、一緒に魚を選んでますよ。妹さん、次におばあさんに会うのはいつ頃ですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response contains some awkward phrasing and structural issues (e.g., 'おばあさんに会うのはいつ頃ですか' echoes the prior question too directly), and the middle clause about shoes and fish-shopping feels disconnected from the conversational flow rather than building naturally on the established topic.",
+      "tutor_usage": {
+        "input_tokens": 379,
+        "output_tokens": 102,
+        "cache_read_input_tokens": 16775,
+        "cache_creation_input_tokens": 339
+      }
+    },
+    {
+      "turn": 18,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "それは楽しみですね！せっかく会うなら、妹さんと一緒に駅の近くで魚料理でも食べに行くのはどうでしょう。祖母も喜ぶと思うし、おしゃれな靴を履いていったら素敵な思い出になりそうですね。どんなことをする予定ですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The tutor awkwardly shoehorns in 'おしゃれな靴を履いていったら' (wearing fancy shoes) without clear conversational motivation, making the suggestion feel forced and derailing from the natural flow about grandmother visits and fish shopping.",
+      "tutor_usage": {
+        "input_tokens": 363,
+        "output_tokens": 110,
+        "cache_read_input_tokens": 16993,
+        "cache_creation_input_tokens": 368
+      }
+    },
+    {
+      "turn": 19,
+      "action_index": 0,
+      "directive_counts": {
+        "new": 0,
+        "active": 0,
+        "review": 5
+      },
+      "word_ids": [
+        69,
+        108,
+        12,
+        138,
+        159
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 69,
+      "text": "いいですね、妹さんも絶対喜びますよ！祖母と一緒に駅で待ち合わせして、魚料理のおいしいお店を探しながら歩くの、楽しそうですね。新しい靴で行ったら気分も上がりそう！どんな料理を食べたいですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response feels natural and conversational with good flow, though the repetition of 'うれしい' concepts and \"駅で待ち合わせ\" / \"駅の近くで\" edges toward echoing the prior turn rather than building organically on it.",
+      "tutor_usage": {
+        "input_tokens": 371,
+        "output_tokens": 103,
+        "cache_read_input_tokens": 17243,
+        "cache_creation_input_tokens": 349
+      }
+    }
+  ]
+}

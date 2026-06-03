@@ -9,12 +9,10 @@ venv/
 .ruff_cache/
 
 # Training artifacts (regenerable, large)
-dataset.npz
-smoke.npz
+# Any dataset or buffer artifacts (regenerable, hundreds of MB)
+*.npz
+# Model checkpoints
 *.pt
-iql_policy.pt
-cql_policy.pt
-smoke_policy.pt
 
 # Generated plots (regenerable; PNGs we want for the writeup live in vocab_rl/results/)
 *.png

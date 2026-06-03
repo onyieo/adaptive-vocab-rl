@@ -2,4 +2,7 @@ numpy
 matplotlib
 torch
 anthropic
+openai
 python-dotenv
+modal
+wandb

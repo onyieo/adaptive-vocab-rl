@@ -1,0 +1,1166 @@
+{
+  "policy": "FSRS+New",
+  "seed": 0,
+  "turns": [
+    {
+      "turn": 0,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        159,
+        138,
+        12,
+        108,
+        69
+      ],
+      "words": [
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 159,
+      "text": "そういえば、私の祖母 (そぼ) [grandmother] がね、毎週駅 (えき) [train station] の近くの魚 (さかな) [fish] 屋さんまで歩いて行くんですよ。妹 (いもうと) [younger sister] がよく靴 (くつ) [shoes] が痛いって文句を言うのに、祖母はぜんぜん平気なんです！あなたのおばあさんはどんな人ですか？",
+      "naturalness": 3,
+      "naturalness_reason": "The tutor attempts to weave vocabulary into a relatable personal anecdote, but the repeated pedagogical glosses (particularly [grandmother], [train station], [fish], [shoes]) interrupt flow and feel more like vocabulary review than natural conversation, making it read somewhat stilted despite grammatical correctness.",
+      "tutor_usage": {
+        "input_tokens": 3,
+        "output_tokens": 147,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    {
+      "turn": 1,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        12,
+        69,
+        108,
+        138
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 190,
+      "text": "へえ、おもしろいですね！うちの妹は駅のそばのプールによく行くんですけど、泳ぐ (およぐ) [to swim] のが本当に上手で、まるで魚みたいなんですよ。あなたは泳ぐのは好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally as a conversational exchange, with 泳ぐ organically introduced through a relatable anecdote about the student's sister; the gloss feels unobtrusive, though the comparison \"まるで魚みたい\" (like a fish) feels slightly formulaic in structure.",
+      "tutor_usage": {
+        "input_tokens": 135,
+        "output_tokens": 93,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 276
+      }
+    },
+    {
+      "turn": 2,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        178,
+        159,
+        190,
+        69,
+        108
+      ],
+      "words": [
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 178,
+      "text": "そうなんですね！私は週末 (しゅうまつ) [weekend] に妹と一緒に祖母の家に行くことが多いんですが、駅から近いので便利ですよ。祖母の家の近くにプールもあって、泳ぐこともできるんです。あなたは週末、たいてい何をしていますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels disjointed and artificially constructed—the tutor abruptly shifts to talking about visiting grandmother's house instead of answering the direct question about swimming, then forces in 'weekend' with a gloss that reads like a vocabulary insertion rather than natural speech, creating a stilted, list-like quality.",
+      "tutor_usage": {
+        "input_tokens": 366,
+        "output_tokens": 109,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 276
+      }
+    },
+    {
+      "turn": 3,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        146,
+        12,
+        138,
+        178,
+        190
+      ],
+      "words": [
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 146,
+      "text": "あ、週末に泳ぎに行く話ですけど、この前プールの靴を脱ぐところのそばのトイレ (トイレ) [toilet] がすごくきれいで驚きました！魚の絵が飾ってあってかわいかったですよ。そのプール、よく行きますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response abruptly pivots to an oddly specific observation about a pool toilet rather than naturally answering the question about weekend activities, making it feel forced and conversationally awkward despite grammatical correctness.",
+      "tutor_usage": {
+        "input_tokens": 385,
+        "output_tokens": 100,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 372
+      }
+    },
+    {
+      "turn": 4,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        167,
+        159,
+        146,
+        69,
+        108
+      ],
+      "words": [
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 167,
+      "text": "そうそう、祖母の家に行く話に戻るんですが、駅から七 (しち) [seven] 分くらい歩くんですよ。妹はいつもトイレに寄りたいって言うので、途中でコンビニに立ち寄ることが多いです！あなたの家は駅から近いですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response awkwardly shoehorns in 七 (seven) with an unnatural conversational setup—saying 'seven minutes walk' with explicit furigana feels like a vocabulary insertion rather than organic speech, and the sudden topic shift to grandmother's house feels forced despite the disclaimer 'to go back to that story.'",
+      "tutor_usage": {
+        "input_tokens": 366,
+        "output_tokens": 104,
+        "cache_read_input_tokens": 13626,
+        "cache_creation_input_tokens": 340
+      }
+    },
+    {
+      "turn": 5,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        69,
+        108,
+        155,
+        178,
+        167
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "コーヒー",
+          "reading": "コーヒー",
+          "gloss": "coffee",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 155,
+      "text": "週末に妹と駅の近くのカフェに行くんですけど、そこのコーヒー (コーヒー) [coffee] が本当においしくて！七種類くらいあって、毎回どれにするか迷っちゃいます。コーヒーは好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response abruptly shifts topics from the grandmother's house discussion to a café without acknowledging the tutor's question about proximity to the station, making it feel disjointed and less like a natural conversational flow; additionally, 'coffee' is repeated mechanically with its reading despite already being established vocabulary, creating a stilted pedagogical feel rather than organic speech.",
+      "tutor_usage": {
+        "input_tokens": 367,
+        "output_tokens": 90,
+        "cache_read_input_tokens": 13857,
+        "cache_creation_input_tokens": 344
+      }
+    },
+    {
+      "turn": 6,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        69,
+        108,
+        176,
+        146,
+        190
+      ],
+      "words": [
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "毎日",
+          "reading": "まいにち",
+          "gloss": "every day",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 176,
+      "text": "妹はね、毎日 (まいにち) [every day] 駅の近くのプールに泳ぎに行くんですよ、すごいでしょう！着替えやトイレも全部そこで済ませて、そのままバイトに行くらしいです。あなたは毎日続けていることって何かありますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The tutor abruptly shifts to an unrelated topic (the sister's swimming habit) rather than engaging naturally with the coffee conversation, making the dialogue feel disjointed and forced; while the target word 毎日 is grammatically correct, its insertion feels like a vocabulary check rather than a natural conversational response.",
+      "tutor_usage": {
+        "input_tokens": 361,
+        "output_tokens": 104,
+        "cache_read_input_tokens": 14101,
+        "cache_creation_input_tokens": 332
+      }
+    },
+    {
+      "turn": 7,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        108,
+        123,
+        155
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "コーヒー",
+          "reading": "コーヒー",
+          "gloss": "coffee",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 123,
+      "text": "へえ、いいですね！妹は泳ぐとき、駅で買ったコーヒーを飲んでから音楽 (おんがく) [music] を聴きながら準備するんですって。音楽があるとやる気が出るって言ってました。あなたはどんな音楽が好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response awkwardly shoehorns in 'music' (音楽) with an invented detail about the sister that contradicts the prior context (the sister goes directly to the pool near the station, not to buy coffee first), making the dialogue feel forced and unnatural rather than a genuine conversational flow.",
+      "tutor_usage": {
+        "input_tokens": 380,
+        "output_tokens": 100,
+        "cache_read_input_tokens": 14329,
+        "cache_creation_input_tokens": 326
+      }
+    },
+    {
+      "turn": 8,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        108,
+        126,
+        176
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "言葉",
+          "reading": "ことば",
+          "gloss": "word",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "毎日",
+          "reading": "まいにち",
+          "gloss": "every day",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 126,
+      "text": "そういえば、妹が毎日泳ぎに行く前に、駅のカフェで日本語の言葉 (ことば) [word] をノートに書いて覚える練習をしてるらしいんですよ。泳ぐことと勉強、両方続けていてえらいなあと思って。あなたも新しい言葉を覚えるとき、何か工夫していますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The turn awkwardly pivots away from the music question to introduce a new, unrelated anecdote about vocabulary study that feels shoehorned in; the phrase '日本語の言葉' is redundant, and the overall flow reads more like a scheduled vocabulary insertion than a natural conversational response.",
+      "tutor_usage": {
+        "input_tokens": 376,
+        "output_tokens": 125,
+        "cache_read_input_tokens": 14565,
+        "cache_creation_input_tokens": 330
+      }
+    },
+    {
+      "turn": 9,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        108,
+        99,
+        167
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "何",
+          "reading": "なに",
+          "gloss": "what",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 99,
+      "text": "妹が駅から七分のプールに毎日泳ぎに行くって話しましたけど、いったい何 (なに) [what] がそんなにやる気の源なんだろうって思って聞いたら、「楽しいから！」って笑ってました。あなたは何か続けている趣味がありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "Natural conversational flow with organic follow-up to the prior context about the sister's swimming routine; the target word 'なに' is integrated smoothly, though the introduction of a new topic (asking about the user's hobbies) slightly shifts focus rather than deepening the original pedagogical thread.",
+      "tutor_usage": {
+        "input_tokens": 392,
+        "output_tokens": 103,
+        "cache_read_input_tokens": 14791,
+        "cache_creation_input_tokens": 341
+      }
+    },
+    {
+      "turn": 10,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        108,
+        98,
+        123
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "時間",
+          "reading": "じかん",
+          "gloss": "time",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 98,
+      "text": "妹は駅から泳ぎに行くとき、時間 (じかん) [time] をとても大切にしていて、音楽を聴きながらぴったり一時間で終わらせるんですって。そんなにきっちりできるの、すごいですよね！あなたは時間の使い方で気をつけていることはありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response naturally continues the conversation about the sister's swimming routine and smoothly incorporates the target word 時間 (じかん) in a contextually appropriate way, though the transition from the previous comment about motivation to this detail about time management feels slightly less organic than ideal conversation flow.",
+      "tutor_usage": {
+        "input_tokens": 368,
+        "output_tokens": 109,
+        "cache_read_input_tokens": 15032,
+        "cache_creation_input_tokens": 361
+      }
+    },
+    {
+      "turn": 11,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        108,
+        75,
+        126
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "今日",
+          "reading": "きょう",
+          "gloss": "today",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "言葉",
+          "reading": "ことば",
+          "gloss": "word",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 75,
+      "text": "今日 (きょう) [today] も妹は駅のプールに泳ぎに行ったみたいで、帰ってきてから覚えた言葉を私に教えてくれましたよ。あなたは今日、何か新しいことをしましたか？",
+      "naturalness": 3,
+      "naturalness_reason": "The response acknowledges the prior context about the sister but feels somewhat disconnected and list-like; 今日 is inserted naturally enough, but the turn reads more like moving through prompted vocabulary items than sustaining a genuine conversational flow about the sister's activities or time management.",
+      "tutor_usage": {
+        "input_tokens": 379,
+        "output_tokens": 85,
+        "cache_read_input_tokens": 15268,
+        "cache_creation_input_tokens": 356
+      }
+    },
+    {
+      "turn": 12,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        190,
+        69,
+        108,
+        191,
+        12
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "使う",
+          "reading": "つかう",
+          "gloss": "to use",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 191,
+      "text": "妹がね、泳ぐときに使う (つかう) [to use] ゴーグルを駅の近くのスポーツ店で買ったんですけど、魚の絵が描いてあってかわいいんですよ！あなたは運動するとき、何か特別な道具を使いますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response naturally incorporates the target word 'つかう' into a charming anecdote about the sister's goggles, with the gloss feeling organic; the flow is conversational and engaging, though the pedagogical gloss could be slightly more seamlessly embedded.",
+      "tutor_usage": {
+        "input_tokens": 353,
+        "output_tokens": 98,
+        "cache_read_input_tokens": 15521,
+        "cache_creation_input_tokens": 346
+      }
+    },
+    {
+      "turn": 13,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        54
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "高い",
+          "reading": "たかい",
+          "gloss": "tall, expensive",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 54,
+      "text": "その魚の絵のゴーグル、実はけっこう高い (たかい) [expensive] んですよ、三千円もしたって！妹は駅の近くのお店でセールのときに買ったから少し安くなったみたいですけど、泳ぐ道具ってなかなか値段がかかりますよね。あなたは高い買い物をしたことがありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally with organic conversation about the goggle purchase, and 高い (expensive) integrates smoothly into the discussion of price; the pedagogical gloss is unobtrusive, though the turn is slightly lengthy and shifts focus somewhat abruptly from the goggle story to a generic question about expensive purchases.",
+      "tutor_usage": {
+        "input_tokens": 366,
+        "output_tokens": 121,
+        "cache_read_input_tokens": 15758,
+        "cache_creation_input_tokens": 327
+      }
+    },
+    {
+      "turn": 14,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        196
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "広い",
+          "reading": "ひろい",
+          "gloss": "wide",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 196,
+      "text": "妹が通っている駅の近くのプール、とても広い (ひろい) [wide] んですって！魚みたいに気持ちよく泳げるって言ってました。あなたの近くにも広いプールや公園はありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally and incorporates the target word 広い (wide) organically within a relatable comment about the sister's pool, though the transition back to asking about the user's own facilities feels slightly formulaic for conversational flow.",
+      "tutor_usage": {
+        "input_tokens": 389,
+        "output_tokens": 78,
+        "cache_read_input_tokens": 16000,
+        "cache_creation_input_tokens": 315
+      }
+    },
+    {
+      "turn": 15,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        105
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "西",
+          "reading": "にし",
+          "gloss": "west",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 105,
+      "text": "そのプールは駅の西 (にし) [west] 側にあるんですけど、妹が「あっちの方が魚屋さんも近くて便利！」って言ってて笑いました。泳いだ後に新鮮な魚を買って帰るんですって。あなたはよく自分で料理しますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The inclusion of 西側 (west side) and 魚屋 (fish shop) feels artificially shoehorned into an unnatural narrative—the logical connection between the pool's location and buying fresh fish is forced and reads more like vocabulary insertion than genuine conversation flow.",
+      "tutor_usage": {
+        "input_tokens": 343,
+        "output_tokens": 103,
+        "cache_read_input_tokens": 16217,
+        "cache_creation_input_tokens": 352
+      }
+    },
+    {
+      "turn": 16,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        84
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "日",
+          "reading": "ひ",
+          "gloss": "day, sun",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 84,
+      "text": "妹がね、泳ぎに行く日 (ひ) [day] は必ず駅の魚屋さんに寄って帰るって決めているみたいで、もうすっかり習慣になっているんですよ。あなたも毎日決まってやることはありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "Natural conversational flow with the target word 日 (day) woven in organically; the gloss feels unobtrusive, and the turn maintains engaging dialogue by asking a reciprocal question, though the 必ず construction slightly adds formality that could feel slightly rehearsed.",
+      "tutor_usage": {
+        "input_tokens": 369,
+        "output_tokens": 90,
+        "cache_read_input_tokens": 16448,
+        "cache_creation_input_tokens": 331
+      }
+    },
+    {
+      "turn": 17,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        9
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "雪",
+          "reading": "ゆき",
+          "gloss": "snow",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 9,
+      "text": "先週、雪 (ゆき) [snow] が降った日も妹は駅まで歩いて泳ぎに行ったんですよ、びっくりでしょう！帰りに魚も買ってきて、「寒くても関係ない！」って笑ってました。あなたは雪の日、外に出るのは好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally with target vocabulary (雪) woven organically into a vivid anecdote about the sister's dedication, though the shift to asking about the listener's preferences feels slightly formulaic for a tutoring context.",
+      "tutor_usage": {
+        "input_tokens": 359,
+        "output_tokens": 109,
+        "cache_read_input_tokens": 16701,
+        "cache_creation_input_tokens": 311
+      }
+    },
+    {
+      "turn": 18,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        40
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "書く",
+          "reading": "かく",
+          "gloss": "to write",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 40,
+      "text": "妹がね、泳いだ後に駅のカフェで日記を書く (かく) [to write] のが好きらしくて、その日食べた魚料理とかも全部メモしているんですって。かわいいですよね！あなたは日記や何かを書く習慣はありますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally and maintains conversational momentum by following up on the sister's swimming habit with a relatable detail about writing diary entries; the target word 書く (かく) is embedded organically within the anecdote rather than forced, though the pedagogical gloss could feel slightly more seamless in natural speech.",
+      "tutor_usage": {
+        "input_tokens": 376,
+        "output_tokens": 95,
+        "cache_read_input_tokens": 16909,
+        "cache_creation_input_tokens": 326
+      }
+    },
+    {
+      "turn": 19,
+      "action_index": 6,
+      "directive_counts": {
+        "new": 1,
+        "active": 0,
+        "review": 4
+      },
+      "word_ids": [
+        12,
+        190,
+        69,
+        108,
+        14
+      ],
+      "words": [
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "車",
+          "reading": "くるま",
+          "gloss": "car",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 14,
+      "text": "実は最近、父が車 (くるま) [car] で妹を駅まで送ることもあるんですけど、妹は「歩いた方が泳ぐ前のウォーミングアップになる！」って言って断るんですよ。帰りは魚を持って歩いて帰ってきます。あなたはどこかに行くとき、車と電車どちらが多いですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels somewhat disjointed and forced: the sudden introduction of the father's car offer and the daughter's rejection seems tangential to the original diary-writing question, and the target word 車 is used awkwardly to pivot away from the topic rather than flowing naturally from it.",
+      "tutor_usage": {
+        "input_tokens": 360,
+        "output_tokens": 125,
+        "cache_read_input_tokens": 17145,
+        "cache_creation_input_tokens": 332
+      }
+    }
+  ]
+}

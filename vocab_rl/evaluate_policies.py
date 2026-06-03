@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from baseline_actions import (FSRSAction, FSRSPlusNewAction, RandomAction,
-                              RuleBasedAction)
+                              RuleBasedAction, SmartFSRSEnvAction)
 from env import ACTION_TABLE, NUM_ACTIONS, VocabEnv
 from iql import IQLConfig, IQLTrainer
 
@@ -24,21 +24,43 @@ def _bootstrap_ci(samples: np.ndarray, axis: int = 0,
                   alpha: float = CI_ALPHA,
                   rng: np.random.Generator | None = None
                   ) -> tuple[np.ndarray, np.ndarray]:
-    """Percentile bootstrap CI on the mean along `axis`.
-
-    Returns (lo, hi) — the alpha/2 and 1-alpha/2 quantiles of the resampled
-    means. Works for both 1-D (returns scalars) and 2-D (returns arrays).
-    """
+    """Percentile bootstrap CI on the mean along `axis`."""
     if rng is None:
         rng = np.random.default_rng(0)
     samples = np.asarray(samples)
     n = samples.shape[axis]
     idx = rng.integers(0, n, size=(n_resamples, n))
-    # Move resample axis to front, then take means
     resampled = np.take(samples, idx, axis=axis).mean(axis=axis + 1)
     lo = np.quantile(resampled, alpha / 2, axis=0)
     hi = np.quantile(resampled, 1 - alpha / 2, axis=0)
     return lo, hi
+
+
+def paired_permutation_test(a: np.ndarray, b: np.ndarray,
+                            n_resamples: int = 10_000,
+                            rng: np.random.Generator | None = None) -> float:
+    """Two-sided paired permutation test for diff-in-means.
+
+    a, b are per-seed measurements (same length). Tests H0: a and b have the
+    same mean. Each permutation randomly swaps a[i] and b[i] within each pair
+    and recomputes the diff. Returns p-value = fraction of permutations with
+    |diff| >= observed |diff|.
+
+    Why paired: same env seed for both policies → reduces variance from
+    seed-specific noise.
+    """
+    if rng is None:
+        rng = np.random.default_rng(0)
+    a = np.asarray(a); b = np.asarray(b)
+    assert a.shape == b.shape, "paired test needs same shape"
+    observed = abs(a.mean() - b.mean())
+    n = len(a)
+    diff = a - b
+    # Random sign flips of pairwise differences
+    signs = rng.choice([-1, 1], size=(n_resamples, n))
+    perm_diffs = (signs * diff).mean(axis=1)
+    p = float((np.abs(perm_diffs) >= observed).mean())
+    return p
 
 
 POST_GAP_DAYS = 7.0          # measure retention 7 days after the final session
@@ -109,6 +131,9 @@ def evaluate(name: str, policy_fn) -> dict:
         "post_gap_retained_ci": (float(pg_lo), float(pg_hi)),
         "post_gap_R_seen_mean": float(pg_avg_seen.mean()),
         "post_gap_R_seen_ci": (float(pg_r_lo), float(pg_r_hi)),
+        # raw per-seed arrays — used for paired stat tests below
+        "raw_acquired_final": acqs[:, -1],
+        "raw_post_gap_retained": pg_retained,
     }
 
 
@@ -226,6 +251,7 @@ def main() -> None:
         ("FSRS", FSRSAction()),
         ("FSRS+New", FSRSPlusNewAction()),
         ("RuleBased", RuleBasedAction()),
+        ("SmartFSRS", SmartFSRSEnvAction()),   # principled hand-coded baseline
         ("IQL (ours)", iql_fn),
     ]
 
@@ -253,6 +279,17 @@ def main() -> None:
             return act_deterministic(ppo_model, state, ppo_device)
 
         behaviors.append(("PPO (online)", ppo_fn))
+
+    bc_path = os.path.join(here, "bc_policy.pt")
+    if os.path.exists(bc_path):
+        from bc import load as load_bc, act_bc
+        bc_model = load_bc(bc_path)
+        print(f"Loaded BC policy from {bc_path}")
+
+        def bc_fn(state, rng):
+            return act_bc(bc_model, state)
+
+        behaviors.append(("BC of PPO", bc_fn))
 
     if args.with_llm_policy:
         from llm.llm_policy import LLMPolicy
@@ -295,6 +332,32 @@ def main() -> None:
                 n_sessions=env.n_sessions)
     plot_action_distribution(results, outdir, env.turns_per_session)
     plot_post_gap_retention(results, outdir)
+    _print_stat_tests(results)
+
+
+def _print_stat_tests(results, ref_names=("IQL (ours)", "CQL (ours)")) -> None:
+    """Print paired-permutation p-values comparing each learned policy to
+    every other policy on post-gap retention."""
+    print(f"\nPaired permutation tests (post-gap retention, n_seeds={N_SEEDS}):")
+    for ref_name in ref_names:
+        ref = next((r for r in results if r["name"] == ref_name), None)
+        if ref is None:
+            continue
+        print(f"  --- {ref_name} vs others ---")
+        for other in results:
+            if other["name"] == ref_name:
+                continue
+            try:
+                p = paired_permutation_test(
+                    ref["raw_post_gap_retained"],
+                    other["raw_post_gap_retained"],
+                )
+                diff = ref["post_gap_retained_mean"] - other["post_gap_retained_mean"]
+                marker = "***" if p < 0.001 else "** " if p < 0.01 else "*  " if p < 0.05 else "   "
+                print(f"    vs {other['name']:14s}  diff={diff:+7.2f}  "
+                      f"p={p:.4f} {marker}")
+            except Exception as e:
+                print(f"    vs {other['name']:14s}  test failed: {e}")
 
 
 def plot_post_gap_retention(results, outdir: str) -> None:

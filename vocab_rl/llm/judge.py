@@ -1,7 +1,8 @@
 """LLM-as-judge: scores naturalness of a generated tutoring turn on a 1-5 scale.
 
-Uses claude-haiku-4-5 (cheap, lots of calls). Rubric is in the system prompt
-and cached. Output is constrained to a small JSON schema so parsing is reliable.
+Supports either Claude (Anthropic) or OpenAI as backend. Cross-provider
+judging (e.g., Claude tutor + OpenAI judge) eliminates same-family
+self-preference bias, which we use in the final eval.
 """
 
 from __future__ import annotations
@@ -10,13 +11,8 @@ import json
 import sys
 from pathlib import Path
 
-import anthropic
-
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from llm._env import require_api_key  # noqa: E402
-
-
-JUDGE_MODEL = "claude-haiku-4-5"
+from llm._llm_client import LLMClient, DEFAULT_JUDGE_MODEL, DEFAULT_PROVIDER  # noqa: E402
 
 
 SYSTEM_PROMPT = """You evaluate the naturalness of a short Japanese tutoring conversation turn.
@@ -45,30 +41,35 @@ SCHEMA = {
 
 
 class Judge:
-    def __init__(self, model: str = JUDGE_MODEL) -> None:
-        require_api_key()
-        self.client = anthropic.Anthropic()
+    # Judge defaults to OpenAI (cross-family with Claude tutor — eliminates
+    # same-family self-preference bias for the headline naturalness numbers).
+    DEFAULT_PROVIDER = "openai"
+
+    def __init__(self, provider: str | None = None,
+                 model: str | None = None) -> None:
+        provider = provider or self.DEFAULT_PROVIDER
+        model = model or DEFAULT_JUDGE_MODEL[provider]
+        self.client = LLMClient(provider=provider, model=model)
+        self.provider = provider
         self.model = model
 
     def score(self, turn_text: str,
               prior_turn_text: str | None = None) -> tuple[int, str]:
         ctx = (f"Prior turn (for context only — do not score):\n{prior_turn_text}\n\n"
                if prior_turn_text else "")
-        user_message = (f"{ctx}Turn to evaluate:\n{turn_text}\n\n"
-                        "Score this turn.")
+        user_message = (f"{ctx}Turn to evaluate:\n{turn_text}\n\nScore this turn.")
 
-        response = self.client.messages.create(
-            model=self.model,
-            max_tokens=200,
-            system=[{
-                "type": "text",
-                "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},
-            }],
-            messages=[{"role": "user", "content": user_message}],
-            output_config={"format": {"type": "json_schema", "schema": SCHEMA}},
-        )
-
-        text = "".join(b.text for b in response.content if b.type == "text")
-        parsed = json.loads(text)
-        return int(parsed["score"]), str(parsed["reason"])
+        try:
+            out = self.client.chat(
+                system=SYSTEM_PROMPT,
+                user=user_message,
+                max_tokens=200,
+                json_schema=SCHEMA,
+            )
+            parsed = json.loads(out["text"])
+            return int(parsed["score"]), str(parsed["reason"])
+        except (json.JSONDecodeError, KeyError, ValueError) as e:
+            # Degrade gracefully; eval loop logs and treats as missing.
+            print(f"[Judge] parse failed ({e}); returning 3 as neutral. "
+                  f"Raw: {out.get('text', '')[:120]!r}")
+            return 3, "PARSE_ERROR"

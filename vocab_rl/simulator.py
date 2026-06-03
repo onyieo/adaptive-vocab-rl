@@ -137,11 +137,17 @@ class StudentSimulator:
     """Simulates a learner studying vocabulary across turns and sessions."""
 
     seed: int = 0
-    initial_stability: float = 0.5      # stability granted on first exposure
+    initial_stability: float = 0.5      # stability granted on first SUCCESSFUL exposure
     success_growth_base: float = 1.8    # multiplier on success (modulated by difficulty)
     failure_reset: float = 0.3          # stability after a failed recall (on a seen word)
     forgetting_constant: float = 9.0    # FSRS forgetting-curve constant
     difficulty_scale: float = 1.0       # multiplier on the JLPT-level difficulty baselines
+    first_exposure_failure_prob: float = 0.2
+        # Probability the learner "doesn't catch" a word on first exposure.
+        # Real learners sometimes miss words on introduction; without this the
+        # simulator is unrealistically optimistic about acquisition rates.
+        # On failure: stability is set to a low value (initial_stability/4) so
+        # the word is still tracked as seen but barely retained.
     rng: np.random.Generator = field(init=False)
     words: list[WordState] = field(init=False)
     now: float = 0.0  # current sim time in days
@@ -196,9 +202,15 @@ class StudentSimulator:
             r_pre = w.retrievability(self.now)
 
             if w.stability <= 0.0:
-                # First exposure: "introduce" the word — no recall test, just seed memory.
-                w.stability = self.initial_stability
-                recalled = False  # the step itself isn't a recall event
+                # First exposure: probabilistic encoding. With probability
+                # first_exposure_failure_prob the learner "misses" it
+                # (stability set to a quarter of initial). Otherwise success.
+                if self.rng.random() < self.first_exposure_failure_prob:
+                    w.stability = self.initial_stability / 4.0
+                    recalled = False
+                else:
+                    w.stability = self.initial_stability
+                    recalled = True   # successful introduction
                 r_pre = 0.0
             else:
                 recalled = bool(self.rng.random() < r_pre)

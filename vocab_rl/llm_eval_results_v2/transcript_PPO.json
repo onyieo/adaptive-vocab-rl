@@ -1,0 +1,1166 @@
+{
+  "policy": "PPO",
+  "seed": 0,
+  "turns": [
+    {
+      "turn": 0,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        159,
+        138,
+        12,
+        108,
+        69
+      ],
+      "words": [
+        {
+          "surface": "祖母",
+          "reading": "そぼ",
+          "gloss": "grandmother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "靴",
+          "reading": "くつ",
+          "gloss": "shoes",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "魚",
+          "reading": "さかな",
+          "gloss": "fish",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "駅",
+          "reading": "えき",
+          "gloss": "train station",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妹",
+          "reading": "いもうと",
+          "gloss": "younger sister",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 159,
+      "text": "うちの祖母 (そぼ) [grandmother] はね、毎週駅 (えき) [train station] の近くの市場で新鮮な魚 (さかな) [fish] を買うんですよ。妹 (いもうと) [younger sister] もよく一緒について行って、帰りに靴 (くつ) [shoes] を見て回るのが楽しみらしくて！あなたのおばあちゃんとはよく出かけますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The conversation flows naturally with contextual details (grandmother's weekly market shopping, sister's enjoyment of the outing), and while the glosses are present, they integrate reasonably well into the narrative structure; only slightly stilted by the density of ruby text and the somewhat expository nature of listing multiple target words.",
+      "tutor_usage": {
+        "input_tokens": 3,
+        "output_tokens": 142,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    {
+      "turn": 1,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        190,
+        178,
+        146,
+        167,
+        155
+      ],
+      "words": [
+        {
+          "surface": "泳ぐ",
+          "reading": "およぐ",
+          "gloss": "to swim",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "週末",
+          "reading": "しゅうまつ",
+          "gloss": "weekend",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "トイレ",
+          "reading": "トイレ",
+          "gloss": "toilet",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "七",
+          "reading": "しち",
+          "gloss": "seven",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "コーヒー",
+          "reading": "コーヒー",
+          "gloss": "coffee",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 190,
+      "text": "へえ、そうなんですね！私は週末 (しゅうまつ) [weekend] の朝、コーヒー (コーヒー) [coffee] を一杯飲んでからプールに行くんですが、七 (しち) [seven] 時ごろに泳ぐ (およぐ) [to swim] のが一番気持ちいいんですよ。トイレ (トイレ) [toilet] に寄ってからすぐ水に入る感じ、わかりますか？笑　あなたは泳ぐのは好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels forced and disjointed—jumping abruptly from the grandmother topic to swimming without natural connection, and including oddly placed vocabulary (toilet) that disrupts conversational flow rather than emerging organically from dialogue.",
+      "tutor_usage": {
+        "input_tokens": 139,
+        "output_tokens": 170,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 271
+      }
+    },
+    {
+      "turn": 2,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        176,
+        123,
+        126,
+        99,
+        98
+      ],
+      "words": [
+        {
+          "surface": "毎日",
+          "reading": "まいにち",
+          "gloss": "every day",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "音楽",
+          "reading": "おんがく",
+          "gloss": "music",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "言葉",
+          "reading": "ことば",
+          "gloss": "word",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "何",
+          "reading": "なに",
+          "gloss": "what",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "時間",
+          "reading": "じかん",
+          "gloss": "time",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 176,
+      "text": "日本語の勉強は、毎日 (まいにち) [every day] 少しずつ続けるのが一番大切だと思いますよ！音楽 (おんがく) [music] を聴きながら言葉 (ことば) [word] を覚えるのも楽しい方法で、時間 (じかん) [time] がない日でも何 (なに) [what] か一つ新しい表現を拾えますよね。毎日の勉強で、特に何をするのが好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response abandons the established conversational context about swimming and pools to deliver a lecture on Japanese study habits with target vocabulary awkwardly listed rather than naturally integrated, making it read like a vocabulary drill instead of a genuine dialogue continuation.",
+      "tutor_usage": {
+        "input_tokens": 438,
+        "output_tokens": 159,
+        "cache_read_input_tokens": 13218,
+        "cache_creation_input_tokens": 271
+      }
+    },
+    {
+      "turn": 3,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        75,
+        191,
+        54,
+        196,
+        105
+      ],
+      "words": [
+        {
+          "surface": "今日",
+          "reading": "きょう",
+          "gloss": "today",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "使う",
+          "reading": "つかう",
+          "gloss": "to use",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "高い",
+          "reading": "たかい",
+          "gloss": "tall, expensive",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "広い",
+          "reading": "ひろい",
+          "gloss": "wide",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "西",
+          "reading": "にし",
+          "gloss": "west",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 75,
+      "text": "そういえば、今日 (きょう) [today] は駅の西 (にし) [west] 側に新しいカフェがオープンしたんですよ！広い (ひろい) [wide] スペースで、ちょっと高い (たかい) [expensive] けど素敵な食器を使う (つかう) [to use] お店らしくて。今日はもう何か特別なことしましたか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response abruptly abandons the tutoring conversation about language-learning habits to discuss a new café, making the transition feel jarring and unmotivated; while the target vocabulary is grammatically correct, it reads like a disjointed shift rather than a natural conversational turn.",
+      "tutor_usage": {
+        "input_tokens": 415,
+        "output_tokens": 126,
+        "cache_read_input_tokens": 13347,
+        "cache_creation_input_tokens": 448
+      }
+    },
+    {
+      "turn": 4,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        84,
+        9,
+        40,
+        14,
+        51
+      ],
+      "words": [
+        {
+          "surface": "日",
+          "reading": "ひ",
+          "gloss": "day, sun",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "雪",
+          "reading": "ゆき",
+          "gloss": "snow",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "書く",
+          "reading": "かく",
+          "gloss": "to write",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "車",
+          "reading": "くるま",
+          "gloss": "car",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "小さい",
+          "reading": "ちいさい",
+          "gloss": "small, little",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 84,
+      "text": "今日は雪 (ゆき) [snow] が降りましたね！こんな日 (ひ) [day] は車 (くるま) [car] の小さい (ちいさい) [small] 窓に雪が積もって、なんかかわいいですよね。家でゆっくり日記を書く (かく) [to write] のにぴったりな日だと思いませんか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally and conversationally, with target vocabulary (雪、日、車、小さい、書く) integrated organically into a genuine dialogue about snowy weather and cozy indoor activities; the pedagogical glosses are unobtrusive, though the transition from the prior turn's café topic feels slightly abrupt rather than seamlessly connected.",
+      "tutor_usage": {
+        "input_tokens": 382,
+        "output_tokens": 122,
+        "cache_read_input_tokens": 13625,
+        "cache_creation_input_tokens": 458
+      }
+    },
+    {
+      "turn": 5,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        158,
+        58,
+        61,
+        83,
+        103
+      ],
+      "words": [
+        {
+          "surface": "祖父",
+          "reading": "そふ",
+          "gloss": "grandfather",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "暑い",
+          "reading": "あつい",
+          "gloss": "hot (weather)",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "嫌い",
+          "reading": "きらい",
+          "gloss": "disliked, hated",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "月",
+          "reading": "つき",
+          "gloss": "moon, month",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "中",
+          "reading": "なか",
+          "gloss": "inside",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 158,
+      "text": "そういえば、うちの祖父 (そふ) [grandfather] はね、暑い (あつい) [hot] 月 (つき) [month] が本当に嫌い (きらい) [disliked] で、夏になると一日中家の中 (なか) [inside] にこもっているんですよ。笑　あなたのおじいちゃんはどんな季節が好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally with organic conversation structure (sharing a personal anecdote then asking a reciprocal question), though the glossed vocabulary feels slightly mechanical in density and the transition from the tutor's snow-focused prompt to the student's heat-focused grandfather story is somewhat abrupt rather than seamlessly connected.",
+      "tutor_usage": {
+        "input_tokens": 387,
+        "output_tokens": 121,
+        "cache_read_input_tokens": 13924,
+        "cache_creation_input_tokens": 409
+      }
+    },
+    {
+      "turn": 6,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        130,
+        181,
+        129,
+        30,
+        27
+      ],
+      "words": [
+        {
+          "surface": "試験",
+          "reading": "しけん",
+          "gloss": "exam",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "今週",
+          "reading": "こんしゅう",
+          "gloss": "this week",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "授業",
+          "reading": "じゅぎょう",
+          "gloss": "class",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "時計",
+          "reading": "とけい",
+          "gloss": "clock, watch",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "家",
+          "reading": "いえ",
+          "gloss": "house",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 130,
+      "text": "今週 (こんしゅう) [this week] は試験 (しけん) [exam] がありますか？授業 (じゅぎょう) [class] の後、家 (いえ) [house] に帰って時計 (とけい) [clock] を見ながらしっかり復習するといいですよ！試験の準備はどんな感じですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response abruptly abandons the conversational topic about seasonal preferences and pivots to exams with a somewhat mechanical listing of vocabulary words (week, exam, class, house, clock) that feels forced and disconnected from the natural flow of dialogue.",
+      "tutor_usage": {
+        "input_tokens": 391,
+        "output_tokens": 111,
+        "cache_read_input_tokens": 14207,
+        "cache_creation_input_tokens": 377
+      }
+    },
+    {
+      "turn": 7,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        152,
+        148,
+        125,
+        115,
+        88
+      ],
+      "words": [
+        {
+          "surface": "卵",
+          "reading": "たまご",
+          "gloss": "egg",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "パン",
+          "reading": "パン",
+          "gloss": "bread",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "手紙",
+          "reading": "てがみ",
+          "gloss": "letter",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "教室",
+          "reading": "きょうしつ",
+          "gloss": "classroom",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "百",
+          "reading": "ひゃく",
+          "gloss": "hundred",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 152,
+      "text": "今朝ね、パン (パン) [bread] と卵 (たまご) [egg] で朝ごはんを作ったんですが、卵がとってもおいしくて！教室 (きょうしつ) [classroom] に行く前に食べると元気が出ますよね。そういえば、百 (ひゃく) [hundred] 円くらいで買える卵って便利ですよね〜、手紙 (てがみ) [letter] を書くのと同じくらい、毎日の小さな楽しみだと思いませんか？あなたは朝ごはんに何を食べますか？",
+      "naturalness": 1,
+      "naturalness_reason": "The response is severely disjointed and unnatural—it awkwardly lists unrelated vocabulary (bread, egg, classroom, hundred, letter) without coherent connection, includes bizarre analogies (eggs being a joy like writing letters), and abandons the student's question about exam preparation entirely.",
+      "tutor_usage": {
+        "input_tokens": 376,
+        "output_tokens": 187,
+        "cache_read_input_tokens": 14462,
+        "cache_creation_input_tokens": 376
+      }
+    },
+    {
+      "turn": 8,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        26,
+        93,
+        15,
+        106,
+        8
+      ],
+      "words": [
+        {
+          "surface": "部屋",
+          "reading": "へや",
+          "gloss": "room",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "下",
+          "reading": "した",
+          "gloss": "below, bottom",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "電車",
+          "reading": "でんしゃ",
+          "gloss": "train",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "南",
+          "reading": "みなみ",
+          "gloss": "south",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "雨",
+          "reading": "あめ",
+          "gloss": "rain",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 26,
+      "text": "今日は雨なので、部屋 (へや) [room] でのんびり過ごすのが一番いいですね！南 (みなみ) [south] の方は特に雨が強いみたいで、電車 (でんしゃ) [train] の下 (した) [below] のホームまで濡れちゃうこともありますよね。あなたの部屋はどんな感じですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels awkwardly constructed with forced vocabulary insertions (南, 下) that don't contribute naturally to the conversation flow, and the glosses create a stilted, textbook-like quality rather than organic dialogue.",
+      "tutor_usage": {
+        "input_tokens": 445,
+        "output_tokens": 125,
+        "cache_read_input_tokens": 14717,
+        "cache_creation_input_tokens": 366
+      }
+    },
+    {
+      "turn": 9,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        22,
+        59,
+        76,
+        36,
+        81
+      ],
+      "words": [
+        {
+          "surface": "雑誌",
+          "reading": "ざっし",
+          "gloss": "magazine",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "寒い",
+          "reading": "さむい",
+          "gloss": "cold (weather)",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "明日",
+          "reading": "あした",
+          "gloss": "tomorrow",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "見る",
+          "reading": "みる",
+          "gloss": "to see, watch",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "夜",
+          "reading": "よる",
+          "gloss": "night, evening",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 22,
+      "text": "明日 (あした) [tomorrow] も寒い (さむい) [cold] みたいだから、夜 (よる) [night] はゆっくり雑誌 (ざっし) [magazine] でも見る (みる) [to see] のはどうですか？日本語の雑誌を読むのも、なかなかいい勉強になりますよ！どんなジャンルの雑誌が好きですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally and conversationally, building on the rainy-day theme with a practical suggestion; the target vocabulary (明日, 寒い, 夜, 雑誌, 見る) integrates smoothly into the dialogue, though the pedagogical glosses are slightly more obtrusive than in native speech, and the pivot to studying Japanese feels slightly formulaic.",
+      "tutor_usage": {
+        "input_tokens": 387,
+        "output_tokens": 128,
+        "cache_read_input_tokens": 14972,
+        "cache_creation_input_tokens": 426
+      }
+    },
+    {
+      "turn": 10,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        10,
+        73,
+        197,
+        97,
+        110
+      ],
+      "words": [
+        {
+          "surface": "犬",
+          "reading": "いぬ",
+          "gloss": "dog",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "女",
+          "reading": "おんな",
+          "gloss": "woman, female",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "狭い",
+          "reading": "せまい",
+          "gloss": "narrow",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "飲み物",
+          "reading": "のみもの",
+          "gloss": "drink, beverage",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "銀行",
+          "reading": "ぎんこう",
+          "gloss": "bank",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 10,
+      "text": "あのね、昨日銀行 (ぎんこう) [bank] の近くの狭い (せまい) [narrow] 道を歩いていたら、素敵な女 (おんな) [woman] の人が大きな犬 (いぬ) [dog] を連れていて、思わず声をかけちゃいました！犬がとってもかわいくて、その人と飲み物 (のみもの) [drink] を飲みながらしばらく話したんですよ。あなたは犬派ですか、それとも猫派ですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels like a vocabulary list awkwardly inserted into a narrative rather than natural conversation; phrases like 'the narrow road near the bank' and 'a woman' feel forced and disconnected from a spontaneous storytelling flow, and the abrupt pivot to asking about dog vs. cat preferences seems jarring rather than organically conversational.",
+      "tutor_usage": {
+        "input_tokens": 400,
+        "output_tokens": 168,
+        "cache_read_input_tokens": 15211,
+        "cache_creation_input_tokens": 439
+      }
+    },
+    {
+      "turn": 11,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        128,
+        16,
+        4,
+        162,
+        153
+      ],
+      "words": [
+        {
+          "surface": "英語",
+          "reading": "えいご",
+          "gloss": "english language",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "バス",
+          "reading": "バス",
+          "gloss": "bus",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "木",
+          "reading": "き",
+          "gloss": "tree",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "赤ちゃん",
+          "reading": "あかちゃん",
+          "gloss": "baby",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "牛乳",
+          "reading": "ぎゅうにゅう",
+          "gloss": "milk",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 128,
+      "text": "バス (バス) [bus] の中でね、外国の方が赤ちゃん (あかちゃん) [baby] を抱っこしながら英語 (えいご) [English language] で話しかけてきて、ちょっとドキドキしました！木 (き) [tree] の前でバスを降りるとき、牛乳 (ぎゅうにゅう) [milk] の入った袋を落としそうになって焦りましたよ。笑　あなたは英語で話すのは得意ですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels disjointed and forced, with vocabulary (tree, milk, bus stop) inserted awkwardly without clear narrative cohesion—it reads more like a vocabulary checklist than a natural conversational reply to the question about dog vs. cat preference.",
+      "tutor_usage": {
+        "input_tokens": 444,
+        "output_tokens": 161,
+        "cache_read_input_tokens": 15525,
+        "cache_creation_input_tokens": 385
+      }
+    },
+    {
+      "turn": 12,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        63,
+        186,
+        189,
+        28,
+        184
+      ],
+      "words": [
+        {
+          "surface": "元気",
+          "reading": "げんき",
+          "gloss": "healthy, energetic",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "待つ",
+          "reading": "まつ",
+          "gloss": "to wait",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "走る",
+          "reading": "はしる",
+          "gloss": "to run",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "門",
+          "reading": "もん",
+          "gloss": "gate",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "教える",
+          "reading": "おしえる",
+          "gloss": "to teach",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 63,
+      "text": "毎朝門 (もん) [gate] のところで友達を待つ (まつ) [to wait] んですが、その子がいつも元気 (げんき) [healthy, energetic] で走る (はしる) [to run] ように来るんですよ！見ているだけでこっちも元気をもらえて、元気の秘訣を教える (おしえる) [to teach] てほしいくらいです。笑　あなたは朝、元気に起きられる方ですか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally as a personal anecdote with good conversational rhythm; target vocabulary is mostly woven in organically, though the glosses for 元気 (twice) and the phrasing of 「教えてほしいくらいです」 feel slightly repetitive and a bit forced in structure.",
+      "tutor_usage": {
+        "input_tokens": 428,
+        "output_tokens": 149,
+        "cache_read_input_tokens": 15782,
+        "cache_creation_input_tokens": 433
+      }
+    },
+    {
+      "turn": 13,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        60,
+        92,
+        82,
+        145,
+        17
+      ],
+      "words": [
+        {
+          "surface": "好き",
+          "reading": "すき",
+          "gloss": "liked, favorite",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "上",
+          "reading": "うえ",
+          "gloss": "above, top",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "年",
+          "reading": "とし",
+          "gloss": "year, age",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "ドア",
+          "reading": "ドア",
+          "gloss": "door",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "学校",
+          "reading": "がっこう",
+          "gloss": "school",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 60,
+      "text": "学校 (がっこう) [school] のドア (ドア) [door] の上 (うえ) [above] に去年の文化祭の写真が飾ってあって、毎年見るたびになんか嬉しくなるんですよね。やっぱり学校って、年 (とし) [year] を重ねるごとに好き (すき) [liked, favorite] になっていく場所だと思いませんか？あなたは学校のどんなところが好きですか？",
+      "naturalness": 3,
+      "naturalness_reason": "The response is comprehensible and contextually relevant, but the vocabulary insertion feels somewhat mechanical—particularly the phrasing around \"学校のドア\" and \"上に\" which reads as if constructed to accommodate target words rather than flowing naturally from the speaker's thought process.",
+      "tutor_usage": {
+        "input_tokens": 406,
+        "output_tokens": 147,
+        "cache_read_input_tokens": 16047,
+        "cache_creation_input_tokens": 465
+      }
+    },
+    {
+      "turn": 14,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        45,
+        161,
+        150,
+        90,
+        194
+      ],
+      "words": [
+        {
+          "surface": "寝る",
+          "reading": "ねる",
+          "gloss": "to sleep",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "妻",
+          "reading": "つま",
+          "gloss": "wife",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "野菜",
+          "reading": "やさい",
+          "gloss": "vegetables",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "右",
+          "reading": "みぎ",
+          "gloss": "right (direction)",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "赤い",
+          "reading": "あかい",
+          "gloss": "red",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 45,
+      "text": "うちの妻 (つま) [wife] がね、夜遅く寝る (ねる) [to sleep] 前に必ず赤い (あかい) [red] トマトとか野菜 (やさい) [vegetables] を切って翌朝の準備をするんですよ。台所の右 (みぎ) [right] 側にいつもきれいに並べてあって、見るたびに感心しちゃいます！あなたは寝る前に何かルーティンがありますか？",
+      "naturalness": 1,
+      "naturalness_reason": "The response is a complete non-sequitur—shifting from school nostalgia to a personal anecdote about the tutor's wife's bedtime routine with no conversational connection, making it sound like word-dumping rather than natural dialogue flow.",
+      "tutor_usage": {
+        "input_tokens": 405,
+        "output_tokens": 151,
+        "cache_read_input_tokens": 16351,
+        "cache_creation_input_tokens": 438
+      }
+    },
+    {
+      "turn": 15,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        65,
+        179,
+        163,
+        13,
+        31
+      ],
+      "words": [
+        {
+          "surface": "母",
+          "reading": "はは",
+          "gloss": "mother",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "来週",
+          "reading": "らいしゅう",
+          "gloss": "next week",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "先輩",
+          "reading": "せんぱい",
+          "gloss": "senior person",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "鳥",
+          "reading": "とり",
+          "gloss": "bird",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "電話",
+          "reading": "でんわ",
+          "gloss": "telephone",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 65,
+      "text": "実はね、母 (はは) [mother] から来週 (らいしゅう) [next week] 会いに来るって電話 (でんわ) [telephone] があったんですよ！公園で一緒に鳥 (とり) [bird] を見ながら散歩しようかなと思って。先輩 (せんぱい) [senior person] にも紹介したいな〜。あなたはお母さんとよく連絡を取りますか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels like a vocabulary checklist rather than natural conversation—each target word (母、来週、電話、鳥、先輩) is inserted with minimal integration, and the sudden topic shifts (mother's visit → introducing her to senpai → asking about the user's mother) lack cohesive flow typical of genuine dialogue.",
+      "tutor_usage": {
+        "input_tokens": 415,
+        "output_tokens": 139,
+        "cache_read_input_tokens": 16640,
+        "cache_creation_input_tokens": 422
+      }
+    },
+    {
+      "turn": 16,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        180,
+        183,
+        102,
+        32,
+        175
+      ],
+      "words": [
+        {
+          "surface": "先週",
+          "reading": "せんしゅう",
+          "gloss": "last week",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "働く",
+          "reading": "はたらく",
+          "gloss": "to work",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "外",
+          "reading": "そと",
+          "gloss": "outside",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "テレビ",
+          "reading": "テレビ",
+          "gloss": "television",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "去年",
+          "reading": "きょねん",
+          "gloss": "last year",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 180,
+      "text": "先週 (せんしゅう) [last week] はずっと外 (そと) [outside] で働く (はたらく) [to work] ことが多くて、本当に疲れましたよ！去年 (きょねん) [last year] はもう少し楽だったのに…。家に帰ってテレビ (テレビ) [television] を見るのが唯一の楽しみでした。先週はどんな一週間でしたか？",
+      "naturalness": 3,
+      "naturalness_reason": "The response is grammatically sound and comprehensible, but feels disconnected from the prior turn's personal narrative about the mother's visit—instead pivoting to a general complaint about last week's work, making the conversation feel stilted and list-like rather than naturally flowing dialogue.",
+      "tutor_usage": {
+        "input_tokens": 405,
+        "output_tokens": 138,
+        "cache_read_input_tokens": 16915,
+        "cache_creation_input_tokens": 427
+      }
+    },
+    {
+      "turn": 17,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        124,
+        1,
+        37,
+        20,
+        147
+      ],
+      "words": [
+        {
+          "surface": "写真",
+          "reading": "しゃしん",
+          "gloss": "photograph",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "火",
+          "reading": "ひ",
+          "gloss": "fire",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "聞く",
+          "reading": "きく",
+          "gloss": "to listen, hear",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "本",
+          "reading": "ほん",
+          "gloss": "book",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "ご飯",
+          "reading": "ごはん",
+          "gloss": "cooked rice",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 124,
+      "text": "そういえば、昨日火 (ひ) [fire] を使ってご飯 (ごはん) [cooked rice] を炊きながら、本 (ほん) [book] について話すラジオを聞く (きく) [to listen] のが最高に気持ちよかったんですよ！その後でお気に入りの写真 (しゃしん) [photograph] を眺めてのんびりしました。あなたはリラックスする時、何をするのが好きですか？",
+      "naturalness": 2,
+      "naturalness_reason": "The response feels heavily vocabulary-driven and awkwardly constructed; phrases like '火を使ってご飯を炊きながら本について話すラジオを聞く' (using fire to cook rice while listening to a radio talk about books) read as forced combinations rather than a natural recounting of relaxation, and the abrupt topic pivots make it feel more like a vocabulary checklist than genuine conversation flow.",
+      "tutor_usage": {
+        "input_tokens": 403,
+        "output_tokens": 147,
+        "cache_read_input_tokens": 17191,
+        "cache_creation_input_tokens": 422
+      }
+    },
+    {
+      "turn": 18,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        157,
+        112,
+        193,
+        165,
+        134
+      ],
+      "words": [
+        {
+          "surface": "家族",
+          "reading": "かぞく",
+          "gloss": "family",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "郵便局",
+          "reading": "ゆうびんきょく",
+          "gloss": "post office",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "黒い",
+          "reading": "くろい",
+          "gloss": "black",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "五",
+          "reading": "ご",
+          "gloss": "five",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "消しゴム",
+          "reading": "けしゴム",
+          "gloss": "eraser",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 157,
+      "text": "今日ね、家族 (かぞく) [family] へ贈り物を送ろうと郵便局 (ゆうびんきょく) [post office] に行ったら、五 (ご) [five] 人くらい並んでいて少し待ちました！帰り道に黒い (くろい) [black] かばんの中を探したら、消しゴム (けしゴム) [eraser] しか出てこなくて思わず笑っちゃいました。あなたは家族にプレゼントをよく送りますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response flows naturally as a conversational reply with relatable anecdotes about visiting the post office and finding items in a bag, though the inclusion of some target words (especially 五人 and the eraser detail) feels slightly anecdotal rather than organically integrated into the dialogue.",
+      "tutor_usage": {
+        "input_tokens": 419,
+        "output_tokens": 167,
+        "cache_read_input_tokens": 17474,
+        "cache_creation_input_tokens": 408
+      }
+    },
+    {
+      "turn": 19,
+      "action_index": 20,
+      "directive_counts": {
+        "new": 5,
+        "active": 0,
+        "review": 0
+      },
+      "word_ids": [
+        154,
+        52,
+        11,
+        171,
+        78
+      ],
+      "words": [
+        {
+          "surface": "お茶",
+          "reading": "おちゃ",
+          "gloss": "tea",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "長い",
+          "reading": "ながい",
+          "gloss": "long",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "猫",
+          "reading": "ねこ",
+          "gloss": "cat",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "万",
+          "reading": "まん",
+          "gloss": "ten thousand",
+          "jlpt": "N5"
+        },
+        {
+          "surface": "今",
+          "reading": "いま",
+          "gloss": "now",
+          "jlpt": "N5"
+        }
+      ],
+      "emphasized": 154,
+      "text": "今 (いま) [now] ね、猫 (ねこ) [cat] がひざの上でうとうとしていて、長い (ながい) [long] 一日の後にお茶 (おちゃ) [tea] を飲みながらこうしているのが最高に幸せなんですよ！一万 (まん) [ten thousand] 円もらっても替えられないくらいの気持ちです。笑　あなたは今どんな飲み物を飲んでいますか？",
+      "naturalness": 4,
+      "naturalness_reason": "The response is mostly natural and conversational, with target vocabulary woven in reasonably well; however, the abrupt insertion of '一万円もらっても' feels slightly forced as a rhetorical device to emphasize the moment's value, and the construction is slightly awkward compared to how a native speaker might express the same sentiment.",
+      "tutor_usage": {
+        "input_tokens": 432,
+        "output_tokens": 151,
+        "cache_read_input_tokens": 17744,
+        "cache_creation_input_tokens": 416
+      }
+    }
+  ]
+}

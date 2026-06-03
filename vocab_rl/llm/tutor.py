@@ -1,9 +1,8 @@
 """LLM tutor: turns a vocabulary directive into a Japanese tutoring conversation turn.
 
-Uses claude-sonnet-4-6 (quality matters for the conversational naturalness we're
-measuring). The system prompt — instructions plus the full vocabulary table — is
-held stable and cached so subsequent turns within a session only pay the
-cache-read price.
+Supports either Claude (Anthropic) or OpenAI as backend via the LLMClient
+wrapper. System prompt is held stable across turns within a session so
+provider-level prompt caching kicks in.
 """
 
 from __future__ import annotations
@@ -11,16 +10,12 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-import anthropic
-
-# Allow importing simulator.VOCAB when run from anywhere.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from simulator import VOCAB                # noqa: E402
-from llm._env import require_api_key       # noqa: E402
+from simulator import VOCAB                                          # noqa: E402
+from llm._llm_client import LLMClient, DEFAULT_TUTOR_MODEL, DEFAULT_PROVIDER  # noqa: E402
 
 
-TUTOR_MODEL = "claude-sonnet-4-6"
 MAX_TUTOR_TOKENS = 500
 
 
@@ -49,13 +44,16 @@ Output ONLY Hana's spoken turn. No labels, no preface, no meta-commentary, no tr
 
 
 class Tutor:
-    """Stateful tutor — keeps the conversation history within a session so the
-    LLM can build coherent dialogue across turns."""
+    """Stateful tutor — keeps the conversation history within a session."""
 
-    def __init__(self, model: str = TUTOR_MODEL) -> None:
-        require_api_key()
-        self.client = anthropic.Anthropic()
-        self.model = model
+    # Tutor defaults to Claude Sonnet — best Japanese quality available.
+    DEFAULT_PROVIDER = "anthropic"
+
+    def __init__(self, provider: str | None = None,
+                 model: str | None = None) -> None:
+        provider = provider or self.DEFAULT_PROVIDER
+        model = model or DEFAULT_TUTOR_MODEL[provider]
+        self.client = LLMClient(provider=provider, model=model)
         self.history: list[dict] = []
 
     def reset(self) -> None:
@@ -74,27 +72,11 @@ class Tutor:
         user_message = "\n".join(directive_lines)
 
         self.history.append({"role": "user", "content": user_message})
-
-        response = self.client.messages.create(
-            model=self.model,
-            max_tokens=MAX_TUTOR_TOKENS,
-            system=[{
-                "type": "text",
-                "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},
-            }],
+        out = self.client.multiturn_chat(
+            system=SYSTEM_PROMPT,
             messages=self.history,
+            max_tokens=MAX_TUTOR_TOKENS,
         )
-
-        text = "".join(b.text for b in response.content if b.type == "text").strip()
+        text = out["text"].strip()
         self.history.append({"role": "assistant", "content": text})
-
-        return {
-            "text": text,
-            "usage": {
-                "input_tokens": response.usage.input_tokens,
-                "output_tokens": response.usage.output_tokens,
-                "cache_read_input_tokens": response.usage.cache_read_input_tokens,
-                "cache_creation_input_tokens": response.usage.cache_creation_input_tokens,
-            },
-        }
+        return {"text": text, "usage": out["usage"]}

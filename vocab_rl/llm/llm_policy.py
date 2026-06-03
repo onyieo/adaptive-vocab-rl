@@ -1,12 +1,11 @@
 """LLM-prompted policy: baseline #4 from the proposal.
 
-Prompts a Claude model with the current learner state at each turn and asks it
-to output a structured directive (counts of new/active/review words to target).
-The directive is then mapped to the same VocabEnv action index used by every
-other policy, so comparisons are apples-to-apples.
+Prompts an LLM with the current learner state at each turn and asks it to
+output a structured directive (counts of new/active/review words). The
+directive maps to the same VocabEnv action index used by every other policy.
 
-Uses Haiku for cost — this policy runs ~thousands of times in a full eval
-sweep. System prompt (instructions + action-space description) is cached.
+Defaults to OpenAI gpt-4o-mini (cheap, lots of calls). System prompt is
+cached on the provider side.
 """
 
 from __future__ import annotations
@@ -15,16 +14,11 @@ import json
 import sys
 from pathlib import Path
 
-import anthropic
-
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from env import ACTION_TABLE, WORDS_PER_TURN  # noqa: E402
-from simulator import VOCAB                   # noqa: E402
-from llm._env import require_api_key          # noqa: E402
-
-
-LLM_POLICY_MODEL = "claude-haiku-4-5"
+from env import ACTION_TABLE, WORDS_PER_TURN                              # noqa: E402
+from simulator import VOCAB                                               # noqa: E402
+from llm._llm_client import LLMClient, DEFAULT_POLICY_MODEL, DEFAULT_PROVIDER  # noqa: E402
 
 
 def _action_table_text() -> str:
@@ -61,7 +55,6 @@ SCHEMA = {
 
 def _state_summary(snap: list[dict], turn: int, turns_per_session: int,
                    sessions_done: int) -> str:
-    """Condense the full state into a prompt-sized summary."""
     unseen = [w for w in snap if not w["seen"]]
     active = [w for w in snap if w["seen"] and w["stability"] < 2.0]
     review = [w for w in snap if w["seen"] and w["stability"] >= 2.0]
@@ -86,61 +79,46 @@ def _state_summary(snap: list[dict], turn: int, turns_per_session: int,
 
 
 class LLMPolicy:
-    """Stateless across turns — each call is an independent decision based on
-    the current state summary."""
+    """Stateless per turn — each call is independent based on current state."""
 
     name = "LLMPrompted"
+    _FALLBACK_ACTION = ACTION_TABLE.index((1, 0, 4))
 
-    def __init__(self, model: str = LLM_POLICY_MODEL,
+    def __init__(self, provider: str | None = None,
+                 model: str | None = None,
                  turns_per_session: int = 20) -> None:
-        require_api_key()
-        self.client = anthropic.Anthropic()
-        self.model = model
+        provider = provider or DEFAULT_PROVIDER
+        model = model or DEFAULT_POLICY_MODEL[provider]
+        self.client = LLMClient(provider=provider, model=model)
         self.turns_per_session = turns_per_session
 
     def bind_to_env(self, env):
-        """Return a (state, rng) -> action closure that reads the live env
-        snapshot. Use this so the policy fits the standard eval signature."""
-        def fn(_state, rng):
+        def fn(_state, _rng):
             return self._act(env)
         return fn
-
-    # Fallback action used when JSON parsing fails — matches FSRS+New
-    # heuristic so the baseline degrades gracefully rather than crashing.
-    _FALLBACK_ACTION = ACTION_TABLE.index((1, 0, 4))
 
     def _act(self, env) -> int:
         snap = env.sim.snapshot()
         sessions_done = env.turn // self.turns_per_session
         summary = _state_summary(snap, env.turn, self.turns_per_session,
                                  sessions_done)
-
-        response = self.client.messages.create(
-            model=self.model,
-            max_tokens=200,
-            system=[{
-                "type": "text",
-                "text": SYSTEM_PROMPT,
-                "cache_control": {"type": "ephemeral"},
-            }],
-            messages=[{"role": "user",
-                       "content": f"Current learner state:\n{summary}\n\nChoose your action."}],
-            output_config={"format": {"type": "json_schema", "schema": SCHEMA}},
-        )
-
-        text = "".join(b.text for b in response.content if b.type == "text")
         try:
-            parsed = json.loads(text)
+            out = self.client.chat(
+                system=SYSTEM_PROMPT,
+                user=f"Current learner state:\n{summary}\n\nChoose your action.",
+                max_tokens=200,
+                json_schema=SCHEMA,
+            )
+            parsed = json.loads(out["text"])
             a = int(parsed["action_index"])
             if 0 <= a < len(ACTION_TABLE):
                 return a
             print(f"[LLMPolicy] out-of-range action {a}; falling back")
             return self._FALLBACK_ACTION
         except (json.JSONDecodeError, KeyError, ValueError) as e:
-            # Structured outputs occasionally returns malformed JSON despite
-            # the schema. Fall back rather than crash the eval.
             print(f"[LLMPolicy] JSON parse failed ({e}); falling back. "
-                  f"Raw text (first 200 chars): {text[:200]!r}")
+                  f"Raw text: {out.get('text', '')[:200]!r}")
             return self._FALLBACK_ACTION
-
-
+        except Exception as e:
+            print(f"[LLMPolicy] API call failed ({type(e).__name__}: {e}); falling back.")
+            return self._FALLBACK_ACTION

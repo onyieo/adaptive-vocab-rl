@@ -71,6 +71,61 @@ class MixedExploreAction:
         return int(rng.choice(self._indices))
 
 
+class SmartFSRSAction:
+    """A genuinely smart hand-coded scheduler. The 'fair' baseline a real
+    tutoring app would actually ship — not a strawman like Random or FSRS.
+
+    Heuristic: maintain a 'cognitive load' bound. If too many actively-learning
+    words are below the recall threshold, the learner is overwhelmed — pure
+    review until the active set stabilizes. Otherwise, introduce 1 new word
+    per turn (like FSRS+New) but only when there's headroom.
+
+    This captures what a sophisticated spaced-repetition system should do:
+    don't dump new content on a learner who's still struggling with what
+    they have."""
+
+    name = "SmartFSRS"
+    LOAD_THRESHOLD = 10   # max # of low-stability seen words before pausing intro
+    DUE_R = 0.7           # words below this R are "due" for review
+
+    def __call__(self, state, rng: np.random.Generator) -> int:
+        # NOTE: state vector doesn't expose snapshot cleanly. SmartFSRS reads
+        # the env via the standard API; we re-implement by inferring from
+        # the structured directive translator's bucket logic.
+        # For training-data collection, we use a slightly degraded heuristic
+        # that only uses information available in the state vector.
+        # Sample a directive: (1,0,4) most of the time, (0,0,5) when overload
+        # is likely. Since we can't measure load from state vec alone,
+        # use a simple stochastic mix that approximates the policy.
+        if rng.random() < 0.7:
+            return _action_index(1, 0, 4)
+        return _action_index(0, 0, 5)
+
+
+class SmartFSRSEnvAction:
+    """Env-aware version of SmartFSRS — reads the simulator snapshot directly
+    via bind_to_env. Used in evaluation, not in training-data collection."""
+
+    name = "SmartFSRS"
+    LOAD_THRESHOLD = 10
+    DUE_R = 0.7
+
+    def bind_to_env(self, env):
+        def fn(_state, _rng):
+            snap = env.sim.snapshot()
+            active_due = sum(1 for w in snap
+                             if w["seen"] and 0 < w["stability"] < 2.0
+                             and w["retrievability"] < self.DUE_R)
+            if active_due >= self.LOAD_THRESHOLD:
+                # Overloaded — pure review, no new intro
+                return _action_index(0, 0, 5)
+            unseen = any(not w["seen"] for w in snap)
+            if unseen:
+                return _action_index(1, 0, 4)
+            return _action_index(0, 0, 5)
+        return fn
+
+
 class AggressiveIntroAction:
     """Heavy on new-word introductions. Samples uniformly from directives
     that have n_new >= 2. Designed to compensate for the existing baselines
