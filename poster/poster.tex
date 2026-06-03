@@ -28,8 +28,8 @@
 
 \newlength{\sepwidth}
 \newlength{\colwidth}
-\setlength{\sepwidth}{0.025\paperwidth}
-\setlength{\colwidth}{0.3\paperwidth}
+\setlength{\sepwidth}{0.02\paperwidth}
+\setlength{\colwidth}{0.31\paperwidth}
 
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
 
@@ -65,68 +65,59 @@
 \separatorcolumn
 
 % =====================================================================
-% COLUMN 1 — Q1 Problem, Q2 Why It Matters, Q3 Prior Work
+% COLUMN 1 — Motivation (Q1+Q2), Prior Work (Q3), Approach (Q4)
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{block}{1. What is the problem?}
-    A conversational language tutor must decide at every turn:
-    \emph{which vocabulary should the tutor's response target?} Each turn
-    presents a mix of words the learner has never seen, words being
-    acquired, and words due for review. This is a sequential decision
-    problem with delayed, multi-objective rewards: the effect of
-    introducing a word now on long-term retention is not observed until
-    future sessions.
-  \end{block}
-
-  \begin{block}{2. Why is it interesting and important?}
-    The choice involves a genuine multi-way trade-off:
+  \begin{block}{Motivation}
+    A conversational language tutor decides at every turn:
+    \emph{which vocabulary should the response target?} The turn presents
+    a mix of unseen words, words being acquired, and words due for review.
+    The choice trades off:
     \begin{itemize}
-      \item \textbf{Long-term retention} — words must come back before they decay
-      \item \textbf{Curriculum pacing} — too many new words at once overwhelms the learner
-      \item \textbf{Conversational naturalness} — the tutor's response must still
-            sound like dialogue, not a flashcard drill
+      \item \textbf{Long-term retention} — words must return before they decay
+      \item \textbf{Curriculum pacing} — too many new words overwhelms the learner
+      \item \textbf{Conversational naturalness} — turns must sound like
+            dialogue, not a flashcard drill
     \end{itemize}
-    A real product (Duolingo, Anki, LingoChamp, etc.) ships some hand-coded
-    spaced-repetition rule. A principled RL approach has the potential to
-    discover scheduling strategies no fixed heuristic can match.
+    Real products ship hand-coded spaced-repetition rules. A principled
+    RL approach can discover scheduling strategies no fixed heuristic
+    matches.
   \end{block}
 
-  \begin{block}{3. Why hasn't it been solved before?}
+  \begin{block}{Related Work}
     \textbf{Spaced repetition (FSRS, SM-2)} \cite{fsrs} schedules
-    flashcards in isolation — no mechanism for embedding review in
-    natural conversation, no joint reasoning about introducing new vocabulary.
+    isolated flashcards — no mechanism to embed review in dialogue, no
+    joint reasoning about introducing new words.
 
     \textbf{RLHF-style methods} \cite{rlhf} treat the LLM as the policy and
-    can't reason about long-horizon retention; the LLM optimizes a
-    naturalness reward turn-by-turn.
+    cannot reason about long-horizon retention.
 
-    \textbf{Educational RL} \cite{rafferty} works on isolated problems
-    (which exercise to assign), never on item selection mediated through a
-    generative LLM producing free-form dialogue.
+    \textbf{Educational RL} \cite{rafferty} works on isolated problems,
+    never on item selection mediated through a generative LLM.
 
-    \textbf{Our contribution}: a \emph{hierarchical control} framing where
-    RL operates over latent linguistic constraints and a frozen LLM
+    \textbf{Our framing}: a \emph{hierarchical control} architecture
+    where RL operates over latent linguistic constraints and a frozen LLM
     realizes them as natural conversation.
   \end{block}
 
-  \begin{block}{4. Key components of our approach}
+  \begin{block}{Approach}
     \begin{center}
       \begin{tikzpicture}[
-          node distance=0.6cm and 0.7cm,
+          node distance=0.5cm and 0.6cm,
           box/.style={rectangle, draw=stanfordred, very thick, rounded corners,
-                     minimum height=1.4cm, minimum width=3.2cm, align=center,
-                     text width=3.0cm, font=\footnotesize},
+                     minimum height=1.2cm, minimum width=2.8cm, align=center,
+                     text width=2.6cm, font=\scriptsize},
           smallbox/.style={rectangle, draw=black!50, thick, rounded corners,
-                     minimum height=1.1cm, minimum width=2.4cm, align=center,
-                     text width=2.2cm, font=\scriptsize},
-          arrow/.style={->, very thick, stanfordred, >=latex}]
-        \node[box] (policy) {Offline RL Policy $\pi(a|s)$ \\ (IQL / CQL)};
-        \node[smallbox, right=of policy] (action) {Action: directive\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
-        \node[smallbox, right=of action] (llm) {Frozen LLM\\(Claude Sonnet)};
-        \node[smallbox, below=of llm] (utter) {Japanese\\conversational turn};
-        \node[smallbox, below=of action] (sim) {Student\\simulator\\(FSRS)};
-        \node[smallbox, below=of policy] (state) {State $s$:\\per-word stats};
+                     minimum height=1.0cm, minimum width=2.2cm, align=center,
+                     text width=2.0cm, font=\tiny},
+          arrow/.style={->, thick, stanfordred, >=latex}]
+        \node[box] (policy) {RL Policy $\pi(a|s)$ \\ (IQL / CQL)};
+        \node[smallbox, right=of policy] (action) {Directive\\$(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$};
+        \node[smallbox, right=of action] (llm) {Frozen LLM\\(Sonnet)};
+        \node[smallbox, below=of llm] (utter) {Japanese\\dialogue turn};
+        \node[smallbox, below=of action] (sim) {Student sim\\(FSRS)};
+        \node[smallbox, below=of policy] (state) {State $s$\\(per-word)};
         \draw[arrow] (policy) -- (action);
         \draw[arrow] (action) -- (llm);
         \draw[arrow] (llm) -- (utter);
@@ -136,15 +127,11 @@
       \end{tikzpicture}
     \end{center}
     \begin{itemize}
-      \item \textbf{State} $s_t$: per-word stability, retrievability, difficulty,
-            usage counts; session position. 500 JLPT N5/N4/N3 words.
-      \item \textbf{Action} $a_t$: structured directive
-            $(n_{\text{new}}, n_{\text{active}}, n_{\text{review}})$
-            summing to 5 words (21 discrete actions).
-      \item \textbf{Reward} $r_t$: see Findings (the headline result).
+      \item \textbf{State}: per-word stability, $R$, difficulty, usage; session position. 500 JLPT N5--N3 words.
+      \item \textbf{Action}: $(n_{\text{new}}, n_{\text{act}}, n_{\text{rev}})$ summing to 5 (21 discrete actions).
       \item \textbf{Methods}: IQL \cite{iql}, CQL \cite{cql} (offline);
             PPO \cite{ppo} (online upper bound); Random, FSRS, FSRS+New,
-            RuleBased, SmartFSRS (heuristics).
+            RuleBased, SmartFSRS.
     \end{itemize}
   \end{block}
 
@@ -153,39 +140,35 @@
 \separatorcolumn
 
 % =====================================================================
-% COLUMN 2 — Q5 Findings (reward design + headline)
+% COLUMN 2 — Key finding (reward design) + headline retention
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{alertblock}{5. Key findings — Reward design $\gg$ algorithm choice}
-    Same algorithms, two rewards, \textbf{6$\times$ retention improvement}
-    across every RL method from the reward redesign alone.
+  \begin{alertblock}{Key Finding: Reward Design $\gg$ Algorithm Choice}
+    Same algorithms, two rewards, \textbf{6$\times$ retention gain} across
+    every RL method.
 
     \heading{v3 reward}
+    \vspace{-0.3cm}
     $$r_t = \underbrace{\Delta R_{\text{total}}/N}_{\text{coverage}}
-            \;-\; \underbrace{\alpha \cdot \max(0, n_{\text{new}} - 1)^2}_{\text{naturalness penalty}}
-            \;+\; \underbrace{\lambda \cdot \tfrac{\#\{R{>}0.5\}}{N}}_{\text{session-end retention bonus}}$$
-
-    The naturalness penalty stops policies from cramming many new words
-    into one turn; the session-end bonus directly rewards what the
-    proposal calls the actual goal.
-    \vspace{0.3cm}
+            - \underbrace{\alpha \cdot \max(0, n_{\text{new}} {-} 1)^2}_{\text{naturalness penalty}}
+            + \underbrace{\lambda \cdot \tfrac{\#\{R{>}0.5\}}{N}}_{\text{retention bonus}}$$
+    \vspace{-0.2cm}
     \begin{figure}
       \centering
       \includegraphics[width=0.95\colwidth]{reward_design_impact.png}
     \end{figure}
   \end{alertblock}
 
-  \begin{block}{Final retention numbers}
+  \begin{block}{Final Retention (500 words, 20 seeds, 95\% CI)}
     \begin{figure}
       \centering
       \includegraphics[width=0.98\colwidth]{headline_retention_20seeds.png}
     \end{figure}
-    500 words, 20 eval seeds, 95\% bootstrap CIs. \textbf{Every RL method
-    beats every heuristic by 5--30$\times$.} Online RL (PPO) exceeds
-    offline RL by $\sim$1.8$\times$ — the cost of the deployment-realistic
-    offline constraint (in production you cannot expose real students to a
-    learning policy).
+    Every RL method beats every heuristic by \textbf{5--30$\times$} on
+    post-gap retention. Online RL (PPO) exceeds offline RL by
+    $\sim$1.8$\times$ — the cost of the deployment-realistic offline
+    constraint.
   \end{block}
 
 \end{column}
@@ -193,56 +176,53 @@
 \separatorcolumn
 
 % =====================================================================
-% COLUMN 3 — Q5 (more findings) + Q6 + Q7
+% COLUMN 3 — More findings + Discussion + Future Work
 % =====================================================================
 \begin{column}{\colwidth}
 
-  \begin{block}{Adaptive pacing emerges from training}
+  \begin{block}{Adaptive Pacing Emerges}
     \begin{figure}
       \centering
       \includegraphics[width=0.98\colwidth]{action_distribution_v3.png}
     \end{figure}
     Action mix by turn-in-session. RL methods (right panels) learn
-    intra-session pacing: heavy on new-word actions early, shift to review
-    late. \emph{No hand-coded baseline shows this structure.}
+    \emph{intra-session pacing}: new words early, review late. No
+    hand-coded baseline shows this.
   \end{block}
 
-  \begin{block}{Retention vs naturalness Pareto frontier}
+  \begin{block}{Retention vs Naturalness Pareto}
     \begin{figure}
       \centering
       \includegraphics[width=0.98\colwidth]{pareto_retention_naturalness.png}
     \end{figure}
-    Naturalness judged by \emph{cross-family} OpenAI gpt-4o-mini (the tutor
-    is Claude Sonnet — eliminates self-preference bias). PPO matches Random
-    on naturalness but at \emph{8$\times$ the retention}; offline IQL has
-    higher naturalness than PPO at 56\% of retention.
+    Naturalness from \emph{cross-family} judge (OpenAI gpt-4o-mini vs
+    Claude Sonnet tutor — no self-preference). PPO matches Random
+    naturalness with 8$\times$ retention; offline IQL has higher
+    naturalness than PPO at 56\% of retention.
   \end{block}
 
-  \begin{block}{6. Takeaways and limitations}
-    \heading{What audiences can learn}
+  \begin{block}{Discussion}
+    \heading{Takeaways}
     \begin{itemize}
-      \item \textbf{Reward design dominates algorithm choice} for this domain
-      \item \textbf{Coverage metrics mislead}: Random scored 81 acquired but
-            only 18 retained after 7 days. Stickiness matters.
-      \item \textbf{Hierarchical RL/LLM control} works: structured directives
-            are tractable as RL actions; the LLM handles naturalness via prompting
+      \item Reward design \emph{dominates} algorithm choice for this domain
+      \item Coverage metrics mislead: Random scored 81 acquired, only 18 retained
+      \item Hierarchical RL/LLM control is viable: structured directives
+            are tractable as RL actions, LLM handles naturalness
     \end{itemize}
-    \heading{Honest limitations}
+    \heading{Limitations}
     \begin{itemize}
-      \item Simulator dynamics are hand-tuned; no human pilot yet
-      \item Action space is coarse (21 directives); finer-grained word
-            selection is future work
-      \item Wide CIs on offline RL (e.g.\ IQL: [52.6, 119.0])
-            indicate seed sensitivity
+      \item Simulator dynamics hand-tuned; no human pilot
+      \item Coarse action space (21 directives)
+      \item Wide offline-RL CIs indicate seed sensitivity
     \end{itemize}
   \end{block}
 
-  \begin{block}{7. Planned before final report}
+  \begin{block}{Future Work (before final report)}
     \begin{itemize}
-      \item \textbf{Tighter CIs}: multi-seed training of IQL/CQL on Modal
-      \item \textbf{BC-of-PPO ablation}: does offline RL exceed simple imitation?
-      \item \textbf{Top-$k$ action space}: per-word selection beyond the 21-action directive
-      \item \textbf{Extended OOD robustness}: forgetting rate, difficulty distribution, combined OOD held-out sims
+      \item Multi-seed training to tighten offline RL CIs (Modal sweep running)
+      \item Behavior-cloning-of-PPO ablation
+      \item Top-$k$ per-word action space
+      \item Extended OOD robustness across simulator parameterizations
     \end{itemize}
   \end{block}
 
