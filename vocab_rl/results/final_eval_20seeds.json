@@ -1,0 +1,51 @@
+{
+  "IQL v3": {
+    "acq_mean": 74.65,
+    "ret_mean": 85.75,
+    "ret_ci_lo": 52.6475,
+    "ret_ci_hi": 119.00125,
+    "ret_std": 76.19637458567172
+  },
+  "CQL v3": {
+    "acq_mean": 71.45,
+    "ret_mean": 81.35,
+    "ret_ci_lo": 49.945,
+    "ret_ci_hi": 112.65125,
+    "ret_std": 73.03784977667401
+  },
+  "PPO v3": {
+    "acq_mean": 110.1,
+    "ret_mean": 151.25,
+    "ret_ci_lo": 132.29875,
+    "ret_ci_hi": 162.6,
+    "ret_std": 34.84806307386395
+  },
+  "Random": {
+    "acq_mean": 81.55,
+    "ret_mean": 18.0,
+    "ret_ci_lo": 15.25,
+    "ret_ci_hi": 20.851249999999993,
+    "ret_std": 6.565059024867941
+  },
+  "FSRS": {
+    "acq_mean": 5.0,
+    "ret_mean": 5.0,
+    "ret_ci_lo": 5.0,
+    "ret_ci_hi": 5.0,
+    "ret_std": 0.0
+  },
+  "FSRS+New": {
+    "acq_mean": 24.0,
+    "ret_mean": 4.4,
+    "ret_ci_lo": 4.15,
+    "ret_ci_hi": 4.7,
+    "ret_std": 0.6633249580710799
+  },
+  "SmartFSRS": {
+    "acq_mean": 5.1,
+    "ret_mean": 8.9,
+    "ret_ci_lo": 7.7,
+    "ret_ci_hi": 10.35,
+    "ret_std": 2.9983328701129897
+  }
+}
