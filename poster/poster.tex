@@ -285,6 +285,20 @@
     \end{itemize}
   \end{block}
 
+  \begin{block}{Planned Before Final Report}
+    \begin{itemize}
+      \item \textbf{Tighten offline RL CIs}: 5 training seeds $\times$ 3 algos
+            with full v3 settings (Modal sweep currently running)
+      \item \textbf{Behavior cloning of PPO}: ablation to test whether
+            offline RL is doing more than supervised imitation
+      \item \textbf{Top-$k$ action space}: extend beyond 21 directives to
+            per-word selection, addressing the coarseness limitation
+      \item \textbf{Robustness analysis}: extended OOD evaluation on
+            held-out simulator parameterizations (forgetting rate, difficulty
+            distribution, combined OOD)
+    \end{itemize}
+  \end{block}
+
   \begin{block}{References}
     \nocite{*}
     \footnotesize{\bibliographystyle{plain}\bibliography{poster}}

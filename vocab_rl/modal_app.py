@@ -47,7 +47,7 @@ _models_volume = modal.Volume.from_name("vocab-rl-models")
 
 
 @app.function(
-    timeout=60 * 60,
+    timeout=2 * 60 * 60,   # 2 hours — full v3 settings with distillation need ~70 min
     cpu=4,
     memory=8192,
     secrets=[modal.Secret.from_name("wandb"),
